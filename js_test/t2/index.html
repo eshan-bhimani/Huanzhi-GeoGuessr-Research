@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Street View Navigator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="pano-container"></div>
+        
+        <div id="controls">
+            <h2>Agent Interface</h2>
+            <div class="status-box">
+                <button id="btn-random" class="primary-btn">Random Teleport (MapCrunch Style)</button>
+            </div>
+
+            <h3>Current AI Observation (JSON)</h3>
+            <textarea id="ai-output" readonly></textarea>
+
+            <h3>Available Moves (Nodes)</h3>
+            <div id="moves-list"></div>
+        </div>
+    </div>
+
+    <script src="agent-navigator.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initTool">
+    </script>
+</body>
+</html>
