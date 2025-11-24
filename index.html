@@ -1,3 +1,5 @@
+<!-- Run a localhost using your google api key -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,7 +21,7 @@
   </head>
   <body>
     <div id="pano"></div>
-
+    <!-- INSERT API KEY HERE -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=APIKEYHERE&callback=initStreetView&v=weekly"
       defer
@@ -39,10 +41,9 @@
               heading: 34,  // Direction camera is facing (0 is North)
               pitch: 10     // Angle up or down
             },
-            zoom: 1,
+            zoom: 1,       // Zoom level
             
-            // OPTIONAL: UI Controls Customization
-            // Set these to 'false' if you want a cleaner look without controls
+            // UI Controls Customization
             addressControl: true,     // Shows the address box
             fullscreenControl: true,  // Shows the toggle fullscreen button
             linksControl: true,       // Shows the navigation arrows on the road
