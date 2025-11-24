@@ -1,31 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>AI Street View Navigator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="app-container">
-        <div id="pano-container"></div>
-        
-        <div id="controls">
-            <h2>Agent Interface</h2>
-            <div class="status-box">
-                <button id="btn-random" class="primary-btn">Random Teleport (MapCrunch Style)</button>
-            </div>
+<html>
+  <head>
+    <title>Full Screen Street View</title>
+    <style>
+      /* 1. Make the map fill the entire window */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* 2. The container for the Street View */
+      #pano {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pano"></div>
 
-            <h3>Current AI Observation (JSON)</h3>
-            <textarea id="ai-output" readonly></textarea>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=APIKEYHERE&callback=initStreetView&v=weekly"
+      defer
+    ></script>
 
-            <h3>Available Moves (Nodes)</h3>
-            <div id="moves-list"></div>
-        </div>
-    </div>
+    <script>
+      function initStreetView() {
+        // 3. Define the starting coordinates (Smithsonian Station, Washington DC)
+        const startLocation = { lat: 38.88918843189586, lng: -77.02835863881397 };
 
-    <script src="agent-navigator.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initTool">
+        // 4. Initialize the Street View Panorama
+        const panorama = new google.maps.StreetViewPanorama(
+          document.getElementById("pano"),
+          {
+            position: startLocation,
+            pov: {
+              heading: 34,  // Direction camera is facing (0 is North)
+              pitch: 10     // Angle up or down
+            },
+            zoom: 1,
+            
+            // OPTIONAL: UI Controls Customization
+            // Set these to 'false' if you want a cleaner look without controls
+            addressControl: true,     // Shows the address box
+            fullscreenControl: true,  // Shows the toggle fullscreen button
+            linksControl: true,       // Shows the navigation arrows on the road
+            panControl: true,         // Shows the compass/pan control
+            enableCloseButton: false, // Hides the 'X' button (since there is no map to close to)
+            showRoadLabels: false,     // Shows street names on the ground
+            clickToGo: true,          // Allows for clicking navigation
+          }
+        );
+      }
     </script>
-</body>
+  </body>
 </html>
