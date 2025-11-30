@@ -22,9 +22,23 @@
   <body>
     <div id="pano"></div>
     <!-- INSERT API KEY HERE -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=APIKEYHERE&callback=initStreetView&v=weekly"
-      defer
+    <script>
+      // Set your API key here (change this variable easily)
+      const GOOGLE_MAPS_API_KEY = 'API_KEY_HERE';
+
+
+      // You can override by calling loadGoogleMapsApi('ANOTHER_KEY')
+      function loadGoogleMapsApi(key = GOOGLE_MAPS_API_KEY) {
+        const s = document.createElement('script');
+        s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(key)}&callback=initStreetView&v=weekly`;
+        s.defer = true;
+        s.async = true;
+        document.head.appendChild(s);
+      }
+
+      // Load immediately by default
+      loadGoogleMapsApi();
+    </script>
     ></script>
 
     <script>
