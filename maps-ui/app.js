@@ -18,11 +18,30 @@ const agentState = {
 function normalizeHeading(heading) {
     return (heading % 360 + 360) % 360;
 }
+// Getting static-street-view 
+// async function fetchPanoImageBase64(panoId, heading, pitch = 0, fov = 90) {
+//   const key = window.GOOGLE_MAPS_KEY;
+//   if (!key) throw new Error('Missing GOOGLE_MAPS_KEY');
 
+//   const url =
+//     `https://maps.googleapis.com/maps/api/streetview?size=320x320` +
+//     `&pano=${encodeURIComponent(panoId)}` +
+//     `&heading=${Math.round(heading)}` +
+//     `&pitch=${Math.round(pitch)}` +
+//     `&fov=${fov}` +
+//     `&key=${key}`;
+
+//   const res = await fetch(url);
+//   if (!res.ok) throw new Error(`Street View image fetch failed: ${res.status}`);
+//   const blob = await res.blob();
+//   const buf = await blob.arrayBuffer();
+//   const base64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+//   return `data:${blob.type};base64,${base64}`;
+// }
 /**
  * Build the observation JSON that you'll send to the LLM
  */
-function buildObservation() {
+async function buildObservation() {
     if (!panorama) return null;
 
     const currentPano = panorama.getPano();
@@ -37,14 +56,17 @@ function buildObservation() {
         next_node_id: link.pano
     }));
 
+    const heading = normalizeHeading(pov.heading);
+    // const image = await fetchPanoImageBase64(currentPano, heading, pov.pitch ?? 0 );
     return {
         current_node_id: currentPano,
         gps: {
             lat: location.latLng.lat(),
             lng: location.latLng.lng()
         },
-        current_heading: normalizeHeading(pov.heading),
+        current_heading: heading,
         available_moves: moves,
+        image: null,
         meta: {
             step_count: agentState.step_count,
             history: agentState.history
@@ -55,8 +77,8 @@ function buildObservation() {
 /**
  *  Update internal state + UI when panorama or links change
  */
-function updateAgentData() {
-    const obs = buildObservation();
+async function updateAgentData() {
+    const obs = await buildObservation();
     if (!obs) return;
 
     // 1. update internal state
@@ -148,7 +170,7 @@ function teleportRandomly() {
     svService.getPanorama({ location: knownLocation, radius: radius }, (data, status) => {
         if (status === google.maps.StreetViewStatus.OK) {
             panorama.setPano(data.location.pano);
-            panorama.setPov({ heading: 0, pitch: 0 });
+            panorama.setPov({ heading: 120, pitch: 0 });
 
             agentState.step_count = 0;
             agentState.history = [data.location.pano];
@@ -218,7 +240,7 @@ const AgentEnv = {
     /**
      * Get the current observation JSON
      */
-    getObservation() {
+    async getObservation() {
         return buildObservation();
     },
 
@@ -260,7 +282,7 @@ async function sendStep(observation) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(observation)
+        body: JSON.stringify({observation: observation})
     });
 
     if (!res.ok) throw new Error(`API error: ${res.status}`);
@@ -292,7 +314,7 @@ const sendStepBtn = document.getElementById('send-step-btn');
 if (sendStepBtn) {
     sendStepBtn.addEventListener('click', async () => {
         try {
-            const obs = AgentEnv.getObservation();
+            const obs = await AgentEnv.getObservation();
             if (!obs) {
                 alert('No observation available yet.');
                 return;

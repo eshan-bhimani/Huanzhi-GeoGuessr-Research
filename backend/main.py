@@ -1,13 +1,18 @@
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI
 from api.state import router as state_router
 from api.update import router as update_router
 from api.actions import router as action_router
 from api.step import router as step_router
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
 
+# Load .env relative to project root to ensure GOOGLE_MAPS_API_KEY is available
+ROOT_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(ROOT_DIR / ".env")
 
 app = FastAPI()
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], # allow all for local testing
@@ -16,6 +21,8 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+# Serve stored images from the repo-level images/ directory
+app.mount("/media/images", StaticFiles(directory=ROOT_DIR / "images"), name="images")
 
 app.include_router(state_router)
 app.include_router(update_router)

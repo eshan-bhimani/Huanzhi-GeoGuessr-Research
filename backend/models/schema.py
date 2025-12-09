@@ -1,9 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 
-from pydantic import BaseModel
-from typing import List, Dict, Optional
-
 class Move(BaseModel):
     heading: float
     next_node_id: str
@@ -13,13 +10,13 @@ class MetaInfo(BaseModel):
     history: List[str]
 
 class Observation(BaseModel):
-    current_node_id: Optional[str] = None
-    gps: Optional[Dict[str, float]] = None
-    current_heading: Optional[float] = None
-    available_moves: Optional[List[Move]] = []
+    current_node_id: str
+    gps: Dict[str, float]
+    current_heading: float
+    available_moves: List[Move]
     image: Optional[str] = None
-    meta: Optional[MetaInfo] = None   # ← matches frontend
-
+    meta: MetaInfo
+    
 class AgentAction(BaseModel):
     type: str  # e.g., "rotate", "move", "zoom"
     angle: Optional[float] = None  # for rotate
