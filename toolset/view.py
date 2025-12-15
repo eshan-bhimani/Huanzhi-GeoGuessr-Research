@@ -41,8 +41,11 @@ def set_heading(heading: float) -> None:
     Returns:
         None
     """
+    from state_manager import state
+    # Normalize heading to 0-360
+    heading = heading % 360
+    state.update(heading=heading)
 
-    raise NotImplementedError()
 
 def set_fov(fov: float) -> None:
     """
@@ -54,8 +57,12 @@ def set_fov(fov: float) -> None:
     Returns:
         None
     """
+    from state_manager import state
+    # Clamp FOV
+    if fov < 10: fov = 10
+    if fov > 120: fov = 120
+    state.update(fov=fov)
 
-    raise NotImplementedError()
 
 def set_pitch(pitch: float) -> None:
     """
@@ -67,5 +74,8 @@ def set_pitch(pitch: float) -> None:
     Returns:
         None
     """
-
-    raise NotImplementedError()
+    from state_manager import state
+    # Clamp pitch
+    if pitch > 90: pitch = 90
+    if pitch < -90: pitch = -90
+    state.update(pitch=pitch)

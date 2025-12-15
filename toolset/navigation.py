@@ -1,138 +1,143 @@
+import requests
+from state_manager import state
+from toolset import view
+from constants import google_api_key
 
-# These will not always be available, it depends on the available panoramas at each location.
-def look_north_south_east_west() -> str:
+def pan(angle: int) -> str:
     """
-    Orients itself using the compass html element. Zooms out, then clicks through the compass in the directions of all 4 cardinal directions to get a complete 360 degree view of your environment.
-    
-    Use this tool whenever you move to a new location so that you can better understand your environment and decide the best action to take.
+    Pans the view horizontally by a custom input angle.
+
+    Use this tool to adjust the horizontal orientation of the view.
 
     Args:
-        None
+        angle (int): The angle in degrees to pan. Positive values pan right, negative values pan left.
 
     Returns:
-        str: A description of the environment, noting any points of interest that could help the agent decide the best action to take and correctly respond to the prompt.
+        str: A description of the panning action performed.
     """
+    current_heading = state.heading
+    new_heading = current_heading + angle
+    view.set_heading(new_heading)
+    return f"Panned {angle} degrees. New heading: {state.heading}"
 
-    raise NotImplementedError()
-
-def go_north() -> str:
+def tilt(degrees: int) -> str:
     """
-    Interacts with the html arrow button element that makes the agent go north, giving a new position and new panorama.
+    Tilts the view vertically by a custom input degree.
 
-    Use this tool when you decide that it's best to go north after reasoning the best course of action to solve the prompt.
+    Use this tool to adjust the vertical orientation of the view.
 
     Args:
-        None
+        degrees (int): The degrees to tilt. Positive values tilt up, negative values tilt down.
 
     Returns:
-        None
+        str: A description of the tilting action performed.
     """
+    current_pitch = state.pitch
+    new_pitch = current_pitch + degrees
+    view.set_pitch(new_pitch)
+    return f"Tilted {degrees} degrees. New pitch: {state.pitch}"
 
-    raise NotImplementedError()
-
-def go_northeast() -> str:
+def zoom(rate: float) -> str:
     """
-    Interacts with the html arrow button element that makes the agent go northeast, giving a new position and new panorama.
+    Zooms the view in or out at a custom rate.
 
-    Use this tool when you decide that it's best to go northeast after reasoning the best course of action to solve the prompt.
+    Use this tool to adjust the zoom level of the view.
 
     Args:
-        None
+        rate (float): The rate at which to zoom. Values greater than 1.0 zoom in, values less than 1.0 zoom out.
+                      For example, 2.0 zooms in by a factor of 2, 0.5 zooms out by a factor of 2.
 
     Returns:
-        None
+        str: A description of the zooming action performed.
     """
+    current_fov = state.fov
+    if rate <= 0:
+        return "Zoom rate must be positive."
+    new_fov = current_fov / rate
+    view.set_fov(new_fov)
+    return f"Zoomed by rate {rate}. New FOV: {state.fov}"
 
-    raise NotImplementedError()
-
-def go_east() -> str:
+def get_possible_pathways() -> list[dict]:
     """
-    Interacts with the html arrow button element that makes the agent go east, giving a new position and new panorama.
+    Retrieves a list of valid navigable nodes around the current location.
 
-    Use this tool when you decide that it's best to go east after reasoning the best course of action to solve the prompt.
+    Returns:
+        list[dict]: A list of dictionaries, where each dictionary represents a nearby node
+                    with information such as 'id', 'latitude', 'longitude', 'description'.
+    """
+    if state.latitude is None or state.longitude is None:
+        return []
+
+    lat, lng = state.latitude, state.longitude
+
+    # Dummy nodes based on current location (since API doesn't easily give linked nodes)
+    # IDs are encoded as "lat,lng" to make go_to_node stateless and simple.
+    offset = 0.0005
+    nodes = [
+        {
+            "id": f"{lat + offset},{lng}",
+            "latitude": lat + offset, 
+            "longitude": lng, 
+            "description": "North"
+        },
+        {
+            "id": f"{lat - offset},{lng}",
+            "latitude": lat - offset, 
+            "longitude": lng, 
+            "description": "South"
+        },
+        {
+            "id": f"{lat},{lng + offset}",
+            "latitude": lat, 
+            "longitude": lng + offset, 
+            "description": "East"
+        },
+        {
+            "id": f"{lat},{lng - offset}",
+            "latitude": lat, 
+            "longitude": lng - offset, 
+            "description": "West"
+        }
+    ]
+    return nodes
+
+def go_to_node(node_id: str) -> str:
+    """
+    Navigates to a specified node (pathway) from the current location.
 
     Args:
-        None
+        node_id (str): The identifier of the node to navigate to. 
+                       Expected format: "lat,lng" or a pano_id (if supported).
 
     Returns:
-        None
+        str: A description of the navigation action.
     """
+    # 1. Try parsing basic coordinate string "lat,lng"
+    if "," in node_id:
+        try:
+            parts = node_id.split(",")
+            new_lat = float(parts[0].strip())
+            new_lng = float(parts[1].strip())
+            
+            state.update(latitude=new_lat, longitude=new_lng)
+            return f"Navigated to coordinates: {new_lat}, {new_lng}"
+        except ValueError:
+            pass # Continue to try other formats if this failed
 
-    raise NotImplementedError()
-
-def go_southeast() -> str:
-    """
-    Interacts with the html arrow button element that makes the agent go southeast, giving a new position and new panorama.
-
-    Use this tool when you decide that it's best to go southeast after reasoning the best course of action to solve the prompt.
-
-    Args:
-        None
-
-    Returns:
-        None
-    """
-
-    raise NotImplementedError()
-
-
-def go_south() -> str:
-    """
-    Interacts with the html arrow button element that makes the agent go south, giving a new position and new panorama.
-
-    Use this tool when you decide that it's best to go south after reasoning the best course of action to solve the prompt.
-
-    Args:
-        None
-
-    Returns:
-        None
-    """
-
-    raise NotImplementedError()
-
-def go_southwest() -> str:
-    """
-    Interacts with the html arrow button element that makes the agent go southwest, giving a new position and new panorama.
-
-    Use this tool when you decide that it's best to go southwest after reasoning the best course of action to solve the prompt.
-
-    Args:
-        None
-
-    Returns:
-        None
-    """
-
-    raise NotImplementedError()
-
-def go_west() -> str:
-    """
-    Interacts with the html arrow button element that makes the agent go west, giving a new position and new panorama.
-
-    Use this tool when you decide that it's best to go west after reasoning the best course of action to solve the prompt.
-
-    Args:
-        None
-
-    Returns:
-        None
-    """
-
-    raise NotImplementedError()
-
-def go_northwest() -> str:
-    """
-    Interacts with the html arrow button element that makes the agent go northwest, giving a new position and new panorama.
-
-    Use this tool when you decide that it's best to go northwest after reasoning the best course of action to solve the prompt.
-
-    Args:
-        None
-
-    Returns:
-        None
-    """
-
-    raise NotImplementedError()
+    # 2. If it's not a coordinate string, we could assume it's a Pano ID and fetch it.
+    # (Existing logic from previous implementation)
+    url = f"https://maps.googleapis.com/maps/api/streetview/metadata?pano={node_id}&key={google_api_key}"
+    try:
+        response = requests.get(url)
+        data = response.json()
+        if data.get("status") == "OK" and "location" in data:
+            loc = data["location"]
+            new_lat = loc["lat"]
+            new_lng = loc["lng"]
+            state.update(latitude=new_lat, longitude=new_lng, pano_id=node_id)
+            return f"Navigated to Pano ID: {node_id} at ({new_lat}, {new_lng})"
+        else:
+            return f"Could not resolve node_id: {node_id}. Status: {data.get('status')}"
+    except Exception as e:
+        return f"Error connecting to API: {e}"
 
