@@ -76,13 +76,18 @@ You can type the following Python command in the bottom input box to control the
 - **`zoom(rate: float)`**
   - Multiplies current FOV by `1/rate`. (Rate > 1.0 zooms in).
 
+- **`teleport(lat: float, lng: float)`**
+  - *Args*: `lat` (float), `lng` (float)
+  - *Effect*: Instantly moves the agent to the specified coordinates. Use this to change the focal area of research.
+
 ## Code Structure
 
 ### `init_env.py`
 The main entry point. It sets up the Tkinter GUI, the event loop, and the integrated terminal. It observes the `state_manager` to redraw the screen whenever the state changes.
 
 ### `state_manager.py`
-A singleton class that maintains the "Source of Truth" for the agent's content (Location, Heading, Pitch, FOV). It implements the Observer pattern so the GUI updates automatically when the state changes.
+A singleton class that maintains the "Source of Truth" for the agent's content (Location, Heading, Pitch, FOV). It implements the Observer pattern so the GUI updates automatically when the state changes. 
+> **Note**: To change the default starting location of the application, modify the `latitude` and `longitude` values in the `StateManager.__init__` method.
 
 ### `toolset/`
 This directory contains the "tools" that an AI agent would access.

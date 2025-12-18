@@ -1,7 +1,14 @@
 import requests
+import os
+import json
+import time
 from state_manager import state
 from toolset import view
 from constants import google_api_key
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
 def pan(angle: int) -> str:
     """
@@ -57,6 +64,43 @@ def zoom(rate: float) -> str:
     view.set_fov(new_fov)
     return f"Zoomed by rate {rate}. New FOV: {state.fov}"
 
+def _get_links_via_selenium(pano_id: str) -> list[dict]:
+    """Helper to fetch real Street View links using a headless browser."""
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--log-level=3") # Suppress logs
+    
+    try:
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=chrome_options)
+        
+        # Use the local helper HTML
+        file_path = os.path.abspath("get_links.html")
+        url = f"file:///{file_path}?pano={pano_id}&key={google_api_key}"
+        
+        driver.get(url)
+        max_wait = 10
+        start_time = time.time()
+        results = []
+        while time.time() - start_time < max_wait:
+            time.sleep(0.5)
+            try:
+                elem = driver.find_element("id", "results")
+                text = elem.text
+                if text != "LOADING..." and text != "":
+                    if not text.startswith("ERROR"):
+                        results = json.loads(text)
+                    break
+            except:
+                continue
+        driver.quit()
+        return results
+    except Exception as e:
+        print(f"Navigation Error (Selenium): {e}")
+        return []
+
 def get_possible_pathways() -> list[dict]:
     """
     Retrieves a list of valid navigable nodes around the current location.
@@ -65,41 +109,56 @@ def get_possible_pathways() -> list[dict]:
         list[dict]: A list of dictionaries, where each dictionary represents a nearby node
                     with information such as 'id', 'latitude', 'longitude', 'description'.
     """
-    if state.latitude is None or state.longitude is None:
+    # 1. Ensure we have a Pano ID. 
+    # If the state doesn't have one, fetch it from lat/lng.
+    current_pano = state.pano_id
+    if not current_pano:
+        url = f"https://maps.googleapis.com/maps/api/streetview/metadata?location={state.latitude},{state.longitude}&key={google_api_key}"
+        try:
+            resp = requests.get(url).json()
+            if resp.get("status") == "OK":
+                current_pano = resp.get("pano_id")
+                state.update(pano_id=current_pano)
+        except:
+            pass
+    
+    if not current_pano:
         return []
 
-    lat, lng = state.latitude, state.longitude
+    # 2. Get real links
+    links = _get_links_via_selenium(current_pano)
+    
+    if not links:
+        # Fallback to dummy nodes if Selenium fails or no links found
+        print("Navigation Error (Selenium): No links found. Using dummy nodes.")
+        lat, lng = state.latitude, state.longitude
+        offset = 0.0005
+        return [
+            {"id": f"{lat + offset},{lng}", "latitude": lat + offset, "longitude": lng, "description": "North (Fallback)"},
+            {"id": f"{lat - offset},{lng}", "latitude": lat - offset, "longitude": lng, "description": "South (Fallback)"},
+            {"id": f"{lat},{lng + offset}", "latitude": lat, "longitude": lng + offset, "description": "East (Fallback)"},
+            {"id": f"{lat},{lng - offset}", "latitude": lat, "longitude": lng - offset, "description": "West (Fallback)"}
+        ]
 
-    # Dummy nodes based on current location (since API doesn't easily give linked nodes)
-    # IDs are encoded as "lat,lng" to make go_to_node stateless and simple.
-    offset = 0.0005
-    nodes = [
-        {
-            "id": f"{lat + offset},{lng}",
-            "latitude": lat + offset, 
-            "longitude": lng, 
-            "description": "North"
-        },
-        {
-            "id": f"{lat - offset},{lng}",
-            "latitude": lat - offset, 
-            "longitude": lng, 
-            "description": "South"
-        },
-        {
-            "id": f"{lat},{lng + offset}",
-            "latitude": lat, 
-            "longitude": lng + offset, 
-            "description": "East"
-        },
-        {
-            "id": f"{lat},{lng - offset}",
-            "latitude": lat, 
-            "longitude": lng - offset, 
-            "description": "West"
-        }
-    ]
-    return nodes
+    # 3. Process links to include metadata (lat/lng)
+    # We could fetch metadata for each, but that's slow. 
+    # For now, we return Pano IDs which go_to_node can handle.
+    return [{"id": l["id"], "description": l["description"], "heading": l["heading"]} for l in links]
+
+def teleport(latitude: float, longitude: float) -> str:
+    """
+    Teleports the agent to a specific latitude and longitude.
+    This resets the current panorama state to the new coordinates.
+
+    Args:
+        latitude (float): The latitude of the destination.
+        longitude (float): The longitude of the destination.
+
+    Returns:
+        str: A description of the teleportation action.
+    """
+    state.update(latitude=latitude, longitude=longitude, pano_id=None)
+    return f"Teleported to: {latitude}, {longitude}"
 
 def go_to_node(node_id: str) -> str:
     """

@@ -92,8 +92,12 @@ def init_env() -> None:
     # Key bindings calling navigation toolset and logging to GUI terminal
     root.bind("<Right>", lambda e: log_and_execute(navigation.pan, 15))
     root.bind("<Left>", lambda e: log_and_execute(navigation.pan, -15))
-    root.bind("<Up>", lambda e: log_and_execute(navigation.tilt, 10))
-    root.bind("<Down>", lambda e: log_and_execute(navigation.tilt, -10))
+    root.bind("<Up>", lambda e: log_and_execute(navigation.tilt, 10)) 
+    root.bind("<Down>", lambda e: log_and_execute(navigation.tilt, -10)) 
+    root.bind("w", lambda e: log_and_execute(navigation.tilt, 10))
+    root.bind("s", lambda e: log_and_execute(navigation.tilt, -10))
+    root.bind("a", lambda e: log_and_execute(navigation.pan, -15))
+    root.bind("d", lambda e: log_and_execute(navigation.pan, 15))
     root.bind("q", lambda e: log_and_execute(navigation.zoom, 0.8)) 
     root.bind("e", lambda e: log_and_execute(navigation.zoom, 1.2))
 
@@ -117,7 +121,8 @@ def init_env() -> None:
             "tilt": navigation.tilt, 
             "zoom": navigation.zoom,
             "get_possible_pathways": navigation.get_possible_pathways,
-            "go_to_node": navigation.go_to_node
+            "go_to_node": navigation.go_to_node,
+            "teleport": navigation.teleport
         }
 
         def run_eval():
@@ -136,7 +141,7 @@ def init_env() -> None:
 
     # Initial welcome message
     log_message("--- Command Interface ---")
-    log_message("Available functions: pan(angle), tilt(deg), zoom(rate), get_possible_pathways(), go_to_node(id)")
+    log_message("Available functions: pan(angle), tilt(deg), zoom(rate), teleport(lat, lng), get_possible_pathways(), go_to_node(id)")
     log_message("Enter commands below:")
 
     # Start GUI loop

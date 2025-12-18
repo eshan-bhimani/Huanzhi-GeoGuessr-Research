@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Get Street View Links</title>
+    <script>
+        function getLinks(panoId) {
+            const service = new google.maps.StreetViewService();
+            service.getPanorama({ pano: panoId }, (data, status) => {
+                if (status === "OK") {
+                    const links = data.links.map(link => {
+                        let desc = link.description || "";
+                        if (desc === "") {
+                            // Provide a fallback if description is empty
+                            desc = `Path at ${Math.round(link.heading)}°`;
+                        }
+                        return {
+                            id: link.pano,
+                            description: desc,
+                            heading: link.heading
+                        };
+                    });
+                    document.getElementById('results').innerText = JSON.stringify(links);
+                } else {
+                    document.getElementById('results').innerText = "ERROR: " + status;
+                }
+            });
+        }
+
+        function loadGoogleMaps(key, panoId) {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${key}`;
+            script.onload = () => {
+                getLinks(panoId);
+            };
+            script.onerror = () => {
+                document.getElementById('results').innerText = "ERROR: Failed to load Google Maps API";
+            };
+            document.head.appendChild(script);
+        }
+
+        window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const panoId = urlParams.get('pano');
+            const key = urlParams.get('key');
+
+            if (key && panoId) {
+                loadGoogleMaps(key, panoId);
+            } else if (!key) {
+                document.getElementById('results').innerText = "ERROR: No API Key provided";
+            } else {
+                document.getElementById('results').innerText = "ERROR: No Pano ID provided";
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div id="results">LOADING...</div>
+</body>
+
+</html>
