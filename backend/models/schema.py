@@ -17,6 +17,22 @@ class Observation(BaseModel):
     image: Optional[str] = None
     meta: MetaInfo
     
+class EnvironmentStateModel(BaseModel):
+    """
+    Response shape for environment state endpoints.
+    Mirrors the in-memory EnvironmentState object.
+    """
+    current_node_id: Optional[str] = None
+    gps: Optional[Dict[str, float]] = None
+    current_heading: Optional[float] = None
+    available_moves: List[Move] = Field(default_factory=list)
+    image: Optional[str] = None
+    metadata: MetaInfo
+    
+class InstructionEnvelope(BaseModel):
+    """Envelope used by /instruction/next."""
+    instruction: Optional[Dict[str, Any]] = None
+    
 class AgentAction(BaseModel):
     type: str  # e.g., "rotate", "move", "zoom"
     angle: Optional[float] = None  # for rotate

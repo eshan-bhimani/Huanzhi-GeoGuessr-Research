@@ -21,8 +21,7 @@
 
         <!-- ========== SIMPLE FASTAPI TEST SECTION ========== -->
         <h3>Send Observation to FastAPI Backend</h3>
-        <button id="send-step-btn">Send Step</button>
-
+        <button id="send-step-btn" type="button">Send Step</button>
         <h4>Backend Response:</h4>
         <pre id="action-text"></pre>
         <pre id="pano-json"></pre>
@@ -41,7 +40,8 @@
     window.onload = () => {
       AgentEnv.init({
         panoContainerId: 'pano-container',
-        randomButtonId: 'btn-random'
+        randomButtonId: 'btn-random',
+         startLocation: { lat:38.88918843, lng:-77.02835864 }, 
       });
 
       // Example: listen to updates
