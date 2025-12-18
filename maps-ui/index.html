@@ -29,10 +29,10 @@
   </div>
   
   <!-- Google Maps JS API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBorZKmYOKIfN1PB2fGg-CQKET83DvGwoA&libraries=geometry"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=Xapikey&libraries=geometry"></script>
   <!-- Expose the key for static image fetches -->
   <script>
-    window.GOOGLE_MAPS_KEY = 'AIzaSyBorZKmYOKIfN1PB2fGg-CQKET83DvGwoA';
+    window.GOOGLE_MAPS_KEY = 'Xapikey';
   </script>
   <!-- Your environment script -->
   <script src="app.js"></script>
@@ -41,8 +41,10 @@
       AgentEnv.init({
         panoContainerId: 'pano-container',
         randomButtonId: 'btn-random',
-         startLocation: { lat:38.88918843, lng:-77.02835864 }, 
+        startLocation: { lat:38.88918843, lng:-77.02835864 }, 
       });
+      // Start polling for MCP-pushed instructions (1s interval by default)
+      AgentEnv.startInstructionPolling(1000);
 
       // Example: listen to updates
       window.addEventListener('agent_observation_updated', (e) => {
