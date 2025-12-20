@@ -2,8 +2,9 @@ import uuid
 from pathlib import Path
 from io import BytesIO
 from PIL import Image
-# Save images under the shared GeoMap/images folder.
-MEDIA_ROOT = Path(r"E:\GeoMap\images")
+# Save images under the project root/images folder.
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+MEDIA_ROOT = ROOT_DIR / "images"
 MEDIA_ROOT.mkdir(parents=True, exist_ok=True)
 
 
