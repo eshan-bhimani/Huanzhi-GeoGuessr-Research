@@ -1,18 +1,24 @@
 from pathlib import Path
-from fastapi.staticfiles import StaticFiles
-from fastapi import FastAPI
-from api.state import router as state_router
-from api.update import router as update_router
-from api.actions import router as action_router
-from api.step import router as step_router
-from api.instruction import router as instruction_router
-from fastapi.middleware.cors import CORSMiddleware
+import sys
 from dotenv import load_dotenv
-from utils.storage import MEDIA_ROOT
 
-# Load .env relative to project root to ensure GOOGLE_MAPS_API_KEY is available
+# Allow running `uvicorn main:app` from the backend/ folder.
+if __package__ in (None, ""):
+    sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+# Load .env relative to project root before importing modules that read env at import time.
 ROOT_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT_DIR / ".env")
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from backend.api.actions import router as action_router
+from backend.api.instruction import router as instruction_router
+from backend.api.state import router as state_router
+from backend.api.step import router as step_router
+from backend.api.update import router as update_router
+from backend.utils.storage import MEDIA_ROOT
 
 app = FastAPI()
 app.add_middleware(

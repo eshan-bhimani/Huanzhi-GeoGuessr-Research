@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from core.environment import global_env_state
-from models.schema import EnvironmentStateModel
+from backend.state import global_session_store
+from backend.models import EnvironmentStateModel
 
 
 router = APIRouter()
@@ -8,4 +8,7 @@ router = APIRouter()
 @router.get("/environment/state", response_model=EnvironmentStateModel)
 async def get_environment_state():
     """Get the current state of the environment."""
-    return global_env_state.get_state()
+    session = global_session_store.get_or_create("default")
+    return session.to_env_state()
+
+
