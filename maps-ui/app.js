@@ -3,6 +3,7 @@ import { normalizeHeading } from "./streetview.js";
 
 window.AgentEnv = AgentEnv;
 
+// Render the list of move buttons based on available moves.
 function renderMoveButtons(moves) {
   const list = document.getElementById("moves-list");
   if (!list) return;
@@ -33,24 +34,28 @@ function renderMoveButtons(moves) {
   });
 }
 
+// Convert a heading into a simple arrow label.
 function getArrowIcon(heading) {
   const directions = ["^", "NE", ">", "SE", "v", "SW", "<", "NW"];
   const idx = Math.round(normalizeHeading(heading) / 45) % 8;
   return directions[idx];
 }
 
+// Shorten long string values for display.
 function shortenText(value, max = 120) {
   if(typeof value !== "string") return value;
   if(value.length <= max) return value;
   return `${value.slice(0, max)}... (${value.length} chars)`;
 }
 
+// Render the latest observation data and moves list.
 function renderObservation(obs) {
   const outEl = document.getElementById("ai-output");
   if (outEl) outEl.value = JSON.stringify(obs, null, 2);
   renderMoveButtons(obs?.available_moves || []);
 }
 
+// Render the last step result and image preview.
 function renderStep(result) {
   const panoImgEl = document.getElementById("pano-img");
   const imageSrc =
@@ -71,6 +76,7 @@ function renderStep(result) {
   }
 }
 
+// Bind the button that sends the current observation to the backend.
 function bindSendStepButton() {
   const sendStepBtn = document.getElementById("send-step-btn");
   if (!sendStepBtn) return;
@@ -101,6 +107,7 @@ function bindSendStepButton() {
   });
 }
 
+// Bind the random teleport button.
 function bindTeleportButton(buttonId) {
   const randomBtn = document.getElementById(buttonId);
   if (!randomBtn) return;
@@ -109,6 +116,7 @@ function bindTeleportButton(buttonId) {
   });
 }
 
+// Bind the location input button to teleport to a custom location.
 function bindLocationButton() {
   const btn = document.getElementById("go-location-btn");
   if(!btn) return;
@@ -134,6 +142,7 @@ function bindLocationButton() {
   });
 }
 
+// Initialize the app UI and AgentEnv wiring.
 function initApp() {
   const cfg = window.APP_CONFIG || {};
   const panoContainerId = cfg.panoContainerId || "pano-container";

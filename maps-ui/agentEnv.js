@@ -17,13 +17,15 @@ import {
 import { sendStep, fetchNextInstruction, setApiBase } from "./backEnd.js";
 
 const DEFAULT_FALLBACK_LOCATION = { lat: 37.7749, lng: -122.4194 };
+const DEFAULT_RADIUS = 500;
+const DEFAULT_HEADING = 120;
 
 const agentConfig = {
   panoContainerId: "pano",
   randomButtonId: "teleport-random-btn",
   startLocation: null,
-  radius: 500,
-  initialHeading: 120,
+  radius: DEFAULT_RADIUS,
+  initialHeading: DEFAULT_HEADING,
   apiBase: null,
   panoOptions: null,
   pollTimeoutMs: 25000,
@@ -34,18 +36,39 @@ let messageBridgeAttached = false;
 let pollingActive = false;
 let pollingTimerId = null;
 
+// Apply runtime config overrides to the agent config.
 function applyConfig(cfg = {}) {
   if (cfg.panoContainerId) agentConfig.panoContainerId = cfg.panoContainerId;
   if (cfg.randomButtonId) agentConfig.randomButtonId = cfg.randomButtonId;
   if (cfg.startLocation) agentConfig.startLocation = cfg.startLocation;
   if (Number.isFinite(cfg.radius)) agentConfig.radius = cfg.radius;
-  if (Number.isFinite(cfg.startRadius)) agentConfig.radius = cfg.startRadius;
   if (Number.isFinite(cfg.initialHeading)) agentConfig.initialHeading = cfg.initialHeading;
   if (cfg.apiBase) agentConfig.apiBase = cfg.apiBase;
   if (cfg.panoOptions) agentConfig.panoOptions = cfg.panoOptions;
   if (Number.isFinite(cfg.pollTimeoutMs)) agentConfig.pollTimeoutMs = cfg.pollTimeoutMs;
 }
 
+// Resolve location, radius, and heading with overrides and defaults.
+function resolveTeleportParams(overrides = {}) {
+  const location =
+    overrides.location ?? agentConfig.startLocation ?? DEFAULT_FALLBACK_LOCATION;
+  const radius = Number.isFinite(overrides.radius)
+    ? overrides.radius
+    : Number.isFinite(agentConfig.radius)
+    ? agentConfig.radius
+    : DEFAULT_RADIUS;
+  const heading =
+    typeof overrides.heading === "number" && Number.isFinite(overrides.heading)
+      ? overrides.heading
+      : typeof agentConfig.initialHeading === "number" &&
+        Number.isFinite(agentConfig.initialHeading)
+      ? agentConfig.initialHeading
+      : DEFAULT_HEADING;
+
+  return { location, radius, heading };
+}
+
+// Initialize the Street View environment from a config object.
 async function initFromConfig(cfg = {}) {
   if (isInitialized) return buildObservation();
   applyConfig(cfg);
@@ -59,13 +82,7 @@ async function initFromConfig(cfg = {}) {
   attachPanoramaListeners(panorama);
 
   const obsPromise = waitForStableObservation(2000, 150);
-  const location = agentConfig.startLocation || DEFAULT_FALLBACK_LOCATION;
-  const radius = Number.isFinite(agentConfig.radius) ? agentConfig.radius : 500;
-  const heading =
-    typeof agentConfig.initialHeading === "number" &&
-    Number.isFinite(agentConfig.initialHeading)
-      ? agentConfig.initialHeading
-      : 120;
+  const { location, radius, heading } = resolveTeleportParams();
 
   const panoId = await teleportToLocation({
     location,
@@ -85,19 +102,15 @@ async function initFromConfig(cfg = {}) {
   return obs;
 }
 
+// Initialize once using defaults or a provided config.
 function init(options) {
   if (isInitialized) return;
   return initFromConfig(options || {});
 }
 
+// Teleport to a random pano around the start location.
 async function teleportRandom() {
-  const location = agentConfig.startLocation || DEFAULT_FALLBACK_LOCATION;
-  const radius = Number.isFinite(agentConfig.radius) ? agentConfig.radius : 500;
-  const heading =
-    typeof agentConfig.initialHeading === "number" &&
-    Number.isFinite(agentConfig.initialHeading)
-      ? agentConfig.initialHeading
-      : 120;
+  const { location, radius, heading } = resolveTeleportParams();
 
   const panoId = await teleportToLocation({
     location,
@@ -110,6 +123,7 @@ async function teleportRandom() {
   return panoId;
 }
 
+// Set a new start location and optionally send the updated observation.
 async function setStartLocation(location, radius, heading, send = true) {
   if (!location) return null;
 
@@ -120,10 +134,12 @@ async function setStartLocation(location, radius, heading, send = true) {
   const obsPromise = waitForStableObservation(2000, 150);
   resetStepState();
 
+  const { location: targetLocation, radius: targetRadius, heading: targetHeading } =
+    resolveTeleportParams({ location, radius, heading });
   const panoId = await teleportToLocation({
-    location,
-    radius: Number.isFinite(radius) ? radius : agentConfig.radius,
-    heading: Number.isFinite(heading) ? heading : agentConfig.initialHeading,
+    location: targetLocation,
+    radius: targetRadius,
+    heading: targetHeading,
     fallbackLocation: DEFAULT_FALLBACK_LOCATION,
   });
 
@@ -135,11 +151,13 @@ async function setStartLocation(location, radius, heading, send = true) {
   if (send && obs) await sendStep(obs);
   return obs;
 }
+// Move to a target pano and increment the step counter.
 function moveToPanoSafe(panoId, heading = null) {
   incrementStepCount();
   moveToPanoInternal(panoId, heading);
 }
 
+// Apply a backend instruction and send the resulting observation.
 async function applyInstruction(instr) {
   if (!instr) return null;
 
@@ -162,6 +180,7 @@ async function applyInstruction(instr) {
   return sendStep(obs);
 }
 
+// Fetch and apply a single instruction from the backend.
 async function pollInstructionsOnce() {
   if (document.hidden) return;
   const instr = await fetchNextInstruction(agentConfig.pollTimeoutMs);
@@ -170,6 +189,7 @@ async function pollInstructionsOnce() {
   await applyInstruction(instr);
 }
 
+// Start the background polling loop for instructions.
 function startInstructionPolling(intervalMs = 1000) {
   if (pollingActive) return;
   pollingActive = true;
@@ -187,6 +207,7 @@ function startInstructionPolling(intervalMs = 1000) {
   loop();
 }
 
+// Stop the background polling loop for instructions.
 function stopInstructionPolling() {
   pollingActive = false;
   if (pollingTimerId) {
@@ -195,6 +216,7 @@ function stopInstructionPolling() {
   }
 }
 
+// Listen for postMessage instructions and apply them.
 function attachMessageBridge() {
   if (messageBridgeAttached) return;
   messageBridgeAttached = true;

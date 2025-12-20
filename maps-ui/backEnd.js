@@ -1,5 +1,6 @@
 let apiBase = "http://localhost:8000";
 
+// Set the API base URL for backend requests.
 function setApiBase(baseUrl) {
   if (typeof baseUrl !== "string") return;
   const trimmed = baseUrl.trim();
@@ -7,10 +8,12 @@ function setApiBase(baseUrl) {
   apiBase = trimmed.endsWith("/") ? trimmed.slice(0, -1) : trimmed;
 }
 
+// Get the current API base URL.
 function getApiBase() {
   return apiBase;
 }
 
+// Send the current observation to the backend step endpoint.
 async function sendStep(observation) {
   if (!observation) throw new Error("No observation provided");
 
@@ -35,6 +38,7 @@ async function sendStep(observation) {
   return payload;
 }
 
+// Fetch the next pending instruction from the backend.
 async function fetchNextInstruction(timeoutMs = 25000) {
   const timeoutSec = Math.max(0, Number(timeoutMs)) / 1000;
   const suffix = timeoutSec > 0 ? `?timeout=${timeoutSec}` : "";

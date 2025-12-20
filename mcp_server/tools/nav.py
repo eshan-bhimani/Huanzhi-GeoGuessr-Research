@@ -3,6 +3,7 @@ import asyncio
 from mcp_server.backend_client import BackendClient
 
 
+
 SCROLL_ROTATE_STEP = 30.0  # degrees
 SCROLL_BACK_ROTATION = 180.0  # degrees
 SCROLL_UP_PITCH_STEP = 15.0  # degrees (optional)
@@ -45,6 +46,7 @@ def helper_heading_to_direction(angle: float) -> str:
     return "N"
 
 def _in_cone(h: float, cones: List[tuple[float, float]]) -> bool:
+    """Return True if a heading is within any cone range."""
     h = h % 360
     for lo, hi in cones:
         if lo <= hi and lo <= h <= hi:
@@ -53,61 +55,10 @@ def _in_cone(h: float, cones: List[tuple[float, float]]) -> bool:
             return True
     return False
 
-
-def scroll_left(state: Dict[str, Any]) -> Dict[str, Any]:
-    """Rotate camera left by scroll_rotate_step degrees without moving."""
-    current_heading = float(state.get("current_heading", 0.0))
-    new_heading = (current_heading - SCROLL_ROTATE_STEP) % 360.0
-
-    return {
-        "action": "scroll_left",
-        "old_heading": current_heading,
-        "new_heading": new_heading,
-        "delta": -SCROLL_ROTATE_STEP,
-    }
-
-
-def scroll_right(state: Dict[str, Any]) -> Dict[str, Any]:
-    """Rotate camera right by scroll_rotate_step degrees without moving."""
-    current_heading = float(state.get("current_heading", 0.0))
-    new_heading = (current_heading + SCROLL_ROTATE_STEP) % 360.0
-
-    return {
-        "action": "scroll_right",
-        "old_heading": current_heading,
-        "new_heading": new_heading,
-        "delta": SCROLL_ROTATE_STEP,
-    }
-
-
-def scroll_up(state: Dict[str, Any]) -> Dict[str, Any]:
-    """Tilt camera upward by SCROLL_UP_PITCH_STEP degrees."""
-    old_pitch = float(state.get("pitch", 0.0))
-    new_pitch = min(old_pitch + SCROLL_UP_PITCH_STEP, 90.0)
-
-    return {
-        "action": "scroll_up",
-        "old_pitch": old_pitch,
-        "new_pitch": new_pitch,
-        "delta": SCROLL_UP_PITCH_STEP,
-    }
-
-
-def scroll_down(state: Dict[str, Any]) -> Dict[str, Any]:
-    """Tilt camera downward by SCROLL_UP_PITCH_STEP degrees."""
-    old_pitch = float(state.get("pitch", 0.0))
-    new_pitch = max(old_pitch - SCROLL_UP_PITCH_STEP, -90.0)
-
-    return {
-        "action": "scroll_up",
-        "old_pitch": old_pitch,
-        "new_pitch": new_pitch,
-        "delta": -SCROLL_UP_PITCH_STEP,
-    }
-
-
 class NavTools:
+    """Navigation helpers that emit backend instructions."""
     def __init__(self, backend_client: BackendClient | None = None) -> None:
+        """Create a NavTools instance with an optional backend client."""
         self.backend = backend_client or BackendClient()
     
     def _deliver_instruction(self, instr: Dict[str, Any]) -> None:
@@ -121,16 +72,19 @@ class NavTools:
             print(f"[NavTools] Failed to deliver instruction: {exc}")
     
     async def _get_state(self) -> Dict[str, Any]:
+        """Fetch the latest state snapshot from the backend."""
         return await asyncio.to_thread(self.backend.get_state)
     
     # State helpers
     async def check_direction(self):
+        """Return the current heading and compass direction."""
         state = await self._get_state()
         heading = float(state.get("current_heading", 0.0))
         compass = helper_heading_to_direction(heading)
         return {"heading": heading, "direction": compass, "description": f"Facing {compass} ({heading:.1f} deg)"}
     
     async def check_available_moves(self):
+        """List available move actions plus universal scroll/zoom actions."""
         state = await self._get_state()
         current_heading = float(state.get("current_heading", 0.0))
         available_steps = state.get("available_moves", [])
@@ -162,6 +116,7 @@ class NavTools:
 
     # Move helpers (instructions only)
     async def _move_and_instruct(self, direction_key: str):
+        """Pick a move in the given cone and emit an instruction."""
         state = await self._get_state()
         moves = state.get("available_moves", [])
         cones = DIR_CONES[direction_key]
@@ -174,7 +129,7 @@ class NavTools:
         target_pano = target["next_node_id"]
         target_heading = target["heading"]
         result = {
-             "action": "move",
+            "action": "move",
             "direction": direction_key,
             "target_pano_id": target_pano,
             "move_heading": target_heading,
@@ -184,18 +139,35 @@ class NavTools:
         await asyncio.to_thread(self._deliver_instruction, result)
         return result
     
-    async def move_north(self): return await self._move_and_instruct("N")
-    async def move_northeast(self): return await self._move_and_instruct("NE")
-    async def move_east(self): return await self._move_and_instruct("E")
-    async def move_southeast(self): return await self._move_and_instruct("SE")
-    async def move_south(self): return await self._move_and_instruct("S")
-    async def move_southwest(self): return await self._move_and_instruct("SW")
-    async def move_west(self): return await self._move_and_instruct("W")
-    async def move_northwest(self): return await self._move_and_instruct("NW")
+    async def move_north(self):
+        """Move to a pano in the N cone."""
+        return await self._move_and_instruct("N")
+    async def move_northeast(self):
+        """Move to a pano in the NE cone."""
+        return await self._move_and_instruct("NE")
+    async def move_east(self):
+        """Move to a pano in the E cone."""
+        return await self._move_and_instruct("E")
+    async def move_southeast(self):
+        """Move to a pano in the SE cone."""
+        return await self._move_and_instruct("SE")
+    async def move_south(self):
+        """Move to a pano in the S cone."""
+        return await self._move_and_instruct("S")
+    async def move_southwest(self):
+        """Move to a pano in the SW cone."""
+        return await self._move_and_instruct("SW")
+    async def move_west(self):
+        """Move to a pano in the W cone."""
+        return await self._move_and_instruct("W")
+    async def move_northwest(self):
+        """Move to a pano in the NW cone."""
+        return await self._move_and_instruct("NW")
 
 
     # Scroll functions
     async def scroll_left(self):
+        """Rotate the view left by a fixed heading step."""
         state = await self._get_state()
         current = float(state.get("current_heading", 0.0))
         new_heading = (current - SCROLL_ROTATE_STEP) % 360
@@ -211,6 +183,7 @@ class NavTools:
         return result
     
     async def scroll_right(self):
+        """Rotate the view right by a fixed heading step."""
         state = await self._get_state()
         current = float(state.get("current_heading", 0.0))
         new_heading = (current + SCROLL_ROTATE_STEP) % 360
@@ -226,6 +199,7 @@ class NavTools:
         return result
 
     async def scroll_up(self):
+        """Tilt the view up by a fixed pitch step."""
         state = await self._get_state()
         current = float(state.get("pitch", 0.0))
         new_pitch = min(current + SCROLL_UP_PITCH_STEP, 90.0)
@@ -241,6 +215,7 @@ class NavTools:
         return result
 
     async def scroll_down(self):
+        """Tilt the view down by a fixed pitch step."""
         state = await self._get_state()
         current = float(state.get("pitch", 0.0))
         new_pitch = max(current - SCROLL_UP_PITCH_STEP, -90.0)
@@ -255,10 +230,11 @@ class NavTools:
         }
         await asyncio.to_thread(self._deliver_instruction, result)
         return result
-    
+
     # Zoom functions
 
     async def zoom_in(self):
+        """Zoom in by a fixed step."""
         state = await self._get_state()
         current = float(state.get("zoom", 1.0))
         new_zoom = current + ZOOM_STEP
@@ -273,6 +249,7 @@ class NavTools:
         return result
 
     async def zoom_out(self):
+        """Zoom out by a fixed step, clamped at zero."""
         state = await self._get_state()
         current = float(state.get("zoom", 1.0))
         new_zoom = max(current - ZOOM_STEP, 0.0)
