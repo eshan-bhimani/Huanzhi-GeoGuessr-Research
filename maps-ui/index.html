@@ -3,54 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>AI Street View Navigator</title>
-    <style>#pano-container { width: 70%; height: 100vh; float: left; }
-           #side-panel { width: 30%; height: 100vh; float: left; padding: 8px; box-sizing: border-box; }
-           #ai-output { width: 100%; height: 40vh; }
-           .move-btn {display: block; margin: 4px 0; padding: 4px 8px;}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="pano-container"></div>
-  <div id="side-panel">
-    <button id="btn-random">Teleport Random</button>
-    <h3>Available Moves</h3>
-    <div id="moves-list"></div>
-    <h3>Observation JSON</h3>
-    <textarea id="ai-output" readonly></textarea>
-     <hr>
+  <div id="app">
+    <div id="pano-container"></div>
+    <div id="side-panel">
+      <div class="panel-header">
+        <div>
+          <h1>AI Street View Navigator</h1>
+          <p class="panel-subtitle">Control the scene, capture a clean initial state.</p>
+        </div>
+        <div class="panel-actions">
+          <button id="btn-random" class="btn btn-ghost" type="button">Teleport Random</button>
+          <button id="send-step-btn" class="btn btn-primary" type="button">Send Step</button>
+        </div>
+      </div>
 
-        <!-- ========== SIMPLE FASTAPI TEST SECTION ========== -->
-        <h3>Send Observation to FastAPI Backend</h3>
-        <button id="send-step-btn" type="button">Send Step</button>
-        <h4>Backend Response:</h4>
+      <section class="card">
+        <h3>Start Location</h3>
+        <div class="field-grid">
+          <div class="field">
+            <label for="lat-input">Lat</label>
+            <input id="lat-input" type="number" step="0.000001" placeholder="37.7749">
+          </div>
+          <div class="field">
+            <label for="lng-input">Lng</label>
+            <input id="lng-input" type="number" step="0.000001" placeholder="-122.4194">
+          </div>
+          <div class="field">
+            <label for="radius-input">Radius (m)</label>
+            <input id="radius-input" type="number" step="1" placeholder="500">
+          </div>
+          <div class="field">
+            <label for="heading-input">Heading</label>
+            <input id="heading-input" type="number" step="1" placeholder="120">
+          </div>
+        </div>
+        <button id="go-location-btn" class="btn btn-secondary" type="button">Go</button>
+      </section>
+
+
+      <section class="card">
+        <h3>Observation JSON</h3>
+        <textarea id="ai-output" readonly></textarea>
+      </section>
+
+      <section class="card">
+        <h3>Backend Response</h3>
         <pre id="action-text"></pre>
         <pre id="pano-json"></pre>
-        <img id="pano-img" style="width:200px; border:1px solid #ccc;" />
+        <img id="pano-img" alt="Street View snapshot" />
+      </section>
+    </div>
   </div>
   
   <!-- Google Maps JS API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=Xapikey&libraries=geometry"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBorZKmYOKIfN1PB2fGg-CQKET83DvGwoA&libraries=geometry"></script>
   <!-- Expose the key for static image fetches -->
   <script>
-    window.GOOGLE_MAPS_KEY = 'Xapikey';
-  </script>
-  <!-- Your environment script -->
-  <script src="app.js"></script>
-  <script>
-    window.onload = () => {
-      AgentEnv.init({
-        panoContainerId: 'pano-container',
-        randomButtonId: 'btn-random',
-        startLocation: { lat:38.88918843, lng:-77.02835864 }, 
-      });
-      // Start polling for MCP-pushed instructions (1s interval by default)
-      AgentEnv.startInstructionPolling(1000);
-
-      // Example: listen to updates
-      window.addEventListener('agent_observation_updated', (e) => {
-        console.log('New observation:', e.detail);
-      });
+    window.GOOGLE_MAPS_KEY = 'AIzaSyBorZKmYOKIfN1PB2fGg-CQKET83DvGwoA';
+    window.APP_CONFIG = {
+      panoContainerId: "pano-container",
+      randomButtonId: "btn-random",
+      startLocation: {  lat: 38.88918843, lng: -77.02835864  },
+      radius: 500,
+      initialHeading: 120,
+      apiBase: "http://localhost:8000",
+      pollIntervalMs: 1000,
     };
   </script>
+  <!-- Your environment script -->
+  <script type="module" src="app.js"></script>
+ 
 </body>
 </html>

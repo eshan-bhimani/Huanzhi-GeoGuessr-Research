@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, Query
 from core.instructions import global_instruction_store
 from models.schema import InstructionEnvelope
 
@@ -16,9 +16,13 @@ def push_instruction(payload: dict = Body(...)):
 
 
 @router.get("/instruction/next", response_model=InstructionEnvelope)
-def pop_instruction():
+def pop_instruction(timeout: float = Query(0.0, ge=0.0, le=60.0)):
     """
     Pop the next pending instruction (if any). Returns null when none available.
+    If timeout > 0, waits up to timeout seconds for a new instruction.
     """
-    instr = global_instruction_store.pop()
+    if timeout > 0:
+        instr = global_instruction_store.wait_for_instruction(timeout)
+    else:
+        instr = global_instruction_store.pop()
     return {"instruction": instr}
