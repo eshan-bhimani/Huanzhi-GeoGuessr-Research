@@ -5,21 +5,25 @@ let navToken = 0;
 
 const DEFAULT_POV = { heading: 34, pitch: 10}
 
+// Normalize a heading into the range [0, 360).
 function normalizeHeading(h) {
     const x = Number(h);
     if(!Number.isFinite(x)) return 0;
     return ((x % 360) + 360) % 360;
 }
 
+// Increment and return the navigation token to track latest navigation.
 function bumpNavToken() {
     navToken += 1;
     return navToken;
 }
 
+// Check whether a token is the latest navigation token.
 function isLatestToken(t) {
     return t === navToken;
 }
 
+// Create (or return) the Street View panorama and service.
 function ensureStreetView(options= {}) {
     if (panorama) return panorama;
 
@@ -49,10 +53,12 @@ function ensureStreetView(options= {}) {
     return panorama;
 }
 
+// Return the current Street View panorama instance.
 function getPanorama() {
     return panorama
 }
 
+// Move to a pano and optionally set the heading once loaded.
 function moveToPano(panoId, heading = null) {
     if(!panorama) return;
 
@@ -71,6 +77,7 @@ function moveToPano(panoId, heading = null) {
     });
 }
 
+// Teleport to a location within a radius and resolve the pano id.
 function teleportToLocation(options = {}) {
     if(!svService || !panorama) return Promise.resolve(null);
 
@@ -103,18 +110,21 @@ function teleportToLocation(options = {}) {
     });
 }
 
+// Set the panorama heading without changing the pano.
 function scrollHeading(newHeading) {
     if(!panorama) return;
     const pov = panorama.getPov() || { heading: 0, pitch: 0};
     panorama.setPov({...pov, heading: normalizeHeading(newHeading)});
 }
 
+// Set the panorama pitch without changing the pano.
 function scrollPitch(newPitch) {
     if(!panorama) return;
     const pov = panorama.getPov() || { heading: 0, pitch: 0};
     panorama.setPov({...pov, pitch: Number(newPitch)});
 }
 
+// Set the panorama zoom level.
 function zoom(newZoom) {
     if(!panorama) return;
     panorama.setZoom(Number(newZoom));
