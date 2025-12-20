@@ -20,3 +20,5 @@ Thumbs.db
 .vscode/
 images/
 *.pyc
+*.md
+mcp_server/

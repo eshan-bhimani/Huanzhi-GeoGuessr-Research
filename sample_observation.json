@@ -1,0 +1,12 @@
+{
+  "observation": {
+    "current_node_id": "REPLACE_PANO_ID",
+    "gps": { "lat": 37.7749, "lng": -122.4194 },
+    "current_heading": 120,
+    "available_moves": [
+      { "heading": 90, "next_node_id": "REPLACE_NEXT_PANO_ID" }
+    ],
+    "image": null,
+    "meta": { "step_count": 0, "history": ["REPLACE_PANO_ID"] }
+  }
+}

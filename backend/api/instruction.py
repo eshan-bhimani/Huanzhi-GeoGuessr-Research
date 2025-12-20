@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Body, Query
-from core.instructions import global_instruction_store
-from models.schema import InstructionEnvelope
+from backend.state import global_instruction_store
+from backend.models import InstructionEnvelope
 
 router = APIRouter()
 
@@ -26,3 +26,5 @@ def pop_instruction(timeout: float = Query(0.0, ge=0.0, le=60.0)):
     else:
         instr = global_instruction_store.pop()
     return {"instruction": instr}
+
+
