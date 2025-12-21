@@ -1,7 +1,7 @@
 """
-Simple in-memory instruction store shared between MCP tools and the frontend.
+Simple in-memory instruction store shared between the backend and frontend.
 
-MCP tools push the latest instruction here; the frontend polls and pops it.
+Producers push the latest instruction here; the frontend polls and pops it.
 """
 
 from typing import Any, Optional
