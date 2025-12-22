@@ -15,7 +15,6 @@
           <p class="panel-subtitle">Control the scene, capture a clean initial state.</p>
         </div>
         <div class="panel-actions">
-          <button id="btn-random" class="btn btn-ghost" type="button">Teleport Random</button>
           <button id="send-step-btn" class="btn btn-primary" type="button">Send Step</button>
         </div>
       </div>
@@ -30,10 +29,6 @@
           <div class="field">
             <label for="lng-input">Lng</label>
             <input id="lng-input" type="number" step="0.000001" placeholder="-122.4194">
-          </div>
-          <div class="field">
-            <label for="radius-input">Radius (m)</label>
-            <input id="radius-input" type="number" step="1" placeholder="500">
           </div>
           <div class="field">
             <label for="heading-input">Heading</label>
@@ -58,23 +53,33 @@
     </div>
   </div>
   
-  <!-- Google Maps JS API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=api_key&libraries=geometry"></script>
-  <!-- Expose the key for static image fetches -->
+  <!-- Local overrides -->
+  <script src="config.local.js"></script>
+  <!-- URL param parsing + runtime config -->
+  <script src="config.js"></script>
+  <!-- Load Google Maps JS API with runtime key, then bootstrap app.js -->
   <script>
-    window.GOOGLE_MAPS_KEY = 'api_key';
-    window.APP_CONFIG = {
-      panoContainerId: "pano-container",
-      randomButtonId: "btn-random",
-      startLocation: {  lat: 38.88918843, lng: -77.02835864  },
-      radius: 500,
-      initialHeading: 120,
-      apiBase: "http://localhost:8000",
-      pollIntervalMs: 1000,
-    };
+    (function(){
+      const key = window.GOOGLE_MAPS_KEY;
+      if(!key) {
+        console.error("Missing GOOGLE_MAPS_KEY. Set maps-ui/config.local.js or add ?gmapsKey=...");
+        return;
+      }
+      const script = document.createElement('script');
+      script.src =
+        "https://maps.googleapis.com/maps/api/js?key=" +
+        encodeURIComponent(key) +
+        "&libraries=geometry";
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        const appScript = document.createElement('script');
+        appScript.type = "module";
+        appScript.src = "app.js";
+        document.body.appendChild(appScript);
+      };
+      document.head.appendChild(script);
+    })();
   </script>
-  <!-- Your environment script -->
-  <script type="module" src="app.js"></script>
- 
 </body>
 </html>

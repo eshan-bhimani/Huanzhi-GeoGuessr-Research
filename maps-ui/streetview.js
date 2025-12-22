@@ -89,7 +89,14 @@ function teleportToLocation(options = {}) {
         typeof options.heading === "number" && Number.isFinite(options.heading)
         ? options.heading
         : 100;
-
+    const pitch = 
+        typeof options.pitch === "number" && Number.isFinite(options.pitch)
+        ? options.pitch
+        : 0;
+    const zoom = 
+        typeof options.zoom === "number" && Number.isFinite(options.zoom)
+        ? options.zoom
+        : null;
 
     return new Promise((resolve) => {
         svService.getPanorama({ location: target, radius }, ( data, status) => {
@@ -99,7 +106,8 @@ function teleportToLocation(options = {}) {
                 panorama.setPano(panoId);
                 google.maps.event.addListenerOnce(panorama, "pano_changed", () =>{
                   if(!isLatestToken(token)) return resolve(null);
-                  panorama.setPov({ heading: normalizeHeading(heading), pitch: 0});
+                  panorama.setPov({ heading: normalizeHeading(heading), pitch});
+                  if(Number.isFinite(zoom)) panorama.setZoom(zoom);
                   resolve(panoId)
                 });
             } else {

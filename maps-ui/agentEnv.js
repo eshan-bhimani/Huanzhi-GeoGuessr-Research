@@ -17,18 +17,18 @@ import {
 import { sendStep, fetchNextInstruction, setApiBase } from "./backEnd.js";
 
 const DEFAULT_FALLBACK_LOCATION = { lat: 37.7749, lng: -122.4194 };
-const DEFAULT_RADIUS = 500;
 const DEFAULT_HEADING = 120;
 
 const agentConfig = {
   panoContainerId: "pano",
-  randomButtonId: "teleport-random-btn",
   startLocation: null,
-  radius: DEFAULT_RADIUS,
   initialHeading: DEFAULT_HEADING,
+  initialPitch: 0,
+  initialZoom: null,
   apiBase: null,
   panoOptions: null,
   pollTimeoutMs: 25000,
+  sendStepOnInit: true,
 };
 
 let isInitialized = false;
@@ -39,24 +39,22 @@ let pollingTimerId = null;
 // Apply runtime config overrides to the agent config.
 function applyConfig(cfg = {}) {
   if (cfg.panoContainerId) agentConfig.panoContainerId = cfg.panoContainerId;
-  if (cfg.randomButtonId) agentConfig.randomButtonId = cfg.randomButtonId;
   if (cfg.startLocation) agentConfig.startLocation = cfg.startLocation;
-  if (Number.isFinite(cfg.radius)) agentConfig.radius = cfg.radius;
   if (Number.isFinite(cfg.initialHeading)) agentConfig.initialHeading = cfg.initialHeading;
+  if (Number.isFinite(cfg.initialPitch)) agentConfig.initialPitch = cfg.initialPitch;
+  if (Number.isFinite(cfg.initialZoom)) agentConfig.initialZoom = cfg.initialZoom;
   if (cfg.apiBase) agentConfig.apiBase = cfg.apiBase;
   if (cfg.panoOptions) agentConfig.panoOptions = cfg.panoOptions;
   if (Number.isFinite(cfg.pollTimeoutMs)) agentConfig.pollTimeoutMs = cfg.pollTimeoutMs;
+  if (cfg.sendStepOnInit === true || cfg.sendStepOnInit === false) {
+    agentConfig.sendStepOnInit = cfg.sendStepOnInit;
+  }
 }
 
-// Resolve location, radius, and heading with overrides and defaults.
+// Resolve location and heading with overrides and defaults.
 function resolveTeleportParams(overrides = {}) {
   const location =
     overrides.location ?? agentConfig.startLocation ?? DEFAULT_FALLBACK_LOCATION;
-  const radius = Number.isFinite(overrides.radius)
-    ? overrides.radius
-    : Number.isFinite(agentConfig.radius)
-    ? agentConfig.radius
-    : DEFAULT_RADIUS;
   const heading =
     typeof overrides.heading === "number" && Number.isFinite(overrides.heading)
       ? overrides.heading
@@ -64,8 +62,22 @@ function resolveTeleportParams(overrides = {}) {
         Number.isFinite(agentConfig.initialHeading)
       ? agentConfig.initialHeading
       : DEFAULT_HEADING;
-
-  return { location, radius, heading };
+  const pitch =
+    typeof overrides.pitch === "number" && Number.isFinite(overrides.pitch)
+      ? overrides.pitch
+      : typeof agentConfig.initialPitch === "number" &&
+        Number.isFinite(agentConfig.initialPitch)
+      ? agentConfig.initialPitch
+      : 0;
+  const zoom =
+    typeof overrides.zoom === "number" && Number.isFinite(overrides.zoom)
+      ? overrides.zoom
+      : typeof agentConfig.initialZoom === "number" &&
+        Number.isFinite(agentConfig.initialZoom)
+      ? agentConfig.initialZoom
+      : null;
+ 
+  return { location, heading, pitch, zoom };
 }
 
 // Initialize the Street View environment from a config object.
@@ -82,12 +94,14 @@ async function initFromConfig(cfg = {}) {
   attachPanoramaListeners(panorama);
 
   const obsPromise = waitForStableObservation(2000, 150);
-  const { location, radius, heading } = resolveTeleportParams();
+  const { location, heading, pitch, zoom } = resolveTeleportParams();
+
 
   const panoId = await teleportToLocation({
     location,
-    radius,
     heading,
+    pitch,
+    zoom,
     fallbackLocation: DEFAULT_FALLBACK_LOCATION,
   });
 
@@ -95,7 +109,7 @@ async function initFromConfig(cfg = {}) {
 
   let obs = await obsPromise;
   if (!obs) obs = await buildObservation();
-  if (obs) await sendStep(obs);
+  if (obs && agentConfig.sendStepOnInit !== false) await sendStep(obs);
 
   attachMessageBridge();
   isInitialized = true;
@@ -108,38 +122,28 @@ function init(options) {
   return initFromConfig(options || {});
 }
 
-// Teleport to a random pano around the start location.
-async function teleportRandom() {
-  const { location, radius, heading } = resolveTeleportParams();
-
-  const panoId = await teleportToLocation({
-    location,
-    radius,
-    heading,
-    fallbackLocation: DEFAULT_FALLBACK_LOCATION,
-  });
-
-  if (panoId) resetStepState(panoId);
-  return panoId;
-}
-
 // Set a new start location and optionally send the updated observation.
-async function setStartLocation(location, radius, heading, send = true) {
+async function setStartLocation(location, heading, send = true, extras = null)  {
   if (!location) return null;
-
-  if (Number.isFinite(radius)) agentConfig.radius = radius;
+  const pitch = extras?.pitch;
+  const zoom = extras?.zoom;
   if (Number.isFinite(heading)) agentConfig.initialHeading = heading;
   agentConfig.startLocation = location;
 
   const obsPromise = waitForStableObservation(2000, 150);
   resetStepState();
-
-  const { location: targetLocation, radius: targetRadius, heading: targetHeading } =
-    resolveTeleportParams({ location, radius, heading });
+  const {
+    location: targetLocation,
+    heading: targetHeading,
+    pitch: targetPitch,
+    zoom: targetZoom,
+  } = resolveTeleportParams({ location, heading, pitch, zoom });
+  
   const panoId = await teleportToLocation({
     location: targetLocation,
-    radius: targetRadius,
     heading: targetHeading,
+    pitch: targetPitch,
+    zoom: targetZoom,
     fallbackLocation: DEFAULT_FALLBACK_LOCATION,
   });
 
@@ -251,7 +255,6 @@ const AgentEnv = {
   getObservation: buildObservation,
   getFreshObservation,
   sendStep,
-  teleportRandom,
   setStartLocation,
   moveToPano: moveToPanoSafe,
   scrollHeading,

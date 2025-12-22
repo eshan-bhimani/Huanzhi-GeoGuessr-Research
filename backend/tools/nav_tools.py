@@ -1,5 +1,4 @@
 from typing import Any, Dict, List
-
 from .contracts import ToolContext, ToolResult
 from .registry import register_tool
 

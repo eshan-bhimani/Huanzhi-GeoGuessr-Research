@@ -160,7 +160,8 @@ def main() -> int:
         except Exception as exc:
             print(f"Tool error: {exc}")
             continue
-
+        
+            
         if result.instruction:
             try:
                 push_instruction(api_base, result.instruction)

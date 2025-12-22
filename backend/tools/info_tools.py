@@ -15,23 +15,3 @@ def get_image(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     mime = header.split(";", 1)[0].split(":", 1)[1]
     return ToolResult(updates={"mime": mime, "data_url": data_url, "base64": b64})
 
-
-@register_tool("describe_scene")
-def describe_scene(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
-    return ToolResult(updates={"description": "A detailed description of the current scene."})
-
-@register_tool("survey_environment_plan")
-def survey_environment_plan(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
-    return ToolResult(updates={
-        "type": "plan",
-        "action": "survey_environment",
-        "plan": [
-            {"rotate": "N", "angle": 0},
-            {"rotate": "E", "angle": 90},
-            {"rotate": "S", "angle": 180},
-            {"rotate": "W", "angle": 270},
-            {"zoom_out": True},
-            {"zoom_in": True},
-        ],
-        "note": "Execute these steps with the rotate_view() and zoom() tools.",
-    })

@@ -62,6 +62,43 @@ python -m http.server 3000
 ```
 Then open `http://localhost:3000` and the page will talk to the backend at `http://localhost:8000`.
 
+## UI runtime config (any port)
+- Put your Maps JS key in `maps-ui/config.local.js`:
+```
+window.GOOGLE_MAPS_KEY = "YOUR_KEY_HERE";
+```
+- UI can run on any port:
+```
+python -m http.server 5505 --directory maps-ui
+```
+- If the backend is not on `http://localhost:8000`, pass `apiBase`:
+```
+http://localhost:5505/index.html?apiBase=http://127.0.0.1:9000
+```
+- Optional params: `autostart`, `lat`, `lng`, `heading`, `pitch`, `fov`, `session`, `apiBase`.
+
+## Headless CLI-only start (no automation libs)
+Prereqs:
+- Chrome/Chromium installed
+- Bash shell (Linux/macOS, or WSL/Git Bash on Windows), or PowerShell on Windows
+
+Example:
+```
+scripts/run_headless_ui.sh 5505 http://127.0.0.1:9000 37.7749 -122.4194 120
+```
+
+Windows PowerShell:
+```
+scripts/run_headless_ui.ps1 -UiPort 5505 -BackendBase http://127.0.0.1:9000 -Lat 37.7749 -Lng -122.4194 -Heading 120
+```
+
+Optional env vars: `PITCH`, `FOV`, `SESSION`, `CHROME_BIN`, `NO_SANDBOX=1`.
+
+## Google Maps referrer allowlist
+Allow these so any localhost port works:
+- `http://localhost/*`
+- `http://127.0.0.1/*`
+
 ## Notes
 - The frontend polls the backend for MCP-pushed instructions every second and applies them.
 - Adjust hard-coded paths/ports as needed if your environment differs.
@@ -114,5 +151,5 @@ Notes for different localhost ports
   http://localhost:5501
 - Make sure your Google Maps API key allows that referrer:
   http://localhost:5501/*
-- If your backend is not on http://localhost:8000, update
-  the apiBase in maps-ui/index.html before starting the UI.
+- If your backend is not on http://localhost:8000, open:
+  http://localhost:5501/index.html?apiBase=http://127.0.0.1:9000
