@@ -5,7 +5,7 @@ services:
     stdin_open: true
     tty: true
     environment:
-      GOOGLE_MAPS_API_KEY: "AIzaSyBorZKmYOKIfN1PB2fGg-CQKET83DvGwoA"
+      GOOGLE_MAPS_API_KEY: "api-key"
       IMAGE_OUTPUT_DIR: /data/images
     volumes:
       - geoguessr-images:/data/images
