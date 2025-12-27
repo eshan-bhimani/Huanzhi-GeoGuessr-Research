@@ -93,7 +93,7 @@
   }
 
   // Wait until pano/links settle with debounce to avoid empty links.
-  function waitForStable({ timeoutMs = 2000, debounceMs = 200 } = {}) {
+  function waitForStable({ timeoutMs = 1500, debounceMs = 200 } = {}) {
     ensurePanorama();
     return new Promise((resolve) => {
       const start = Date.now();

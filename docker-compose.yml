@@ -1,0 +1,16 @@
+services:
+  geoguessr-worker:
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    environment:
+      GOOGLE_MAPS_API_KEY: "AIzaSyBorZKmYOKIfN1PB2fGg-CQKET83DvGwoA"
+      IMAGE_OUTPUT_DIR: /data/images
+    volumes:
+      - geoguessr-images:/data/images
+    shm_size: "1gb"
+    restart: "no"
+
+volumes:
+  geoguessr-images:

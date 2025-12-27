@@ -112,7 +112,7 @@ class StreetViewHostClient:
         return self._request("setPosition", {"lat": lat, "lng": lng})
     
 
-    def wait_for_stable(self, timeoutMs: int = 2000, debounceMs: int = 200) -> Any:
+    def wait_for_stable(self, timeoutMs: int = 1500, debounceMs: int = 200) -> Any:
         return self._request("waitForStable", {"timeoutMs": timeoutMs, "debounceMs": debounceMs})
     
     def close(self) -> None:
