@@ -3,6 +3,7 @@ import io
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 import threading
+import queue
 import sys
 from toolset import view, navigation
 from constants import google_api_key
@@ -19,6 +20,9 @@ def init_env() -> None:
     Returns:
         None
     """ 
+    # Remove direct init_browser call from main thread
+    # navigation.init_browser() 
+
     # Initialize basic TK window
     root = tk.Tk()
     root.title("Huanzhi GeoGuessr Research Environment")
@@ -101,6 +105,34 @@ def init_env() -> None:
     root.bind("q", lambda e: log_and_execute(navigation.zoom, 0.8)) 
     root.bind("e", lambda e: log_and_execute(navigation.zoom, 1.2))
 
+    # ------------------ Command Processor (Background Thread) ------------------
+    # This queue handles commands that should run in the background to avoid freezing the GUI
+    # and keeps Playwright calls on a consistent thread.
+    cmd_queue = queue.Queue()
+
+    def command_worker():
+        # Playwright MUST be initialized in the thread where it is used.
+        navigation.init_browser()
+        
+        while True:
+            item = cmd_queue.get()
+            if item is None: # Shutdown signal
+                navigation.close_browser()
+                break
+            
+            cmd_string, context, callback = item
+            try:
+                # Simplistic eval for demonstration/research environment
+                result = eval(cmd_string, {"__builtins__": None}, context)
+                # Helper to flush output to the GUI in a thread-safe way
+                root.after(0, callback, result)
+            except Exception as e:
+                 root.after(0, callback, f"Error: {e}")
+            cmd_queue.task_done()
+
+    # Start the worker thread
+    threading.Thread(target=command_worker, daemon=True).start()
+
     # ------------------ Terminal Command Execution ------------------
     def handle_command(event=None):
         cmd = terminal_input.get()
@@ -112,6 +144,7 @@ def init_env() -> None:
         log_message(f">>> {cmd}")
 
         if cmd.strip().lower() in ["exit", "quit"]:
+            cmd_queue.put(None) # Signal worker to close browser
             root.quit()
             return
 
@@ -125,17 +158,8 @@ def init_env() -> None:
             "teleport": navigation.teleport
         }
 
-        def run_eval():
-            try:
-                # Simplistic eval for demonstration/research environment
-                result = eval(cmd, {"__builtins__": None}, context)
-                # Helper to flush output to the GUI in a thread-safe way
-                root.after(0, log_message, result)
-            except Exception as e:
-                 root.after(0, log_message, f"Error: {e}")
-
-        # Run eval in separate thread to prevent GUI freezing during network calls
-        threading.Thread(target=run_eval, daemon=True).start()
+        # Put the command into the queue for the worker thread
+        cmd_queue.put((cmd, context, log_message))
 
     terminal_input.bind("<Return>", handle_command)
 
@@ -144,10 +168,17 @@ def init_env() -> None:
     log_message("Available functions: pan(angle), tilt(deg), zoom(rate), teleport(lat, lng), get_possible_pathways(), go_to_node(id)")
     log_message("Enter commands below:")
 
+    def on_closing():
+        cmd_queue.put(None) # Shutdown worker thread and close browser
+        root.destroy()
+
+    root.protocol("WM_DELETE_WINDOW", on_closing)
+
     # Start GUI loop
     try:
         root.mainloop()
     except KeyboardInterrupt:
+        cmd_queue.put(None)
         print("Exiting...")
 
 if __name__ == "__main__":

@@ -3,8 +3,8 @@ import threading
 class StateManager:
     def __init__(self):
         # Default values (can be overwritten by init_env or user)
-        self.width = 600
-        self.height = 300
+        self.width = 640
+        self.height = 640
         self.latitude = 35.752099
         self.longitude = -83.964307
         self.heading = 151.78

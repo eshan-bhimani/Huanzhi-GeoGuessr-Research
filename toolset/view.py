@@ -8,6 +8,7 @@ from typing import Union # Union is used to have tuples as a typecast for functi
 import requests
 from PIL import Image, ImageTk
 import io
+import os
 
 #Better to have the model not have access to the json including all of the information, maybe better to have the agents have a function calling for that information as it needs.
 def show_panorama(width, height, latitude, longitude, heading, pitch, fov, api_key, label) -> None:
@@ -79,3 +80,25 @@ def set_pitch(pitch: float) -> None:
     if pitch > 90: pitch = 90
     if pitch < -90: pitch = -90
     state.update(pitch=pitch)
+
+
+def save_panorama(pano_id, width, height, latitude, longitude, heading, pitch, fov, api_key) -> str:
+    """
+    Fetches the panorama and saves it to the 'img' folder.
+    
+    Returns:
+        str: The path to the saved image.
+    """
+    response = requests.get(f"https://maps.googleapis.com/maps/api/streetview?size={width}x{height}&location={latitude},{longitude}&heading={heading}&pitch={pitch}&fov={fov}&key={api_key}")
+    if response.status_code != 200:
+        return f"Error: Failed to fetch panorama (status code {response.status_code})"
+
+    img = Image.open(io.BytesIO(response.content))
+    
+    if not os.path.exists("img"):
+        os.makedirs("img")
+        
+    filename = f"{pano_id}_{latitude}_{longitude}_h{heading}_p{pitch}.jpg"
+    filepath = os.path.join("img", filename)
+    img.save(filepath)
+    return filepath

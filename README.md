@@ -1,15 +1,17 @@
 # Huanzhi GeoGuessr Research Environment
 
 ## Overview
-This project serves as a research testbed for autonomous navigation agents and manual exploration within a controllable Google Street View environment. It bridges the gap between low-level API interactions and a visual, interactive GUI, allowing user agents (or humans) to navigate the world dynamically.
+This project serves as a research testbed for autonomous navigation agents and manual exploration within a controllable Google Street View environment. It bridges the gap between low-level API interactions and a visual, interactive interface, allowing agents (or humans) to navigate the world dynamically.
 
-The system uses the **Google Street View Static API** to render panoramas and allows control via both standard keyboard inputs and a programmatic command terminal.
+The system uses the **Google Street View Static API** for rendering and **Playwright** for pathway discovery. It supports both a Tkinter-based GUI and a terminal-based CLI for interaction.
 
 ## Features
-- **Visual Interface**: Real-time rendering of Street View panoramas.
-- **Dual Control**: Navigate using typical gaming keys (WASD/Arrows) or sophisticated API function calls via an embedded terminal.
-- **State Management**: Centralized state tracking for heading, pitch, FOV, and location.
-- **Agent Toolset**: A decoupled `toolset` library (`navigation.py`, `view.py`) acting as the API surface for AI agents.
+- **Visual GUI**: Real-time rendering of Street View panoramas with an integrated terminal.
+- **CLI Mode**: A lightweight terminal interface for headless or script-based interaction.
+- **Automatic Saving**: Panorama images are automatically saved to the `img/` folder upon movement or orientation changes (CLI only).
+- **Dual Control**: Navigate using keyboard shortcuts (GUI) or programmatic API calls (GUI & CLI).
+- **State Management**: Centralized `state_manager.py` for consistent position and orientation tracking.
+- **Agent Toolset**: Decoupled `navigation.py` and `view.py` for easy integration with AI agents.
 
 ## Installation & Setup
 
@@ -24,9 +26,9 @@ The system uses the **Google Street View Static API** to render panoramas and al
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
+   python -m playwright install chromium
    ```
-   *(Ensure `python-dotenv`, `requests`, and `pillow` are installed)*.
-3. specific your API key:
+3. Configure your API key:
    Create a `.env` file in the root directory:
    ```env
    GOOGLE_API_KEY=your_google_api_key_here
@@ -34,69 +36,61 @@ The system uses the **Google Street View Static API** to render panoramas and al
 
 ## Usage
 
-Start the environment by running:
+### 1. GUI Interface (Recommended for Manual Use)
+Start the GUI by running:
 ```bash
 python init_env.py
 ```
+- **Top Section**: Displays the current Street View panorama.
+- **Bottom Section**: An integrated terminal for calling tools directly.
+- **Keyboard Shortcuts**:
+  - `Left/Right Arrow` or `A/D`: Pan (15°)
+  - `Up/Down Arrow` or `W/S`: Tilt (10°)
+  - `Q/E`: Zoom Out/In
 
-### The GUI Interface
-The window is split into two sections:
-1. **Panorama View** (Top): Displays the current street view.
-2. **Command Terminal** (Bottom): Logs actions and accepts specific function calls.
+### 2. CLI Interface (Recommended for Research/Agents)
+Start the CLI by running:
+```bash
+python cli_example.py
+```
+- Accepts the same programmatic commands as the GUI terminal.
+- Automatically saves every viewed panorama to the `img/` folder with naming format: `{pano_id}_{lat}_{lng}_h{heading}_p{pitch}.jpg`.
 
-### Controls
-
-#### Manual (Keyboard)
-| Key | Action | Function Called |
-| :--- | :--- | :--- |
-| **Left Arrow** | Pan Left (15°) | `pan(-15)` |
-| **Right Arrow** | Pan Right (15°) | `pan(15)` |
-| **Up Arrow** | Tilt Up (10°) | `tilt(10)` |
-| **Down Arrow** | Tilt Down (10°) | `tilt(-10)` |
-| **Q** | Zoom Out | `zoom(0.8)` |
-| **E** | Zoom In | `zoom(1.2)` |
-
-#### Programmatic (Terminal)
-You can type the following Python command in the bottom input box to control the agent directly:
+## Programmatic Control (Terminal/CLI)
+Both interfaces support direct Python-like function calls:
 
 - **`get_possible_pathways()`**
-  - *Returns*: A list of dictionaries containing nearby nodes (ID, lat, lng).
-  - *Use*: To find where you can move next.
-
+  - *Returns*: A list of nearby navigable nodes (ID, description, heading).
 - **`go_to_node(node_id)`**
-  - *Args*: `node_id` (str) - Can be a `"lat,lng"` string or a specific Pano ID.
-  - *Effect*: Teleports the agent to the new location.
-
+  - *Args*: `node_id` (str) - A Pano ID or `"lat,lng"` string.
+  - *Effect*: Navigates to the specified location.
 - **`pan(angle: int)`**
-  - Adjusts heading by `angle` degrees.
-
+  - Adjusts heading relative to the current view.
 - **`tilt(degrees: int)`**
-  - Adjusts pitch by `degrees`.
-
+  - Adjusts pitch relative to the current view.
 - **`zoom(rate: float)`**
-  - Multiplies current FOV by `1/rate`. (Rate > 1.0 zooms in).
-
-- **`teleport(lat: float, lng: float)`**
-  - *Args*: `lat` (float), `lng` (float)
-  - *Effect*: Instantly moves the agent to the specified coordinates. Use this to change the focal area of research.
+  - Zooms in (Rate > 1.0) or out (Rate < 1.0).
+- **`teleport(lat, lng)`**
+  - Instantly moves to the specified coordinates.
+- **`save_panorama(...)`**
+  - Manually trigger a panorama save (handled automatically in CLI).
 
 ## Code Structure
 
-### `init_env.py`
-The main entry point. It sets up the Tkinter GUI, the event loop, and the integrated terminal. It observes the `state_manager` to redraw the screen whenever the state changes.
+### Core Environment
+- **`init_env.py`**: The Tkinter GUI entry point.
+- **`cli_example.py`**: The CLI entry point with auto-image saving.
+- **`state_manager.py`**: The central "Source of Truth" for agent state. Default resolution is 640x640.
+- **`constants.py`**: Loads environment variables and API keys.
 
-### `state_manager.py`
-A singleton class that maintains the "Source of Truth" for the agent's content (Location, Heading, Pitch, FOV). It implements the Observer pattern so the GUI updates automatically when the state changes. 
-> **Note**: To change the default starting location of the application, modify the `latitude` and `longitude` values in the `StateManager.__init__` method.
+### Toolset (`toolset/`)
+- **`navigation.py`**: High-level movement logic, pathway discovery (Playwright integration), and coordinate parsing.
+- **`view.py`**: Camera adjustment logic and panorama fetching/saving.
 
-### `toolset/`
-This directory contains the "tools" that an AI agent would access.
-- **`navigation.py`**: Logic for high-level movement. Handles coordinate parsing and API logic for finding/moving to nodes.
-- **`view.py`**: Logic for camera adjustments. Used by `navigation.py` to set specific view parameters on the state.
-
-### `constants.py`
-Handles safe loading of environment variables (API Keys).
+### Assets
+- **`img/`**: Stores saved panorama images.
+- **`get_links.html`**: Helper file for Playwright to interact with the Street View API.
 
 ## Troubleshooting
-- **Black Screen / Image Not Loading**: Check your `GOOGLE_API_KEY` in `.env`. Ensure billing is enabled on your Google Cloud project.
-- **"Module not found"**: Ensure you have installed all requirements.
+- **Black Screen**: Check your `GOOGLE_API_KEY` and ensure billing is enabled.
+- **Playwright Errors**: Run `python -m playwright install chromium` to ensure the browser is installed.

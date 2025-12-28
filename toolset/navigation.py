@@ -5,10 +5,37 @@ import time
 from state_manager import state
 from toolset import view
 from constants import google_api_key
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+from playwright.sync_api import sync_playwright
+
+# Global browser instance
+_playwright = None
+_browser = None
+_context = None
+_page = None
+
+def init_browser():
+    """Initializes a persistent browser instance."""
+    global _playwright, _browser, _context, _page
+    if _playwright is None:
+        _playwright = sync_playwright().start()
+        _browser = _playwright.chromium.launch(headless=True)
+        _context = _browser.new_context()
+        _page = _context.new_page()
+        print("Playwright Browser Initialized.")
+
+def close_browser():
+    """Closes the persistent browser instance."""
+    global _playwright, _browser, _context, _page
+    if _page:
+        _page.close()
+    if _context:
+        _context.close()
+    if _browser:
+        _browser.close()
+    if _playwright:
+        _playwright.stop()
+    _playwright = _browser = _context = _page = None
+    print("Playwright Browser Closed.")
 
 def pan(angle: int) -> str:
     """
@@ -64,46 +91,48 @@ def zoom(rate: float) -> str:
     view.set_fov(new_fov)
     return f"Zoomed by rate {rate}. New FOV: {state.fov}"
 
-def _get_links_via_selenium(pano_id: str) -> list[dict]:
-    """Helper to fetch real Street View links using a headless browser."""
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--log-level=3") # Suppress logs
+def _get_links_via_playwright(pano_id: str, page=None) -> list[dict]:
+    """Helper to fetch real Street View links using a persistent Playwright browser."""
+    global _page
+    target_page = page if page is not None else _page
+    
+    if target_page is None:
+        init_browser()
+        target_page = _page
     
     try:
-        service = Service(ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service, options=chrome_options)
-        
         # Use the local helper HTML
         file_path = os.path.abspath("get_links.html")
         url = f"file:///{file_path}?pano={pano_id}&key={google_api_key}"
         
-        driver.get(url)
-        max_wait = 10
-        start_time = time.time()
+        target_page.goto(url)
+        
+        # Wait for results
         results = []
-        while time.time() - start_time < max_wait:
-            time.sleep(0.5)
-            try:
-                elem = driver.find_element("id", "results")
-                text = elem.text
-                if text != "LOADING..." and text != "":
-                    if not text.startswith("ERROR"):
-                        results = json.loads(text)
-                    break
-            except:
-                continue
-        driver.quit()
+        max_wait = 10000 # 10 seconds
+        try:
+            # Wait for the #results element to have content other than "LOADING..."
+            target_page.wait_for_function(
+                "() => { const el = document.getElementById('results'); return el && el.innerText !== 'LOADING...' && el.innerText !== ''; }",
+                timeout=max_wait
+            )
+            text = target_page.inner_text("#results")
+            if text and not text.startswith("ERROR"):
+                results = json.loads(text)
+        except Exception as e:
+            print(f"Playwright wait error: {e}")
+            
         return results
     except Exception as e:
-        print(f"Navigation Error (Selenium): {e}")
+        print(f"Navigation Error (Playwright): {e}")
         return []
 
-def get_possible_pathways() -> list[dict]:
+def get_possible_pathways(page=None) -> list[dict]:
     """
     Retrieves a list of valid navigable nodes around the current location.
+
+    Args:
+        page (playwright.sync_api.Page, optional): A persistent Playwright page instance.
 
     Returns:
         list[dict]: A list of dictionaries, where each dictionary represents a nearby node
@@ -126,11 +155,11 @@ def get_possible_pathways() -> list[dict]:
         return []
 
     # 2. Get real links
-    links = _get_links_via_selenium(current_pano)
+    links = _get_links_via_playwright(current_pano, page=page)
     
     if not links:
-        # Fallback to dummy nodes if Selenium fails or no links found
-        print("Navigation Error (Selenium): No links found. Using dummy nodes.")
+        # Fallback to dummy nodes if Playwright fails or no links found
+        print("Navigation Error (Playwright): No links found. Using dummy nodes.")
         lat, lng = state.latitude, state.longitude
         offset = 0.0005
         return [
