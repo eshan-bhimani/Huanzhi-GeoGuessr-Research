@@ -10,7 +10,7 @@ class StateManager:
         self.heading = 151.78
         self.pitch = -0.76
         self.fov = 90
-        self.pano_id = None
+        self.pano_id = "Start"
         self._observers = []
         self._lock = threading.Lock()
 

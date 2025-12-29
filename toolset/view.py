@@ -98,7 +98,7 @@ def save_panorama(pano_id, width, height, latitude, longitude, heading, pitch, f
     if not os.path.exists("img"):
         os.makedirs("img")
         
-    filename = f"{pano_id}_{latitude}_{longitude}_h{heading}_p{pitch}.jpg"
+    filename = f"{pano_id}_{latitude}_{longitude}_h{heading}_p{pitch}_fov{fov}.jpg"
     filepath = os.path.join("img", filename)
     img.save(filepath)
     return filepath
