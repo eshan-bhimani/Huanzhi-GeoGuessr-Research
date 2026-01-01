@@ -4,10 +4,10 @@ CLI pipeline that drives Google Street View via a Playwright (Node) host and Pyt
 
 ## Quickstart (Docker Compose)
 1) Ensure Docker Desktop is running.
-2) Provide a valid `GOOGLE_MAPS_API_KEY` (do not commit keys).
+2) Provide a valid `GOOGLE_MAPS_API_KEY` (include your API key; do not commit it).
 3) Build the image: `docker compose build`
-4) Run the CLI: `docker compose run --rm geoguessr-worker`
-5) Try commands like `init 37.7749 -122.4194`, `move north`, `state`, `exit`.
+4) Run the multi-agent test: `docker compose up --build`
+5) Stop the stack when done: `docker compose down`
 
 ## Outputs
 - Images are written to `/data/images` in the container and stored in a Compose volume.

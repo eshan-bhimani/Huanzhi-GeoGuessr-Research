@@ -6,28 +6,60 @@ const { chromium } = require("playwright");
 const state = {
   apiKey: "",
   browser: null,
-  page: null,
+  sessions: new Map(),
 };
+async function ensureBrowser() {
+  if(state.browser) return state.browser;
+  state.browser = await chromium.launch({headless: true})
+  return  state.browser;
+}
 
-// Launch the browser and load the Street View page once.
-async function ensurePage() {
-  if (state.page) return state.page;
-  state.browser = await chromium.launch({ headless: true });
-  state.page = await state.browser.newPage();
+function getFileUrl() {
   const fileUrl = pathToFileURL(path.join(__dirname, "index.html")).toString();
-  const url = `${fileUrl}?key=${encodeURIComponent(state.apiKey)}`;
-  await state.page.goto(url, { waitUntil: "domcontentloaded" });
-  await state.page.waitForFunction(
-    () => window.__SV__ && window.__SV__.ready === true
-  );
-  return state.page;
+  return `${fileUrl}?key=${encodeURIComponent(state.apiKey)}`;
+}
+
+async function createSession(sessionId) {
+  await ensureBrowser();
+  const session = {
+    id: sessionId,
+    context: null,
+    page: null,
+    last_active: Date.now(),
+    queue: Promise.resolve(),
+    ready: null,
+  };
+
+  session.ready = (async () => {
+    session.context = await state.browser.newContext();
+    session.page = await session.context.newPage();
+    await session.page.goto(getFileUrl(), { waitUntil: "domcontentloaded" });
+    await session.page.waitForFunction(
+      () => window.__SV__ && window.__SV__.ready === true
+    );
+    return session;
+  })();
+
+  state.sessions.set(sessionId, session);
+  await session.ready;
+  return session;
+}
+
+async function getSession(sessionId) {
+  const existing = state.sessions.get(sessionId);
+  if(existing) {
+    await existing.ready;
+    return existing;
+  }
+  return createSession(sessionId)
 }
 
 // Call a bridge method inside the page.
-async function callBridge(method, params) {
-  await ensurePage();
+async function callBridge(session, method, params) {
+  await session.ready;
+  session.last_active = Date.now();
   const payload = { method, params: params || {} };
-  return state.page.evaluate(
+  return session.page.evaluate(
     (req) => window.__SV__[req.method](req.params),
     payload
   );
@@ -43,41 +75,45 @@ function requireStarted(method) {
 const handlers = {
   // Start the host and load the page with API key.
   async start(params) {
-    const key =
-      (params && params.apiKey) ||
-      process.env.GOOGLE_MAPS_API_KEY ||
-      "";
-    if (!key) {
-      throw new Error("missing_api_key");
-    }
-    state.apiKey = key;
-    await ensurePage();
-    return { started: true };
+  const key = (params && params.apiKey) || process.env.GOOGLE_MAPS_API_KEY || "";
+  if (!key) throw new Error("missing_api_key");
+  state.apiKey = key;
+  await ensureBrowser();
+  return { started: true };
   },
   // Initialize the panorama at a lat/lng and POV.
-  async init(params) {
-    return callBridge("init", params);
+  async init(session, params) {
+    return callBridge(session, "init", params);
   },
   // Fetch the current panorama state.
-  async getState() {
-    return callBridge("getState", {});
+  async getState(session) {
+    return callBridge(session, "getState", {});
   },
   // Update POV without changing pano.
-  async setPov(params) {
-    return callBridge("setPov", params);
+  async setPov(session, params) {
+    return callBridge(session, "setPov", params);
   },
   // Move to a specific pano id.
-  async setPano(params) {
-    return callBridge("setPano", params);
+  async setPano(session, params) {
+    return callBridge(session,"setPano", params);
   },
   // Move to a lat/lng position.
-  async setPosition(params) {
-    return callBridge("setPosition", params);
+  async setPosition(session, params) {
+    return callBridge(session, "setPosition", params);
   },
   // Wait for pano/links to stabilize.
-  async waitForStable(params) {
-    return callBridge("waitForStable", params);
+  async waitForStable(session, params) {
+    return callBridge(session, "waitForStable", params);
   },
+
+  // Close the session
+  async closeSession(session) {
+    await session.ready;
+    if (session.page) await session.page.close();
+    if (session.context) await session.context.close();
+    state.sessions.delete(session.id);
+    return { closed: true };
+  }
 };
 
 // Write a JSONL response to stdout.
@@ -89,10 +125,11 @@ function send(message) {
 async function handleLine(line) {
   const trimmed = line.trim();
   if (!trimmed) return;
+
   let payload;
   try {
     payload = JSON.parse(trimmed);
-  } catch (err) {
+  } catch {
     send({ id: null, ok: false, error: "invalid_json" });
     return;
   }
@@ -103,40 +140,62 @@ async function handleLine(line) {
     send({ id, ok: false, error: "missing_method" });
     return;
   }
-
+  //parse Json, validate id/method
+  const sessionId = payload.session_id;
+  if(!sessionId || typeof sessionId !== "string") {
+    send({id, ok: false, error: "missing_session_id"});
+    return;
+  }
   try {
     requireStarted(method);
     const handler = handlers[method];
-    if (!handler) {
-      throw new Error(`unknown_method:${method}`);
+    if(!handler) throw new Error(`unknown_method:${method}`);
+
+    if(method === "start") {
+      const result = await handler(payload.params || {});
+      send({id, ok:true, result})
+      return;
     }
-    const result = await handler(payload.params || {});
-    send({ id, ok: true, result });
-  } catch (err) {
+    const session = await getSession(sessionId);
+    const run = async () => handler(session, payload.params || {});
+    session.queue = session.queue
+      .then(run, run)
+      .then((result) => {
+        send({id, ok: true, result});
+        return result;
+      })
+      .catch((err) => {
+        send({ id, ok: false, error: String(err.message || err) });
+      });
+  } catch(err) {
     send({ id, ok: false, error: String(err.message || err) });
   }
 }
 
-// Start the JSONL loop and serialize requests.
+// Start the JSONL loop and dispatch per-session queues.
 function startHost() {
   const rl = readline.createInterface({
     input: process.stdin,
     crlfDelay: Infinity,
   });
-  let chain = Promise.resolve();
   // Queue each line to keep request handling ordered.
   rl.on("line", (line) => {
-    chain = chain.then(() => handleLine(line)).catch(() => undefined);
-  });
+  handleLine(line).catch(() => undefined);
+});
 }
 
 // Close the browser and clear state.
 async function shutdown() {
-  if (state.browser) {
-    await state.browser.close();
+  for (const session of state.sessions.values()) {
+    try {
+      await session.ready;
+      if (session.page) await session.page.close();
+      if (session.context) await session.context.close();
+    } catch {}
   }
+  state.sessions.clear();
+  if (state.browser) await state.browser.close();
   state.browser = null;
-  state.page = null;
 }
 
 process.on("SIGINT", async () => {

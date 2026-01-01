@@ -17,8 +17,8 @@ def _get_client(ctx: ToolContext):
 
 def _get_state(ctx: ToolContext) -> Dict[str, Any]:
     client = _get_client(ctx)
-    state = client.wait_for_stable()
-    state = client.get_state()
+    state = client.wait_for_stable(ctx.session_id)
+    state = client.get_state(ctx.session_id)
     return state
 
 def _execute_command(ctx: ToolContext, cmd: Dict[str, Any]) -> Dict[str, Any]:
@@ -28,20 +28,21 @@ def _execute_command(ctx: ToolContext, cmd: Dict[str, Any]) -> Dict[str, Any]:
 
     if method == "setPov":
         client.set_pov(
+            ctx.session_id,
             heading=params.get("heading"),
             pitch=params.get("pitch"),
             zoom=params.get("zoom"),
         )
 
     elif method == "setPano":
-        client.set_pano(params["panoId"])
+        client.set_pano(ctx.session_id, params["panoId"])
     elif method == "setPosition":
-        client.set_position(params["lat"], params["lng"])
+        client.set_position(ctx.session_id, params["lat"], params["lng"])
     else:
         raise RuntimeError(f"unknown_command:{method}")
 
-    client.wait_for_stable()
-    return client.get_state()
+    client.wait_for_stable(ctx.session_id)
+    return client.get_state(ctx.session_id)
 
 
 def _capture_image(ctx: ToolContext, state: Dict[str, Any]) -> Optional[str]:
@@ -96,9 +97,9 @@ def init_panorama(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     pitch = args.get("pitch", 0.0)
     zoom = args.get("zoom", 1.0)
 
-    client.init(lat=lat, lng=lng, heading=heading, pitch=pitch, zoom=zoom)
-    client.wait_for_stable()
-    state = client.get_state()
+    client.init(ctx.session_id, lat=lat, lng=lng, heading=heading, pitch=pitch, zoom=zoom)
+    client.wait_for_stable(ctx.session_id)
+    state = client.get_state(ctx.session_id)
     updates = {"state": state}
     image_path = _capture_image(ctx, state)
     if image_path:

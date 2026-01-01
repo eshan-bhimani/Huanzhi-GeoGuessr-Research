@@ -2,11 +2,17 @@ services:
   geoguessr-worker:
     build:
       context: .
+    command: ["python3", "-m", "apps.multi_agent_test"]
     stdin_open: true
     tty: true
     environment:
-      GOOGLE_MAPS_API_KEY: "api-key"
+      GOOGLE_MAPS_API_KEY: "${GOOGLE_MAPS_API_KEY}"
       IMAGE_OUTPUT_DIR: /data/images
+      LMSTUDIO_BASE_URL: "${LMSTUDIO_BASE_URL}"
+      LMSTUDIO_API_KEY: "${LMSTUDIO_API_KEY}"
+      LMSTUDIO_MODEL_A: "${LMSTUDIO_MODEL_A}"
+      LMSTUDIO_MODEL_B: "${LMSTUDIO_MODEL_B}"
+      AGENT_MAX_WORKERS: "${AGENT_MAX_WORKERS}"
     volumes:
       - geoguessr-images:/data/images
     shm_size: "1gb"

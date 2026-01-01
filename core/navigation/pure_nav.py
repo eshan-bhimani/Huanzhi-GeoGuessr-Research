@@ -3,8 +3,8 @@ from __future__ import annotations
 import json 
 import math
 from typing import Any, Dict, List, Optional
-
 from core.navigation.protocol import parse_state, build_command, dump_command
+
 
 DIR_CONES = {
     "N":  [(337.5, 360.0), (0.0, 22.5)],
@@ -194,3 +194,5 @@ def zoom_out(state_json: str, delta: float) -> str:
     current = _current_zoom(state)
     new_zoom = max(current - step, 0.0)
     return _command("setPov", {"zoom": new_zoom})
+
+
