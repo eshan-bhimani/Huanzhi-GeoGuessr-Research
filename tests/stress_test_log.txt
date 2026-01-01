@@ -1,0 +1,1018 @@
+--- Starting Stress Test with 90 Agents ---
+Initializing agents...
+Initialized 10 agents...
+Initialized 20 agents...
+Initialized 30 agents...
+Initialized 40 agents...
+Initialized 50 agents...
+Initialized 60 agents...
+Initialized 70 agents...
+Initialized 80 agents...
+Initialized 90 agents...
+--- Beginning 500 Random Turns ---
+Turn 1: Agent 86 PAN -18
+Turn 1: Agent 86 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_86\1_None_41.7151_44.8271_h133.78_p-0.76_fov90.jpg
+Turn 2: Agent 36 TILT -27
+Turn 2: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\1_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-27.76_fov90.jpg
+Turn 3: Agent 34 GO 44Eutq8ASziNKwcEQ5u9QQ
+Turn 3: Agent 34 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_34\1_44Eutq8ASziNKwcEQ5u9QQ_53.34453556983719_-6.267291517635982_h151.78_p-0.76_fov90.jpg
+Turn 4: Agent 81 TILT -20
+Turn 4: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\1_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h151.78_p-20.76_fov90.jpg
+Turn 5: Agent 47 PAN -43
+Turn 5: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h108.78_p-0.76_fov90.jpg
+Turn 6: Agent 3 PAN -14
+Turn 6: Agent 3 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_3\1_CAoSFkNJSE0wb2dLRUlDQWdJQzR4OTJnV0E._33.9857_-118.4732_h137.78_p-0.76_fov90.jpg
+Turn 7: Agent 67 GO R1L5Is-gq4Giz8tQhTOHIA
+Turn 7: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\1_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p-0.76_fov90.jpg
+Turn 8: Agent 42 PAN 45
+Turn 8: Agent 42 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_42\1_CAoSF0NJSE0wb2dLRUlDQWdJRDRyX0xkbGdF_31.2397_121.4993_h196.78_p-0.76_fov90.jpg
+Turn 9: Agent 62 GO XXgkK2kb6ZWNFW4YrCqNVw
+Turn 9: Agent 62 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_62\1_XXgkK2kb6ZWNFW4YrCqNVw_35.99930603015209_-78.90993712270298_h151.78_p-0.76_fov90.jpg
+Turn 10: Agent 34 PAN 0
+Turn 10: Agent 34 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_34\2_44Eutq8ASziNKwcEQ5u9QQ_53.34453556983719_-6.267291517635982_h151.78_p-0.76_fov90.jpg
+Turn 11: Agent 83 GO TBP-Il3vUFXp17oBMF-MWQ
+Turn 11: Agent 83 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_83\1_TBP-Il3vUFXp17oBMF-MWQ_46.05687970340978_14.50592253938715_h151.78_p-0.76_fov90.jpg
+Turn 12: Agent 3 TILT 26
+Turn 12: Agent 3 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_3\2_CAoSFkNJSE0wb2dLRUlDQWdJQzR4OTJnV0E._33.9857_-118.4732_h137.78_p25.24_fov90.jpg
+Turn 13: Agent 11 ZOOM 1.07
+Turn 13: Agent 11 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_11\1_CAoSF0NJSE0wb2dLRUlDQWdJRGN2NUsyN2dF_30.2747_-97.7404_h151.78_p-0.76_fov84.33827115541247.jpg
+Turn 14: Agent 34 PAN -16
+Turn 14: Agent 34 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_34\3_44Eutq8ASziNKwcEQ5u9QQ_53.34453556983719_-6.267291517635982_h135.78_p-0.76_fov90.jpg
+Turn 15: Agent 67 GO rnfhxWRfekO0lp2V--Tg1g
+Turn 15: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\2_rnfhxWRfekO0lp2V--Tg1g_-23.69791259979296_133.8807229637225_h151.78_p-0.76_fov90.jpg
+Turn 16: Agent 75 TILT -10
+Turn 16: Agent 75 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_75\1_CAoSFkNJSE0wb2dLRUlDQWdJRHk5c2F6Y0E._46.8772_-96.7898_h151.78_p-10.76_fov90.jpg
+Turn 17: Agent 66 ZOOM 0.54
+Turn 17: Agent 66 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_66\1_CAoSFENJSE0wb2dLRUlDQWdJREo0dFpT_78.2232_15.6267_h151.78_p-0.76_fov120.jpg
+Turn 18: Agent 53 PAN -83
+Turn 18: Agent 53 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_53\1_CAoSF0NJSE0wb2dLRUlDQWdJQ1o4SVdRa0FF_44.428_-110.5885_h68.78_p-0.76_fov90.jpg
+Turn 19: Agent 78 PAN -1
+Turn 19: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\1_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-0.76_fov90.jpg
+Turn 20: Agent 46 PAN 71
+Turn 20: Agent 46 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_46\1_CAoSFkNJSE0wb2dLRUlDQWdJQ010dDJQSlE._25.033_121.5654_h222.78_p-0.76_fov90.jpg
+Turn 21: Agent 1 GO gxStuTqjyqAfA3wnXX-vUA
+Turn 21: Agent 1 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_1\1_gxStuTqjyqAfA3wnXX-vUA_38.88932140704399_-77.02811644217961_h151.78_p-0.76_fov90.jpg
+Turn 22: Agent 79 TILT 0
+Turn 22: Agent 79 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_79\1_Lm3VIyb0S_xx_3FixNNe_A_50.0647_19.945_h151.78_p-0.76_fov90.jpg
+Turn 23: Agent 49 ZOOM 0.83
+Turn 23: Agent 49 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_49\1_CAoSF0NJSE0wb2dLRUlDQWdJQ2Vrcm5TcHdF_21.0285_105.8542_h151.78_p-0.76_fov107.94317442250589.jpg
+Turn 24: Agent 6 GO CAoSF0NJSE0wb2dLRUlDQWdJRHNvZFR4b0FF
+Turn 24: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\1_CAoSF0NJSE0wb2dLRUlDQWdJRHNvZFR4b0FF_33.74902062547842_-84.38825587302364_h151.78_p-0.76_fov90.jpg
+Turn 25: Agent 84 TILT 26
+Turn 25: Agent 84 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_84\1_CAoSFkNJSE0wb2dLRUlDQWdJREV2TFNjY2c._42.6507_18.0944_h151.78_p25.24_fov90.jpg
+Turn 26: Agent 78 ZOOM 1.80
+Turn 26: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\2_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-0.76_fov50.11323475716379.jpg
+Turn 27: Agent 74 TILT -4
+Turn 27: Agent 74 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_74\1_CAoSF0NJSE0wb2dLRUlDQWdJRDQ4OVdvX3dF_45.677_-111.0429_h151.78_p-4.76_fov90.jpg
+Turn 28: Agent 78 ZOOM 0.61
+Turn 28: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\3_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-0.76_fov82.78662541466684.jpg
+Turn 29: Agent 29 PAN 90
+Turn 29: Agent 29 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_29\1_sp4EhSnYnKRIP2TGc3e1mQ_51.5628_-1.7715_h241.78_p-0.76_fov90.jpg
+Turn 30: Agent 68 PAN 11
+Turn 30: Agent 68 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_68\1_CAoSFkNJSE0wb2dLRUlDQWdJQ2NtT0h6YkE._64.1466_-21.9426_h162.78_p-0.76_fov90.jpg
+Turn 31: Agent 73 TILT -13
+Turn 31: Agent 73 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_73\1_kvP7koMdtnxnt_ZBJ3pkeA_64.8378_-147.7164_h151.78_p-13.76_fov90.jpg
+Turn 32: Agent 12 GO CAoSFkNJSE0wb2dLRUlDQWdJQ0V6WU90VUE.
+Turn 32: Agent 12 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_12\1_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6WU90VUE._39.94955854908497_-75.15028474148855_h151.78_p-0.76_fov90.jpg
+Turn 33: Agent 82 ZOOM 1.69
+Turn 33: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h151.78_p-0.76_fov53.147002445094806.jpg
+Turn 34: Agent 24 ZOOM 1.55
+Turn 34: Agent 24 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_24\1_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6OVdmTUE._37.9715_23.7266_h151.78_p-0.76_fov57.962475173924.jpg
+Turn 35: Agent 14 TILT 29
+Turn 35: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\1_Lvj8JSmgHOP5oke6tDPKzw_36.1627_-86.7816_h151.78_p28.24_fov90.jpg
+Turn 36: Agent 60 PATH - No pathways found.
+Turn 36: Agent 60 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_60\1_CAoSFkNJSE0wb2dLRUlDQWdJRGtoT21LVUE._44.5902_-104.7151_h151.78_p-0.76_fov90.jpg
+Turn 37: Agent 65 PATH - No pathways found.
+Turn 37: Agent 65 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_65\1_CAoSFkNJSE0wb2dLRUlDQWdJQ0JqTmFoRmc._-54.8019_-68.303_h151.78_p-0.76_fov90.jpg
+Turn 38: Agent 50 PAN 77
+Turn 38: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\1_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h228.78_p-0.76_fov90.jpg
+Turn 39: Agent 49 PAN 77
+Turn 39: Agent 49 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_49\2_CAoSF0NJSE0wb2dLRUlDQWdJQ2Vrcm5TcHdF_21.0285_105.8542_h228.78_p-0.76_fov107.94317442250589.jpg
+Turn 40: Agent 55 TILT -25
+Turn 40: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\1_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h151.78_p-25.76_fov90.jpg
+Turn 41: Agent 82 PATH - No pathways found.
+Turn 41: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h151.78_p-0.76_fov53.147002445094806.jpg
+Turn 42: Agent 51 ZOOM 1.23
+Turn 42: Agent 51 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_51\1_None_14.5932_120.9825_h151.78_p-0.76_fov73.17843594722993.jpg
+Turn 43: Agent 61 TILT -4
+Turn 43: Agent 61 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_61\1_Wcnod1PcpfEWuxyVsH0-9g_-45.874_170.5036_h151.78_p-4.76_fov90.jpg
+Turn 44: Agent 35 ZOOM 1.92
+Turn 44: Agent 35 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_35\1_CAoSF0NJSE0wb2dLRUlDQWdJRFVfYlROc0FF_55.6795_12.5892_h151.78_p-0.76_fov46.83204029089257.jpg
+Turn 45: Agent 3 ZOOM 0.54
+Turn 45: Agent 3 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_3\3_CAoSFkNJSE0wb2dLRUlDQWdJQzR4OTJnV0E._33.9857_-118.4732_h137.78_p25.24_fov120.jpg
+Turn 46: Agent 5 ZOOM 1.40
+Turn 46: Agent 5 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_5\1_CAoSF0NJSE0wb2dLRUlDQWdJQ3FqNUdQOFFF_37.8024_-122.4183_h151.78_p-0.76_fov64.33905460524463.jpg
+Turn 47: Agent 48 PAN 23
+Turn 47: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\1_s0hwED607Fwwzmlj7v2vMQ_-6.1751_106.865_h174.78_p-0.76_fov90.jpg
+Turn 48: Agent 52 PATH - No pathways found.
+Turn 48: Agent 52 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_52\1_CAoSF0NJSE0wb2dLRUlDQWdJRDA2NWpMdHdF_36.0544_-112.1401_h151.78_p-0.76_fov90.jpg
+Turn 49: Agent 55 PATH - No pathways found.
+Turn 49: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\2_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h151.78_p-25.76_fov90.jpg
+Turn 50: Agent 21 PAN 59
+Turn 50: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\1_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4S0s3Ync._41.4036_2.1744_h210.78_p-0.76_fov90.jpg
+Turn 51: Agent 18 GO CAoSF0NJSE0wb2dLRUlDQWdJQzZxWlhpMWdF
+Turn 51: Agent 18 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_18\1_CAoSF0NJSE0wb2dLRUlDQWdJQzZxWlhpMWdF_32.07982749471719_-81.09140977359799_h151.78_p-0.76_fov90.jpg
+Turn 52: Agent 36 PATH - No pathways found.
+Turn 52: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\2_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-27.76_fov90.jpg
+Turn 53: Agent 72 PAN 63
+Turn 53: Agent 72 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_72\1_CAoSF0NJSE0wb2dLRUlDQWdJREc2ODI2amdF_61.2181_-149.9003_h214.78_p-0.76_fov90.jpg
+Turn 54: Agent 57 PATH - No pathways found.
+Turn 54: Agent 57 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_57\1_CAoSFkNJSE0wb2dLRUlDQWdJRDI0ZHpBT1E._43.0828_-79.0742_h151.78_p-0.76_fov90.jpg
+Turn 55: Agent 14 TILT -24
+Turn 55: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\2_Lvj8JSmgHOP5oke6tDPKzw_36.1627_-86.7816_h151.78_p4.239999999999998_fov90.jpg
+Turn 56: Agent 39 PAN 50
+Turn 56: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\1_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h201.78_p-0.76_fov90.jpg
+Turn 57: Agent 56 PAN -90
+Turn 57: Agent 56 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_56\1_CAoSF0NJSE0wb2dLRUlDQWdJQzRqNVBPaXdF_40.6892_-74.0445_h61.78_p-0.76_fov90.jpg
+Turn 58: Agent 18 PAN 10
+Turn 58: Agent 18 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_18\2_CAoSF0NJSE0wb2dLRUlDQWdJQzZxWlhpMWdF_32.07982749471719_-81.09140977359799_h161.78_p-0.76_fov90.jpg
+Turn 59: Agent 44 PAN -51
+Turn 59: Agent 44 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_44\1_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4dVdUY2c._18.922_72.8347_h100.78_p-0.76_fov90.jpg
+Turn 60: Agent 63 GO CAoSFkNJSE0wb2dLRUlDQWdJREN1OFhWTmc.
+Turn 60: Agent 63 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_63\1_CAoSFkNJSE0wb2dLRUlDQWdJREN1OFhWTmc._35.75196618788757_-83.96411110181558_h151.78_p-0.76_fov90.jpg
+Turn 61: Agent 67 ZOOM 1.19
+Turn 61: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\3_rnfhxWRfekO0lp2V--Tg1g_-23.69791259979296_133.8807229637225_h151.78_p-0.76_fov75.34190244270502.jpg
+Turn 62: Agent 37 GO DMH12jX4AqXZDjOgjnwHsw
+Turn 62: Agent 37 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_37\1_DMH12jX4AqXZDjOgjnwHsw_35.65973538433726_139.7006579092991_h151.78_p-0.76_fov90.jpg
+Turn 63: Agent 88 GO CAoSFkNJSE0wb2dLRUlDQWdJREczOGJBQnc.
+Turn 63: Agent 88 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_88\1_CAoSFkNJSE0wb2dLRUlDQWdJREczOGJBQnc._47.88633212159008_106.9057639704205_h151.78_p-0.76_fov90.jpg
+Turn 64: Agent 13 PATH - No pathways found.
+Turn 64: Agent 13 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_13\1_CAoSF0NJSE0wb2dLRUlDQWdJREV0c0dDcFFF_39.7392_-104.9903_h151.78_p-0.76_fov90.jpg
+Turn 65: Agent 21 TILT 26
+Turn 65: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\2_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4S0s3Ync._41.4036_2.1744_h210.78_p25.24_fov90.jpg
+Turn 66: Agent 81 PATH - No pathways found.
+Turn 66: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\2_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h151.78_p-20.76_fov90.jpg
+Turn 67: Agent 56 TILT -3
+Turn 67: Agent 56 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_56\2_CAoSF0NJSE0wb2dLRUlDQWdJQzRqNVBPaXdF_40.6892_-74.0445_h61.78_p-3.76_fov90.jpg
+Turn 68: Agent 16 ZOOM 1.58
+Turn 68: Agent 16 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_16\1_9ZLr9aRyEhpR5CdMDTW_EA_45.5202_-122.6742_h151.78_p-0.76_fov56.81413777753154.jpg
+Turn 69: Agent 36 PATH - No pathways found.
+Turn 69: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\3_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-27.76_fov90.jpg
+Turn 70: Agent 23 ZOOM 1.50
+Turn 70: Agent 23 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_23\1_5ZFtmpfWAuTtqAWfAk2yeg_52.3676_4.9041_h151.78_p-0.76_fov60.071753276455.jpg
+Turn 71: Agent 10 TILT 18
+Turn 71: Agent 10 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_10\1_CAoSF0NJSE0wb2dLRUlDQWdJRGlqT3JidWdF_36.1127_-115.1729_h151.78_p17.24_fov90.jpg
+Turn 72: Agent 30 PATH - No pathways found.
+Turn 72: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\1_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h151.78_p-0.76_fov90.jpg
+Turn 73: Agent 24 PAN 75
+Turn 73: Agent 24 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_24\2_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6OVdmTUE._37.9715_23.7266_h226.78_p-0.76_fov57.962475173924.jpg
+Turn 74: Agent 43 ZOOM 1.46
+Turn 74: Agent 43 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_43\1_CAoSF0NJSE0wb2dLRUlDQWdJRDQ0T1MxbEFF_37.5795_126.977_h151.78_p-0.76_fov61.55171592789328.jpg
+Turn 75: Agent 37 GO oeiz4XxmpFpWhlhoYMD2NA
+Turn 75: Agent 37 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_37\2_oeiz4XxmpFpWhlhoYMD2NA_35.65970438150233_139.7006501182504_h151.78_p-0.76_fov90.jpg
+Turn 76: Agent 21 ZOOM 1.81
+Turn 76: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4S0s3Ync._41.4036_2.1744_h210.78_p25.24_fov49.745497688230564.jpg
+Turn 77: Agent 65 PAN 13
+Turn 77: Agent 65 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_65\2_CAoSFkNJSE0wb2dLRUlDQWdJQ0JqTmFoRmc._-54.8019_-68.303_h164.78_p-0.76_fov90.jpg
+Turn 78: Agent 32 ZOOM 0.93
+Turn 78: Agent 32 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_32\1_CAoSFkNJSE0wb2dLRUlDQWdJREV3UEh1TVE._48.2085_16.3738_h151.78_p-0.76_fov96.96445459894495.jpg
+Turn 79: Agent 30 ZOOM 1.58
+Turn 79: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\2_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h151.78_p-0.76_fov56.850040509450864.jpg
+Turn 80: Agent 76 GO xpD0TltCtFHD23JonQNknQ
+Turn 80: Agent 76 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_76\1_xpD0TltCtFHD23JonQNknQ_44.47596291530272_-73.21198863309219_h151.78_p-0.76_fov90.jpg
+Turn 81: Agent 6 PAN -69
+Turn 81: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\2_CAoSF0NJSE0wb2dLRUlDQWdJRHNvZFR4b0FF_33.74902062547842_-84.38825587302364_h82.78_p-0.76_fov90.jpg
+Turn 82: Agent 77 PAN 13
+Turn 82: Agent 77 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_77\1_CAoSFkNJSE0wb2dLRUlDQWdJREVpcGZVVnc._43.263_-2.935_h164.78_p-0.76_fov90.jpg
+Turn 83: Agent 14 GO Y6GF3U7679oK4Pw2476_hQ
+Turn 83: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\3_Y6GF3U7679oK4Pw2476_hQ_36.16270054566505_-86.78145364993394_h151.78_p4.239999999999998_fov90.jpg
+Turn 84: Agent 71 ZOOM 1.34
+Turn 84: Agent 71 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_71\1_9m-D67zs6opuNNPUEMf9yw_64.1814_-51.6941_h151.78_p-0.76_fov67.11613518555951.jpg
+Turn 85: Agent 38 ZOOM 1.43
+Turn 85: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\1_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h151.78_p-0.76_fov62.94348120005589.jpg
+Turn 86: Agent 64 TILT -19
+Turn 86: Agent 64 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_64\1_CAoSFkNJSE0wb2dLRUlDQWdJQ0Uyc0xtVlE._69.6492_18.9553_h151.78_p-19.76_fov90.jpg
+Turn 87: Agent 40 PATH - No pathways found.
+Turn 87: Agent 40 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_40\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0VyUEx3MXdF_13.75_100.4915_h151.78_p-0.76_fov90.jpg
+Turn 88: Agent 39 ZOOM 0.74
+Turn 88: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\2_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h201.78_p-0.76_fov120.jpg
+Turn 89: Agent 65 TILT 29
+Turn 89: Agent 65 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_65\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0JqTmFoRmc._-54.8019_-68.303_h164.78_p28.24_fov90.jpg
+Turn 90: Agent 64 ZOOM 0.64
+Turn 90: Agent 64 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_64\2_CAoSFkNJSE0wb2dLRUlDQWdJQ0Uyc0xtVlE._69.6492_18.9553_h151.78_p-19.76_fov120.jpg
+Turn 91: Agent 30 PATH - No pathways found.
+Turn 91: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\3_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h151.78_p-0.76_fov56.850040509450864.jpg
+Turn 92: Agent 36 PATH - No pathways found.
+Turn 92: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\4_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-27.76_fov90.jpg
+Turn 93: Agent 47 PATH - No pathways found.
+Turn 93: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h108.78_p-0.76_fov90.jpg
+Turn 94: Agent 43 ZOOM 1.71
+Turn 94: Agent 43 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_43\2_CAoSF0NJSE0wb2dLRUlDQWdJRDQ0T1MxbEFF_37.5795_126.977_h151.78_p-0.76_fov36.064501887932416.jpg
+Turn 95: Agent 88 ZOOM 1.33
+Turn 95: Agent 88 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_88\2_CAoSFkNJSE0wb2dLRUlDQWdJREczOGJBQnc._47.88633212159008_106.9057639704205_h151.78_p-0.76_fov67.87381159682339.jpg
+Turn 96: Agent 23 TILT 9
+Turn 96: Agent 23 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_23\2_5ZFtmpfWAuTtqAWfAk2yeg_52.3676_4.9041_h151.78_p8.24_fov60.071753276455.jpg
+Turn 97: Agent 60 TILT -12
+Turn 97: Agent 60 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_60\2_CAoSFkNJSE0wb2dLRUlDQWdJRGtoT21LVUE._44.5902_-104.7151_h151.78_p-12.76_fov90.jpg
+Turn 98: Agent 88 ZOOM 1.41
+Turn 98: Agent 88 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_88\3_CAoSFkNJSE0wb2dLRUlDQWdJREczOGJBQnc._47.88633212159008_106.9057639704205_h151.78_p-0.76_fov48.29359271673639.jpg
+Turn 99: Agent 75 TILT 11
+Turn 99: Agent 75 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_75\2_CAoSFkNJSE0wb2dLRUlDQWdJRHk5c2F6Y0E._46.8772_-96.7898_h151.78_p0.2400000000000002_fov90.jpg
+Turn 100: Agent 86 TILT -14
+Turn 100: Agent 86 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_86\2_None_41.7151_44.8271_h133.78_p-14.76_fov90.jpg
+Turn 101: Agent 82 PAN -66
+Turn 101: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\3_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h85.78_p-0.76_fov53.147002445094806.jpg
+Turn 102: Agent 9 ZOOM 1.33
+Turn 102: Agent 9 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_9\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0dodF9ZOFFF_42.3467_-71.0972_h151.78_p-0.76_fov67.66788654827441.jpg
+Turn 103: Agent 4 PAN 88
+Turn 103: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\1_CAoSF0NJSE0wb2dLRUlDQWdJREV5Y3JSdXdF_41.8827_-87.6233_h239.78_p-0.76_fov90.jpg
+Turn 104: Agent 18 PAN 45
+Turn 104: Agent 18 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_18\3_CAoSF0NJSE0wb2dLRUlDQWdJQzZxWlhpMWdF_32.07982749471719_-81.09140977359799_h206.78_p-0.76_fov90.jpg
+Turn 105: Agent 32 TILT 0
+Turn 105: Agent 32 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_32\2_CAoSFkNJSE0wb2dLRUlDQWdJREV3UEh1TVE._48.2085_16.3738_h151.78_p-0.76_fov96.96445459894495.jpg
+Turn 106: Agent 12 GO CAoSFkNJSE0wb2dLRUlDQWdJQ0V6Y09VQVE.
+Turn 106: Agent 12 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_12\2_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6Y09VQVE._39.94955215343946_-75.15024278875474_h151.78_p-0.76_fov90.jpg
+Turn 107: Agent 7 ZOOM 1.07
+Turn 107: Agent 7 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_7\1_CAoSF0NJSE0wb2dLRUlDQWdJQzhxNEhTcmdF_47.6101_-122.3422_h151.78_p-0.76_fov83.96935906072935.jpg
+Turn 108: Agent 30 PAN -23
+Turn 108: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\4_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h128.78_p-0.76_fov56.850040509450864.jpg
+Turn 109: Agent 10 PAN 66
+Turn 109: Agent 10 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_10\2_CAoSF0NJSE0wb2dLRUlDQWdJRGlqT3JidWdF_36.1127_-115.1729_h217.78_p17.24_fov90.jpg
+Turn 110: Agent 54 ZOOM 0.66
+Turn 110: Agent 54 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_54\1_CAoSFkNJSE0wb2dLRUlDQWdJQ0VoYXpUREE._37.7459_-119.5332_h151.78_p-0.76_fov120.jpg
+Turn 111: Agent 62 TILT 11
+Turn 111: Agent 62 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_62\2_XXgkK2kb6ZWNFW4YrCqNVw_35.99930603015209_-78.90993712270298_h151.78_p10.24_fov90.jpg
+Turn 112: Agent 63 PAN -89
+Turn 112: Agent 63 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_63\2_CAoSFkNJSE0wb2dLRUlDQWdJREN1OFhWTmc._35.75196618788757_-83.96411110181558_h62.78_p-0.76_fov90.jpg
+Turn 113: Agent 68 PATH - No pathways found.
+Turn 113: Agent 68 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_68\2_CAoSFkNJSE0wb2dLRUlDQWdJQ2NtT0h6YkE._64.1466_-21.9426_h162.78_p-0.76_fov90.jpg
+Turn 114: Agent 73 PAN -55
+Turn 114: Agent 73 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_73\2_kvP7koMdtnxnt_ZBJ3pkeA_64.8378_-147.7164_h96.78_p-13.76_fov90.jpg
+Turn 115: Agent 37 ZOOM 0.87
+Turn 115: Agent 37 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_37\3_oeiz4XxmpFpWhlhoYMD2NA_35.65970438150233_139.7006501182504_h151.78_p-0.76_fov102.88724994892448.jpg
+Turn 116: Agent 58 PAN 77
+Turn 116: Agent 58 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_58\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0UtZVRMdGdF_38.7331_-109.5925_h228.78_p-0.76_fov90.jpg
+Turn 117: Agent 51 ZOOM 0.97
+Turn 117: Agent 51 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_51\2_None_14.5932_120.9825_h151.78_p-0.76_fov75.1371981244559.jpg
+Turn 118: Agent 6 GO CAoSFkNJSE0wb2dLRUlDQWdJRHNvZFN2RlE.
+Turn 118: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\3_CAoSFkNJSE0wb2dLRUlDQWdJRHNvZFN2RlE._33.74901985318448_-84.38819204684216_h82.78_p-0.76_fov90.jpg
+Turn 119: Agent 3 ZOOM 1.22
+Turn 119: Agent 3 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_3\4_CAoSFkNJSE0wb2dLRUlDQWdJQzR4OTJnV0E._33.9857_-118.4732_h137.78_p25.24_fov98.4471262234182.jpg
+Turn 120: Agent 6 PAN -6
+Turn 120: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\4_CAoSFkNJSE0wb2dLRUlDQWdJRHNvZFN2RlE._33.74901985318448_-84.38819204684216_h76.78_p-0.76_fov90.jpg
+Turn 121: Agent 46 TILT 17
+Turn 121: Agent 46 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_46\2_CAoSFkNJSE0wb2dLRUlDQWdJQ010dDJQSlE._25.033_121.5654_h222.78_p16.24_fov90.jpg
+Turn 122: Agent 50 TILT -25
+Turn 122: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\2_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h228.78_p-25.76_fov90.jpg
+Turn 123: Agent 58 PATH - No pathways found.
+Turn 123: Agent 58 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_58\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0UtZVRMdGdF_38.7331_-109.5925_h228.78_p-0.76_fov90.jpg
+Turn 124: Agent 79 GO dbESevVTq5o_nd6pU7cnrQ
+Turn 124: Agent 79 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_79\2_dbESevVTq5o_nd6pU7cnrQ_50.06479204647365_19.94503355194745_h151.78_p-0.76_fov90.jpg
+Turn 125: Agent 39 PAN -49
+Turn 125: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\3_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h152.78_p-0.76_fov120.jpg
+Turn 126: Agent 40 PATH - No pathways found.
+Turn 126: Agent 40 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_40\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0VyUEx3MXdF_13.75_100.4915_h151.78_p-0.76_fov90.jpg
+Turn 127: Agent 15 GO R35I90jCLUPGZHnJTFy-tw
+Turn 127: Agent 15 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_15\1_R35I90jCLUPGZHnJTFy-tw_25.78146850999796_-80.1309382524127_h151.78_p-0.76_fov90.jpg
+Turn 128: Agent 68 PATH - No pathways found.
+Turn 128: Agent 68 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_68\3_CAoSFkNJSE0wb2dLRUlDQWdJQ2NtT0h6YkE._64.1466_-21.9426_h162.78_p-0.76_fov90.jpg
+Turn 129: Agent 50 TILT -19
+Turn 129: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\3_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h228.78_p-44.760000000000005_fov90.jpg
+Turn 130: Agent 39 ZOOM 1.71
+Turn 130: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\4_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h152.78_p-0.76_fov70.33591277678482.jpg
+Turn 131: Agent 49 ZOOM 1.73
+Turn 131: Agent 49 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_49\3_CAoSF0NJSE0wb2dLRUlDQWdJQ2Vrcm5TcHdF_21.0285_105.8542_h228.78_p-0.76_fov62.55376668862249.jpg
+Turn 132: Agent 72 TILT -24
+Turn 132: Agent 72 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_72\2_CAoSF0NJSE0wb2dLRUlDQWdJREc2ODI2amdF_61.2181_-149.9003_h214.78_p-24.76_fov90.jpg
+Turn 133: Agent 64 ZOOM 1.91
+Turn 133: Agent 64 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_64\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0Uyc0xtVlE._69.6492_18.9553_h151.78_p-19.76_fov62.94523259516445.jpg
+Turn 134: Agent 73 TILT -8
+Turn 134: Agent 73 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_73\3_kvP7koMdtnxnt_ZBJ3pkeA_64.8378_-147.7164_h96.78_p-21.759999999999998_fov90.jpg
+Turn 135: Agent 69 ZOOM 1.00
+Turn 135: Agent 69 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_69\1_CAoSFkNJSE0wb2dLRUlDQWdJRDQ4N1c4VHc._-43.5321_172.6362_h151.78_p-0.76_fov90.03907388705446.jpg
+Turn 136: Agent 21 PAN 13
+Turn 136: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4S0s3Ync._41.4036_2.1744_h223.78_p25.24_fov49.745497688230564.jpg
+Turn 137: Agent 82 PAN -36
+Turn 137: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\4_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p-0.76_fov53.147002445094806.jpg
+Turn 138: Agent 43 TILT 24
+Turn 138: Agent 43 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_43\3_CAoSF0NJSE0wb2dLRUlDQWdJRDQ0T1MxbEFF_37.5795_126.977_h151.78_p23.24_fov36.064501887932416.jpg
+Turn 139: Agent 87 PAN 88
+Turn 139: Agent 87 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_87\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0VxSWZIM0FF_27.7172_85.324_h239.78_p-0.76_fov90.jpg
+Turn 140: Agent 52 TILT 27
+Turn 140: Agent 52 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_52\2_CAoSF0NJSE0wb2dLRUlDQWdJRDA2NWpMdHdF_36.0544_-112.1401_h151.78_p26.24_fov90.jpg
+Turn 141: Agent 81 TILT 29
+Turn 141: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\3_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h151.78_p8.239999999999998_fov90.jpg
+Turn 142: Agent 54 PAN 34
+Turn 142: Agent 54 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_54\2_CAoSFkNJSE0wb2dLRUlDQWdJQ0VoYXpUREE._37.7459_-119.5332_h185.78_p-0.76_fov120.jpg
+Turn 143: Agent 53 PAN -62
+Turn 143: Agent 53 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_53\2_CAoSF0NJSE0wb2dLRUlDQWdJQ1o4SVdRa0FF_44.428_-110.5885_h6.780000000000001_p-0.76_fov90.jpg
+Turn 144: Agent 21 ZOOM 0.90
+Turn 144: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\5_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4S0s3Ync._41.4036_2.1744_h223.78_p25.24_fov55.39598591875685.jpg
+Turn 145: Agent 16 GO joQvkwJemqYSd8onuRUhLg
+Turn 145: Agent 16 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_16\2_joQvkwJemqYSd8onuRUhLg_45.52007383747051_-122.6742102739034_h151.78_p-0.76_fov56.81413777753154.jpg
+Turn 146: Agent 57 PAN 12
+Turn 146: Agent 57 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_57\2_CAoSFkNJSE0wb2dLRUlDQWdJRDI0ZHpBT1E._43.0828_-79.0742_h163.78_p-0.76_fov90.jpg
+Turn 147: Agent 60 PATH - No pathways found.
+Turn 147: Agent 60 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_60\3_CAoSFkNJSE0wb2dLRUlDQWdJRGtoT21LVUE._44.5902_-104.7151_h151.78_p-12.76_fov90.jpg
+Turn 148: Agent 78 TILT -26
+Turn 148: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\4_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-26.76_fov82.78662541466684.jpg
+Turn 149: Agent 83 PAN -61
+Turn 149: Agent 83 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_83\2_TBP-Il3vUFXp17oBMF-MWQ_46.05687970340978_14.50592253938715_h90.78_p-0.76_fov90.jpg
+Turn 150: Agent 64 PAN 17
+Turn 150: Agent 64 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_64\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0Uyc0xtVlE._69.6492_18.9553_h168.78_p-19.76_fov62.94523259516445.jpg
+Turn 151: Agent 36 PATH - No pathways found.
+Turn 151: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\5_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-27.76_fov90.jpg
+Turn 152: Agent 47 PATH - No pathways found.
+Turn 152: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\3_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h108.78_p-0.76_fov90.jpg
+Turn 153: Agent 9 PATH - No pathways found.
+Turn 153: Agent 9 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_9\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0dodF9ZOFFF_42.3467_-71.0972_h151.78_p-0.76_fov67.66788654827441.jpg
+Turn 154: Agent 50 PAN -61
+Turn 154: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\4_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h167.78_p-44.760000000000005_fov90.jpg
+Turn 155: Agent 71 ZOOM 1.58
+Turn 155: Agent 71 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_71\2_9m-D67zs6opuNNPUEMf9yw_64.1814_-51.6941_h151.78_p-0.76_fov42.40677181690514.jpg
+Turn 156: Agent 51 PATH - No pathways found.
+Turn 156: Agent 51 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_51\3_None_14.5932_120.9825_h151.78_p-0.76_fov75.1371981244559.jpg
+Turn 157: Agent 50 PAN 59
+Turn 157: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\5_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h226.78_p-44.760000000000005_fov90.jpg
+Turn 158: Agent 90 TILT -5
+Turn 158: Agent 90 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_90\1_None_-16.5_-68.15_h151.78_p-5.76_fov90.jpg
+Turn 159: Agent 88 TILT 19
+Turn 159: Agent 88 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_88\4_CAoSFkNJSE0wb2dLRUlDQWdJREczOGJBQnc._47.88633212159008_106.9057639704205_h151.78_p18.24_fov48.29359271673639.jpg
+Turn 160: Agent 4 ZOOM 1.71
+Turn 160: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\2_CAoSF0NJSE0wb2dLRUlDQWdJREV5Y3JSdXdF_41.8827_-87.6233_h239.78_p-0.76_fov52.68111387291124.jpg
+Turn 161: Agent 44 ZOOM 1.70
+Turn 161: Agent 44 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_44\2_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4dVdUY2c._18.922_72.8347_h100.78_p-0.76_fov52.98151754639152.jpg
+Turn 162: Agent 12 PAN -24
+Turn 162: Agent 12 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_12\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6Y09VQVE._39.94955215343946_-75.15024278875474_h127.78_p-0.76_fov90.jpg
+Turn 163: Agent 31 PAN -31
+Turn 163: Agent 31 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_31\1_CAoSFkNJSE0wb2dLRUlDQWdJQ3VfYi1LSWc._50.0865_14.4114_h120.78_p-0.76_fov90.jpg
+Turn 164: Agent 11 TILT 14
+Turn 164: Agent 11 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_11\2_CAoSF0NJSE0wb2dLRUlDQWdJRGN2NUsyN2dF_30.2747_-97.7404_h151.78_p13.24_fov84.33827115541247.jpg
+Turn 165: Agent 90 PAN -58
+Turn 165: Agent 90 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_90\2_None_-16.5_-68.15_h93.78_p-5.76_fov90.jpg
+Turn 166: Agent 11 ZOOM 0.62
+Turn 166: Agent 11 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_11\3_CAoSF0NJSE0wb2dLRUlDQWdJRGN2NUsyN2dF_30.2747_-97.7404_h151.78_p13.24_fov120.jpg
+Turn 167: Agent 14 GO Lvj8JSmgHOP5oke6tDPKzw
+Turn 167: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\4_Lvj8JSmgHOP5oke6tDPKzw_36.16278627030748_-86.78150808766347_h151.78_p4.239999999999998_fov90.jpg
+Turn 168: Agent 11 ZOOM 0.78
+Turn 168: Agent 11 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_11\4_CAoSF0NJSE0wb2dLRUlDQWdJRGN2NUsyN2dF_30.2747_-97.7404_h151.78_p13.24_fov120.jpg
+Turn 169: Agent 51 PAN 39
+Turn 169: Agent 51 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_51\4_None_14.5932_120.9825_h190.78_p-0.76_fov75.1371981244559.jpg
+Turn 170: Agent 75 ZOOM 1.43
+Turn 170: Agent 75 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_75\3_CAoSFkNJSE0wb2dLRUlDQWdJRHk5c2F6Y0E._46.8772_-96.7898_h151.78_p0.2400000000000002_fov62.960374821018895.jpg
+Turn 171: Agent 87 ZOOM 1.25
+Turn 171: Agent 87 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_87\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0VxSWZIM0FF_27.7172_85.324_h239.78_p-0.76_fov72.1005953985474.jpg
+Turn 172: Agent 2 PATH - No pathways found.
+Turn 172: Agent 2 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_2\1_CAoSFkNJSE0wb2dLRUlDQWdJREVfWU9WTWc._40.741_-73.9896_h151.78_p-0.76_fov90.jpg
+Turn 173: Agent 44 TILT -16
+Turn 173: Agent 44 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_44\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4dVdUY2c._18.922_72.8347_h100.78_p-16.76_fov52.98151754639152.jpg
+Turn 174: Agent 36 TILT -23
+Turn 174: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\6_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-50.760000000000005_fov90.jpg
+Turn 175: Agent 78 GO CAoSFkNJSE0wb2dLRUlDQWdJQ2t3S2JGUmc.
+Turn 175: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\5_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-26.76_fov82.78662541466684.jpg
+Turn 176: Agent 63 ZOOM 1.00
+Turn 176: Agent 63 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_63\3_CAoSFkNJSE0wb2dLRUlDQWdJREN1OFhWTmc._35.75196618788757_-83.96411110181558_h62.78_p-0.76_fov90.42796136946528.jpg
+Turn 177: Agent 60 ZOOM 1.69
+Turn 177: Agent 60 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_60\4_CAoSFkNJSE0wb2dLRUlDQWdJRGtoT21LVUE._44.5902_-104.7151_h151.78_p-12.76_fov53.315159563757945.jpg
+Turn 178: Agent 78 TILT -15
+Turn 178: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\6_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-41.760000000000005_fov82.78662541466684.jpg
+Turn 179: Agent 28 GO Dj9MC0Hyeug7-Y7UyMbWlw
+Turn 179: Agent 28 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_28\1_Dj9MC0Hyeug7-Y7UyMbWlw_66.54329192014715_25.84649448105847_h151.78_p-0.76_fov90.jpg
+Turn 180: Agent 28 ZOOM 1.37
+Turn 180: Agent 28 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_28\2_Dj9MC0Hyeug7-Y7UyMbWlw_66.54329192014715_25.84649448105847_h151.78_p-0.76_fov65.54831202629136.jpg
+Turn 181: Agent 90 PATH - No pathways found.
+Turn 181: Agent 90 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_90\3_None_-16.5_-68.15_h93.78_p-5.76_fov90.jpg
+Turn 182: Agent 8 TILT -28
+Turn 182: Agent 8 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_8\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwbzI2aUFF_29.9572_-90.0644_h151.78_p-28.76_fov90.jpg
+Turn 183: Agent 68 PAN 51
+Turn 183: Agent 68 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_68\4_CAoSFkNJSE0wb2dLRUlDQWdJQ2NtT0h6YkE._64.1466_-21.9426_h213.78_p-0.76_fov90.jpg
+Turn 184: Agent 63 ZOOM 0.60
+Turn 184: Agent 63 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_63\4_CAoSFkNJSE0wb2dLRUlDQWdJREN1OFhWTmc._35.75196618788757_-83.96411110181558_h62.78_p-0.76_fov120.jpg
+Turn 185: Agent 27 TILT -3
+Turn 185: Agent 27 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_27\1_KEy4xQFIlcQPOWz2TocfFg_53.2236_-4.1981_h151.78_p-3.76_fov90.jpg
+Turn 186: Agent 62 TILT -30
+Turn 186: Agent 62 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_62\3_XXgkK2kb6ZWNFW4YrCqNVw_35.99930603015209_-78.90993712270298_h151.78_p-19.759999999999998_fov90.jpg
+Turn 187: Agent 22 ZOOM 1.41
+Turn 187: Agent 22 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_22\1_CAoSHENJQUJJaENJLVBfZC11V2dxSHB3U3RGLTdickQ._41.8902_12.4922_h151.78_p-0.76_fov63.88325915156623.jpg
+Turn 188: Agent 81 ZOOM 1.25
+Turn 188: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\4_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h151.78_p8.239999999999998_fov71.94843948379955.jpg
+Turn 189: Agent 31 GO CAoSF0NJSE0wb2dLRUlDQWdJQ3VfWS1tOFFF
+Turn 189: Agent 31 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_31\2_CAoSF0NJSE0wb2dLRUlDQWdJQ3VfWS1tOFFF_50.0865235792644_14.41135505673702_h120.78_p-0.76_fov90.jpg
+Turn 190: Agent 31 ZOOM 1.95
+Turn 190: Agent 31 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_31\3_CAoSF0NJSE0wb2dLRUlDQWdJQ3VfWS1tOFFF_50.0865235792644_14.41135505673702_h120.78_p-0.76_fov46.042780709628275.jpg
+Turn 191: Agent 30 TILT -12
+Turn 191: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\5_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h128.78_p-12.76_fov56.850040509450864.jpg
+Turn 192: Agent 44 PAN -46
+Turn 192: Agent 44 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_44\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4dVdUY2c._18.922_72.8347_h54.78_p-16.76_fov52.98151754639152.jpg
+Turn 193: Agent 29 PAN 26
+Turn 193: Agent 29 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_29\2_sp4EhSnYnKRIP2TGc3e1mQ_51.5628_-1.7715_h267.78_p-0.76_fov90.jpg
+Turn 194: Agent 19 ZOOM 1.56
+Turn 194: Agent 19 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_19\1_CAoSFkNJSE0wb2dLRUlDQWdJREU0SnJsWlE._48.8606_2.3376_h151.78_p-0.76_fov57.631602735915294.jpg
+Turn 195: Agent 39 PAN 82
+Turn 195: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\5_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h234.78_p-0.76_fov70.33591277678482.jpg
+Turn 196: Agent 87 GO CAoSFkNJSE0wb2dLRUlDQWdJQ0VxSmVVUkE.
+Turn 196: Agent 87 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_87\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0VxSmVVUkE._27.71747223338892_85.32393056926705_h239.78_p-0.76_fov72.1005953985474.jpg
+Turn 197: Agent 47 PAN -7
+Turn 197: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\4_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h101.78_p-0.76_fov90.jpg
+Turn 198: Agent 19 TILT 13
+Turn 198: Agent 19 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_19\2_CAoSFkNJSE0wb2dLRUlDQWdJREU0SnJsWlE._48.8606_2.3376_h151.78_p12.24_fov57.631602735915294.jpg
+Turn 199: Agent 18 PAN 83
+Turn 199: Agent 18 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_18\4_CAoSF0NJSE0wb2dLRUlDQWdJQzZxWlhpMWdF_32.07982749471719_-81.09140977359799_h289.78_p-0.76_fov90.jpg
+Turn 200: Agent 70 GO OnM1_OIVJXpKtxGDoNfzOg
+Turn 200: Agent 70 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_70\1_OnM1_OIVJXpKtxGDoNfzOg_-3.743754831700683_-73.25156424576406_h151.78_p-0.76_fov90.jpg
+Turn 201: Agent 33 PATH - No pathways found.
+Turn 201: Agent 33 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_33\1_CAoSFkNJSE0wb2dLRUlDQWdJRDRncVc0TWc._45.4341_12.3388_h151.78_p-0.76_fov90.jpg
+Turn 202: Agent 14 ZOOM 1.01
+Turn 202: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\5_Lvj8JSmgHOP5oke6tDPKzw_36.16278627030748_-86.78150808766347_h151.78_p4.239999999999998_fov89.49536192576672.jpg
+Turn 203: Agent 62 GO fXk1gm1PqBSt81iZUQpqmg
+Turn 203: Agent 62 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_62\4_fXk1gm1PqBSt81iZUQpqmg_35.99922610750146_-78.91004668969354_h151.78_p-19.759999999999998_fov90.jpg
+Turn 204: Agent 36 ZOOM 1.46
+Turn 204: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\7_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-50.760000000000005_fov61.76194489140374.jpg
+Turn 205: Agent 5 ZOOM 1.66
+Turn 205: Agent 5 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_5\2_CAoSF0NJSE0wb2dLRUlDQWdJQ3FqNUdQOFFF_37.8024_-122.4183_h151.78_p-0.76_fov38.74587237559107.jpg
+Turn 206: Agent 47 PAN 13
+Turn 206: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\5_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h114.78_p-0.76_fov90.jpg
+Turn 207: Agent 71 GO ZyeDvziyYGMX3E2jIwVFQQ
+Turn 207: Agent 71 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_71\3_ZyeDvziyYGMX3E2jIwVFQQ_64.18128482745655_-51.69402537882144_h151.78_p-0.76_fov42.40677181690514.jpg
+Turn 208: Agent 4 GO CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JSYnc.
+Turn 208: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\3_CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JSYnc._41.88269743378285_-87.62332061436929_h239.78_p-0.76_fov52.68111387291124.jpg
+Turn 209: Agent 48 ZOOM 1.21
+Turn 209: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\2_s0hwED607Fwwzmlj7v2vMQ_-6.1751_106.865_h174.78_p-0.76_fov74.65341819198206.jpg
+Turn 210: Agent 9 PAN 89
+Turn 210: Agent 9 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_9\3_CAoSF0NJSE0wb2dLRUlDQWdJQ0dodF9ZOFFF_42.3467_-71.0972_h240.78_p-0.76_fov67.66788654827441.jpg
+Turn 211: Agent 13 ZOOM 1.94
+Turn 211: Agent 13 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_13\2_CAoSF0NJSE0wb2dLRUlDQWdJREV0c0dDcFFF_39.7392_-104.9903_h151.78_p-0.76_fov46.33779712376868.jpg
+Turn 212: Agent 13 ZOOM 1.22
+Turn 212: Agent 13 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_13\3_CAoSF0NJSE0wb2dLRUlDQWdJREV0c0dDcFFF_39.7392_-104.9903_h151.78_p-0.76_fov37.92689881709249.jpg
+Turn 213: Agent 88 ZOOM 1.38
+Turn 213: Agent 88 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_88\5_CAoSFkNJSE0wb2dLRUlDQWdJREczOGJBQnc._47.88633212159008_106.9057639704205_h151.78_p18.24_fov34.991765043552334.jpg
+Turn 214: Agent 79 ZOOM 1.09
+Turn 214: Agent 79 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_79\3_dbESevVTq5o_nd6pU7cnrQ_50.06479204647365_19.94503355194745_h151.78_p-0.76_fov82.77499477663288.jpg
+Turn 215: Agent 50 PAN -88
+Turn 215: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\6_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h138.78_p-44.760000000000005_fov90.jpg
+Turn 216: Agent 61 ZOOM 1.44
+Turn 216: Agent 61 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_61\2_Wcnod1PcpfEWuxyVsH0-9g_-45.874_170.5036_h151.78_p-4.76_fov62.53311937300681.jpg
+Turn 217: Agent 28 ZOOM 1.76
+Turn 217: Agent 28 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_28\3_Dj9MC0Hyeug7-Y7UyMbWlw_66.54329192014715_25.84649448105847_h151.78_p-0.76_fov37.27072702557985.jpg
+Turn 218: Agent 2 TILT 26
+Turn 218: Agent 2 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_2\2_CAoSFkNJSE0wb2dLRUlDQWdJREVfWU9WTWc._40.741_-73.9896_h151.78_p25.24_fov90.jpg
+Turn 219: Agent 55 TILT 26
+Turn 219: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\3_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h151.78_p0.23999999999999844_fov90.jpg
+Turn 220: Agent 83 TILT -4
+Turn 220: Agent 83 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_83\3_TBP-Il3vUFXp17oBMF-MWQ_46.05687970340978_14.50592253938715_h90.78_p-4.76_fov90.jpg
+Turn 221: Agent 47 TILT -19
+Turn 221: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\6_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h114.78_p-19.76_fov90.jpg
+Turn 222: Agent 16 TILT 5
+Turn 222: Agent 16 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_16\3_joQvkwJemqYSd8onuRUhLg_45.52007383747051_-122.6742102739034_h151.78_p4.24_fov56.81413777753154.jpg
+Turn 223: Agent 20 PAN -9
+Turn 223: Agent 20 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_20\1_CAoSFkNJSE0wb2dLRUlDQWdJRDRnZWE3YWc._51.5055_-0.0754_h142.78_p-0.76_fov90.jpg
+Turn 224: Agent 40 ZOOM 0.55
+Turn 224: Agent 40 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_40\3_CAoSF0NJSE0wb2dLRUlDQWdJQ0VyUEx3MXdF_13.75_100.4915_h151.78_p-0.76_fov120.jpg
+Turn 225: Agent 14 GO Y6GF3U7679oK4Pw2476_hQ
+Turn 225: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\6_Y6GF3U7679oK4Pw2476_hQ_36.16270054566505_-86.78145364993394_h151.78_p4.239999999999998_fov89.49536192576672.jpg
+Turn 226: Agent 56 TILT -24
+Turn 226: Agent 56 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_56\3_CAoSF0NJSE0wb2dLRUlDQWdJQzRqNVBPaXdF_40.6892_-74.0445_h61.78_p-27.759999999999998_fov90.jpg
+Turn 227: Agent 21 PAN -36
+Turn 227: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\6_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4S0s3Ync._41.4036_2.1744_h187.78_p25.24_fov55.39598591875685.jpg
+Turn 228: Agent 25 TILT 19
+Turn 228: Agent 25 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_25\1_CAoSF0NJSE0wb2dLRUlDQWdJQzR3Y1NLN1FF_41.0055_28.9769_h151.78_p18.24_fov90.jpg
+Turn 229: Agent 40 TILT -2
+Turn 229: Agent 40 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_40\4_CAoSF0NJSE0wb2dLRUlDQWdJQ0VyUEx3MXdF_13.75_100.4915_h151.78_p-2.76_fov120.jpg
+Turn 230: Agent 25 PAN 24
+Turn 230: Agent 25 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_25\2_CAoSF0NJSE0wb2dLRUlDQWdJQzR3Y1NLN1FF_41.0055_28.9769_h175.78_p18.24_fov90.jpg
+Turn 231: Agent 38 PAN 26
+Turn 231: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\2_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h177.78_p-0.76_fov62.94348120005589.jpg
+Turn 232: Agent 34 ZOOM 1.35
+Turn 232: Agent 34 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_34\4_44Eutq8ASziNKwcEQ5u9QQ_53.34453556983719_-6.267291517635982_h135.78_p-0.76_fov66.90238435275015.jpg
+Turn 233: Agent 67 TILT -20
+Turn 233: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\4_rnfhxWRfekO0lp2V--Tg1g_-23.69791259979296_133.8807229637225_h151.78_p-20.76_fov75.34190244270502.jpg
+Turn 234: Agent 9 PATH - No pathways found.
+Turn 234: Agent 9 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_9\4_CAoSF0NJSE0wb2dLRUlDQWdJQ0dodF9ZOFFF_42.3467_-71.0972_h240.78_p-0.76_fov67.66788654827441.jpg
+Turn 235: Agent 47 PAN -27
+Turn 235: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\7_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h87.78_p-19.76_fov90.jpg
+Turn 236: Agent 71 PAN -20
+Turn 236: Agent 71 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_71\4_ZyeDvziyYGMX3E2jIwVFQQ_64.18128482745655_-51.69402537882144_h131.78_p-0.76_fov42.40677181690514.jpg
+Turn 237: Agent 57 PAN -82
+Turn 237: Agent 57 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_57\3_CAoSFkNJSE0wb2dLRUlDQWdJRDI0ZHpBT1E._43.0828_-79.0742_h81.78_p-0.76_fov90.jpg
+Turn 238: Agent 30 PATH - No pathways found.
+Turn 238: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\6_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h128.78_p-12.76_fov56.850040509450864.jpg
+Turn 239: Agent 36 TILT -2
+Turn 239: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\8_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-52.760000000000005_fov61.76194489140374.jpg
+Turn 240: Agent 59 PAN 29
+Turn 240: Agent 59 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_59\1_CAoSF0NJSE0wb2dLRUlDQWdJQzR1NFc1NkFF_37.8199_-122.4783_h180.78_p-0.76_fov90.jpg
+Turn 241: Agent 19 ZOOM 1.74
+Turn 241: Agent 19 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_19\3_CAoSFkNJSE0wb2dLRUlDQWdJREU0SnJsWlE._48.8606_2.3376_h151.78_p12.24_fov33.19540078376099.jpg
+Turn 242: Agent 81 PAN 55
+Turn 242: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\5_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h206.78_p8.239999999999998_fov71.94843948379955.jpg
+Turn 243: Agent 35 PATH - No pathways found.
+Turn 243: Agent 35 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_35\2_CAoSF0NJSE0wb2dLRUlDQWdJRFVfYlROc0FF_55.6795_12.5892_h151.78_p-0.76_fov46.83204029089257.jpg
+Turn 244: Agent 71 ZOOM 0.74
+Turn 244: Agent 71 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_71\5_ZyeDvziyYGMX3E2jIwVFQQ_64.18128482745655_-51.69402537882144_h131.78_p-0.76_fov57.38313400119816.jpg
+Turn 245: Agent 27 TILT -21
+Turn 245: Agent 27 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_27\2_KEy4xQFIlcQPOWz2TocfFg_53.2236_-4.1981_h151.78_p-24.759999999999998_fov90.jpg
+Turn 246: Agent 28 ZOOM 1.40
+Turn 246: Agent 28 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_28\4_Dj9MC0Hyeug7-Y7UyMbWlw_66.54329192014715_25.84649448105847_h151.78_p-0.76_fov26.56002912692803.jpg
+Turn 247: Agent 29 ZOOM 0.72
+Turn 247: Agent 29 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_29\3_sp4EhSnYnKRIP2TGc3e1mQ_51.5628_-1.7715_h267.78_p-0.76_fov120.jpg
+Turn 248: Agent 66 PAN -90
+Turn 248: Agent 66 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_66\2_CAoSFENJSE0wb2dLRUlDQWdJREo0dFpT_78.2232_15.6267_h61.78_p-0.76_fov120.jpg
+Turn 249: Agent 34 GO A5psOSgK28R2r4tNbQLAgg
+Turn 249: Agent 34 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_34\5_A5psOSgK28R2r4tNbQLAgg_53.34451022842414_-6.267285244948738_h135.78_p-0.76_fov66.90238435275015.jpg
+Turn 250: Agent 10 TILT -18
+Turn 250: Agent 10 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_10\3_CAoSF0NJSE0wb2dLRUlDQWdJRGlqT3JidWdF_36.1127_-115.1729_h217.78_p-0.7600000000000016_fov90.jpg
+Turn 251: Agent 52 PAN 29
+Turn 251: Agent 52 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_52\3_CAoSF0NJSE0wb2dLRUlDQWdJRDA2NWpMdHdF_36.0544_-112.1401_h180.78_p26.24_fov90.jpg
+Turn 252: Agent 67 GO R1L5Is-gq4Giz8tQhTOHIA
+Turn 252: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\5_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p-20.76_fov75.34190244270502.jpg
+Turn 253: Agent 84 ZOOM 1.08
+Turn 253: Agent 84 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_84\2_CAoSFkNJSE0wb2dLRUlDQWdJREV2TFNjY2c._42.6507_18.0944_h151.78_p25.24_fov83.14253602613631.jpg
+Turn 254: Agent 69 ZOOM 0.65
+Turn 254: Agent 69 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_69\2_CAoSFkNJSE0wb2dLRUlDQWdJRDQ4N1c4VHc._-43.5321_172.6362_h151.78_p-0.76_fov120.jpg
+Turn 255: Agent 89 PAN -24
+Turn 255: Agent 89 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_89\1_duqpqkhpah8DI2U1IdsVPQ_-0.1807_-78.4678_h127.78_p-0.76_fov90.jpg
+Turn 256: Agent 67 ZOOM 1.41
+Turn 256: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\6_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p-20.76_fov53.463160928360864.jpg
+Turn 257: Agent 44 PATH - No pathways found.
+Turn 257: Agent 44 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_44\5_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4dVdUY2c._18.922_72.8347_h54.78_p-16.76_fov52.98151754639152.jpg
+Turn 258: Agent 35 PATH - No pathways found.
+Turn 258: Agent 35 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_35\3_CAoSF0NJSE0wb2dLRUlDQWdJRFVfYlROc0FF_55.6795_12.5892_h151.78_p-0.76_fov46.83204029089257.jpg
+Turn 259: Agent 54 ZOOM 1.37
+Turn 259: Agent 54 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_54\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0VoYXpUREE._37.7459_-119.5332_h185.78_p-0.76_fov87.71448310278777.jpg
+Turn 260: Agent 34 TILT -12
+Turn 260: Agent 34 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_34\6_A5psOSgK28R2r4tNbQLAgg_53.34451022842414_-6.267285244948738_h135.78_p-12.76_fov66.90238435275015.jpg
+Turn 261: Agent 81 ZOOM 1.81
+Turn 261: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\6_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h206.78_p8.239999999999998_fov39.67358463950136.jpg
+Turn 262: Agent 21 PAN 0
+Turn 262: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\7_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4S0s3Ync._41.4036_2.1744_h187.78_p25.24_fov55.39598591875685.jpg
+Turn 263: Agent 5 TILT 12
+Turn 263: Agent 5 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_5\3_CAoSF0NJSE0wb2dLRUlDQWdJQ3FqNUdQOFFF_37.8024_-122.4183_h151.78_p11.24_fov38.74587237559107.jpg
+Turn 264: Agent 63 GO CAoSF0NJSE0wb2dLRUlDQWdJREN1OFhWMndF
+Turn 264: Agent 63 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_63\5_CAoSF0NJSE0wb2dLRUlDQWdJREN1OFhWMndF_35.75209900547976_-83.9643070092418_h62.78_p-0.76_fov120.jpg
+Turn 265: Agent 45 PAN -77
+Turn 265: Agent 45 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_45\1_CAoSF0NJSE0wb2dLRUlDQWdJQ0R0X2FhZ2dF_35.0117_135.7681_h74.78_p-0.76_fov90.jpg
+Turn 266: Agent 62 GO XXgkK2kb6ZWNFW4YrCqNVw
+Turn 266: Agent 62 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_62\5_XXgkK2kb6ZWNFW4YrCqNVw_35.99930603015209_-78.90993712270298_h151.78_p-19.759999999999998_fov90.jpg
+Turn 267: Agent 53 PAN -38
+Turn 267: Agent 53 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_53\3_CAoSF0NJSE0wb2dLRUlDQWdJQ1o4SVdRa0FF_44.428_-110.5885_h328.78_p-0.76_fov90.jpg
+Turn 268: Agent 38 PAN -31
+Turn 268: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\3_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h146.78_p-0.76_fov62.94348120005589.jpg
+Turn 269: Agent 48 TILT 12
+Turn 269: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\3_s0hwED607Fwwzmlj7v2vMQ_-6.1751_106.865_h174.78_p11.24_fov74.65341819198206.jpg
+Turn 270: Agent 89 TILT 9
+Turn 270: Agent 89 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_89\2_duqpqkhpah8DI2U1IdsVPQ_-0.1807_-78.4678_h127.78_p8.24_fov90.jpg
+Turn 271: Agent 45 PATH - No pathways found.
+Turn 271: Agent 45 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_45\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0R0X2FhZ2dF_35.0117_135.7681_h74.78_p-0.76_fov90.jpg
+Turn 272: Agent 11 GO CAoSF0NJSE0wb2dLRUlDQWdJRGN2OExvbFFF
+Turn 272: Agent 11 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_11\5_CAoSF0NJSE0wb2dLRUlDQWdJRGN2OExvbFFF_30.27458446039061_-97.74042245258256_h151.78_p13.24_fov120.jpg
+Turn 273: Agent 48 TILT -23
+Turn 273: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\4_s0hwED607Fwwzmlj7v2vMQ_-6.1751_106.865_h174.78_p-11.76_fov74.65341819198206.jpg
+Turn 274: Agent 25 PATH - No pathways found.
+Turn 274: Agent 25 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_25\3_CAoSF0NJSE0wb2dLRUlDQWdJQzR3Y1NLN1FF_41.0055_28.9769_h175.78_p18.24_fov90.jpg
+Turn 275: Agent 39 ZOOM 0.95
+Turn 275: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\6_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h234.78_p-0.76_fov74.24491840456716.jpg
+Turn 276: Agent 82 ZOOM 1.31
+Turn 276: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\5_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p-0.76_fov40.6531422691457.jpg
+Turn 277: Agent 8 TILT -1
+Turn 277: Agent 8 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_8\2_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwbzI2aUFF_29.9572_-90.0644_h151.78_p-29.76_fov90.jpg
+Turn 278: Agent 47 PATH - No pathways found.
+Turn 278: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\8_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h87.78_p-19.76_fov90.jpg
+Turn 279: Agent 71 PAN -64
+Turn 279: Agent 71 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_71\6_ZyeDvziyYGMX3E2jIwVFQQ_64.18128482745655_-51.69402537882144_h67.78_p-0.76_fov57.38313400119816.jpg
+Turn 280: Agent 31 PAN -54
+Turn 280: Agent 31 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_31\4_CAoSF0NJSE0wb2dLRUlDQWdJQ3VfWS1tOFFF_50.0865235792644_14.41135505673702_h66.78_p-0.76_fov46.042780709628275.jpg
+Turn 281: Agent 9 ZOOM 1.49
+Turn 281: Agent 9 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_9\5_CAoSF0NJSE0wb2dLRUlDQWdJQ0dodF9ZOFFF_42.3467_-71.0972_h240.78_p-0.76_fov45.47966486718186.jpg
+Turn 282: Agent 88 ZOOM 1.51
+Turn 282: Agent 88 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_88\6_CAoSFkNJSE0wb2dLRUlDQWdJREczOGJBQnc._47.88633212159008_106.9057639704205_h151.78_p18.24_fov23.111921813736817.jpg
+Turn 283: Agent 44 PAN -75
+Turn 283: Agent 44 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_44\6_CAoSFkNJSE0wb2dLRUlDQWdJQ0t4dVdUY2c._18.922_72.8347_h339.78_p-16.76_fov52.98151754639152.jpg
+Turn 284: Agent 60 PATH - No pathways found.
+Turn 284: Agent 60 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_60\5_CAoSFkNJSE0wb2dLRUlDQWdJRGtoT21LVUE._44.5902_-104.7151_h151.78_p-12.76_fov53.315159563757945.jpg
+Turn 285: Agent 41 PAN 0
+Turn 285: Agent 41 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_41\1_fIr5HQwRCLyhKVzlzl0wQg_22.2793_114.1628_h151.78_p-0.76_fov90.jpg
+Turn 286: Agent 79 GO Lm3VIyb0S_xx_3FixNNe_A
+Turn 286: Agent 79 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_79\4_Lm3VIyb0S_xx_3FixNNe_A_50.06469907342536_19.94502426188792_h151.78_p-0.76_fov82.77499477663288.jpg
+Turn 287: Agent 4 TILT 7
+Turn 287: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\4_CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JSYnc._41.88269743378285_-87.62332061436929_h239.78_p6.24_fov52.68111387291124.jpg
+Turn 288: Agent 52 TILT -25
+Turn 288: Agent 52 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_52\4_CAoSF0NJSE0wb2dLRUlDQWdJRDA2NWpMdHdF_36.0544_-112.1401_h180.78_p1.2399999999999984_fov90.jpg
+Turn 289: Agent 72 TILT -16
+Turn 289: Agent 72 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_72\3_CAoSF0NJSE0wb2dLRUlDQWdJREc2ODI2amdF_61.2181_-149.9003_h214.78_p-40.760000000000005_fov90.jpg
+Turn 290: Agent 80 PAN -33
+Turn 290: Agent 80 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_80\1_CAoSF0NJSE0wb2dLRUlDQWdJRFUwdjdiMlFF_59.437_24.7536_h118.78_p-0.76_fov90.jpg
+Turn 291: Agent 43 PAN 44
+Turn 291: Agent 43 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_43\4_CAoSF0NJSE0wb2dLRUlDQWdJRDQ0T1MxbEFF_37.5795_126.977_h195.78_p23.24_fov36.064501887932416.jpg
+Turn 292: Agent 47 PAN -6
+Turn 292: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\9_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h81.78_p-19.76_fov90.jpg
+Turn 293: Agent 76 GO q_qOSZtLeVJ9p0st5zTuQQ
+Turn 293: Agent 76 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_76\2_q_qOSZtLeVJ9p0st5zTuQQ_44.47595921459838_-73.21210449673119_h151.78_p-0.76_fov90.jpg
+Turn 294: Agent 37 TILT -19
+Turn 294: Agent 37 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_37\4_oeiz4XxmpFpWhlhoYMD2NA_35.65970438150233_139.7006501182504_h151.78_p-19.76_fov102.88724994892448.jpg
+Turn 295: Agent 13 TILT -2
+Turn 295: Agent 13 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_13\4_CAoSF0NJSE0wb2dLRUlDQWdJREV0c0dDcFFF_39.7392_-104.9903_h151.78_p-2.76_fov37.92689881709249.jpg
+Turn 296: Agent 86 PAN -61
+Turn 296: Agent 86 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_86\3_None_41.7151_44.8271_h72.78_p-14.76_fov90.jpg
+Turn 297: Agent 57 PATH - No pathways found.
+Turn 297: Agent 57 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_57\4_CAoSFkNJSE0wb2dLRUlDQWdJRDI0ZHpBT1E._43.0828_-79.0742_h81.78_p-0.76_fov90.jpg
+Turn 298: Agent 81 PAN -49
+Turn 298: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\7_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h157.78_p8.239999999999998_fov39.67358463950136.jpg
+Turn 299: Agent 2 PAN 43
+Turn 299: Agent 2 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_2\3_CAoSFkNJSE0wb2dLRUlDQWdJREVfWU9WTWc._40.741_-73.9896_h194.78_p25.24_fov90.jpg
+Turn 300: Agent 40 TILT 22
+Turn 300: Agent 40 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_40\5_CAoSF0NJSE0wb2dLRUlDQWdJQ0VyUEx3MXdF_13.75_100.4915_h151.78_p19.240000000000002_fov120.jpg
+Turn 301: Agent 48 GO e2BoFu7dzKV0sROaLVXNfw
+Turn 301: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\5_e2BoFu7dzKV0sROaLVXNfw_-6.175121508592309_106.8650083687439_h174.78_p-11.76_fov74.65341819198206.jpg
+Turn 302: Agent 89 PAN 31
+Turn 302: Agent 89 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_89\3_duqpqkhpah8DI2U1IdsVPQ_-0.1807_-78.4678_h158.78_p8.24_fov90.jpg
+Turn 303: Agent 77 GO CAoSFkNJSE0wb2dLRUlDQWdJREVpcmZMSXc.
+Turn 303: Agent 77 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_77\2_CAoSFkNJSE0wb2dLRUlDQWdJREVpcmZMSXc._43.26353675905105_-2.933970637047786_h164.78_p-0.76_fov90.jpg
+Turn 304: Agent 30 TILT 24
+Turn 304: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\7_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h128.78_p11.24_fov56.850040509450864.jpg
+Turn 305: Agent 24 ZOOM 1.58
+Turn 305: Agent 24 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_24\3_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6OVdmTUE._37.9715_23.7266_h226.78_p-0.76_fov36.61910719590819.jpg
+Turn 306: Agent 43 ZOOM 1.83
+Turn 306: Agent 43 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_43\5_CAoSF0NJSE0wb2dLRUlDQWdJRDQ0T1MxbEFF_37.5795_126.977_h195.78_p23.24_fov19.729214785715545.jpg
+Turn 307: Agent 4 PAN 35
+Turn 307: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\5_CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JSYnc._41.88269743378285_-87.62332061436929_h274.78_p6.24_fov52.68111387291124.jpg
+Turn 308: Agent 63 ZOOM 0.53
+Turn 308: Agent 63 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_63\6_CAoSF0NJSE0wb2dLRUlDQWdJREN1OFhWMndF_35.75209900547976_-83.9643070092418_h62.78_p-0.76_fov120.jpg
+Turn 309: Agent 41 ZOOM 1.13
+Turn 309: Agent 41 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_41\2_fIr5HQwRCLyhKVzlzl0wQg_22.2793_114.1628_h151.78_p-0.76_fov79.47948677165307.jpg
+Turn 310: Agent 89 PAN 0
+Turn 310: Agent 89 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_89\4_duqpqkhpah8DI2U1IdsVPQ_-0.1807_-78.4678_h158.78_p8.24_fov90.jpg
+Turn 311: Agent 63 PAN 72
+Turn 311: Agent 63 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_63\7_CAoSF0NJSE0wb2dLRUlDQWdJREN1OFhWMndF_35.75209900547976_-83.9643070092418_h134.78_p-0.76_fov120.jpg
+Turn 312: Agent 62 PAN -67
+Turn 312: Agent 62 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_62\6_XXgkK2kb6ZWNFW4YrCqNVw_35.99930603015209_-78.90993712270298_h84.78_p-19.759999999999998_fov90.jpg
+Turn 313: Agent 59 PATH - No pathways found.
+Turn 313: Agent 59 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_59\2_CAoSF0NJSE0wb2dLRUlDQWdJQzR1NFc1NkFF_37.8199_-122.4783_h180.78_p-0.76_fov90.jpg
+Turn 314: Agent 49 ZOOM 0.93
+Turn 314: Agent 49 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_49\4_CAoSF0NJSE0wb2dLRUlDQWdJQ2Vrcm5TcHdF_21.0285_105.8542_h228.78_p-0.76_fov67.51537035235302.jpg
+Turn 315: Agent 82 TILT -18
+Turn 315: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\6_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p-18.76_fov40.6531422691457.jpg
+Turn 316: Agent 36 PATH - No pathways found.
+Turn 316: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\9_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h151.78_p-52.760000000000005_fov61.76194489140374.jpg
+Turn 317: Agent 41 GO PzDornbNJovjIsq_2KmWMA
+Turn 317: Agent 41 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_41\3_PzDornbNJovjIsq_2KmWMA_22.27926623953146_114.1627560874437_h151.78_p-0.76_fov79.47948677165307.jpg
+Turn 318: Agent 35 TILT -28
+Turn 318: Agent 35 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_35\4_CAoSF0NJSE0wb2dLRUlDQWdJRFVfYlROc0FF_55.6795_12.5892_h151.78_p-28.76_fov46.83204029089257.jpg
+Turn 319: Agent 79 GO gZ4LFdF-grtVuLFdC3Jc4A
+Turn 319: Agent 79 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_79\5_gZ4LFdF-grtVuLFdC3Jc4A_50.06462275861868_19.94501579638641_h151.78_p-0.76_fov82.77499477663288.jpg
+Turn 320: Agent 29 TILT 19
+Turn 320: Agent 29 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_29\4_sp4EhSnYnKRIP2TGc3e1mQ_51.5628_-1.7715_h267.78_p18.24_fov120.jpg
+Turn 321: Agent 81 TILT -17
+Turn 321: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\8_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h157.78_p-8.760000000000002_fov39.67358463950136.jpg
+Turn 322: Agent 52 PAN -18
+Turn 322: Agent 52 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_52\5_CAoSF0NJSE0wb2dLRUlDQWdJRDA2NWpMdHdF_36.0544_-112.1401_h162.78_p1.2399999999999984_fov90.jpg
+Turn 323: Agent 4 GO CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JOQnc.
+Turn 323: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\6_CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JOQnc._41.88262631910265_-87.62326472867808_h274.78_p6.24_fov52.68111387291124.jpg
+Turn 324: Agent 75 PAN -52
+Turn 324: Agent 75 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_75\4_CAoSFkNJSE0wb2dLRUlDQWdJRHk5c2F6Y0E._46.8772_-96.7898_h99.78_p0.2400000000000002_fov62.960374821018895.jpg
+Turn 325: Agent 45 TILT 27
+Turn 325: Agent 45 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_45\3_CAoSF0NJSE0wb2dLRUlDQWdJQ0R0X2FhZ2dF_35.0117_135.7681_h74.78_p26.24_fov90.jpg
+Turn 326: Agent 70 GO A8FMktnyxxXYjaP6d7qNUA
+Turn 326: Agent 70 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_70\2_A8FMktnyxxXYjaP6d7qNUA_-3.743811595677486_-73.25149684104184_h151.78_p-0.76_fov90.jpg
+Turn 327: Agent 32 PAN 24
+Turn 327: Agent 32 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_32\3_CAoSFkNJSE0wb2dLRUlDQWdJREV3UEh1TVE._48.2085_16.3738_h175.78_p-0.76_fov96.96445459894495.jpg
+Turn 328: Agent 67 TILT 23
+Turn 328: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\7_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p2.2399999999999984_fov53.463160928360864.jpg
+Turn 329: Agent 67 TILT -11
+Turn 329: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\8_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p-8.760000000000002_fov53.463160928360864.jpg
+Turn 330: Agent 78 GO CAoSFkNJSE0wb2dLRUlDQWdJQ2t3S2JGUmc.
+Turn 330: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\7_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-41.760000000000005_fov82.78662541466684.jpg
+Turn 331: Agent 80 PAN 29
+Turn 331: Agent 80 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_80\2_CAoSF0NJSE0wb2dLRUlDQWdJRFUwdjdiMlFF_59.437_24.7536_h147.78_p-0.76_fov90.jpg
+Turn 332: Agent 47 TILT -16
+Turn 332: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\10_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h81.78_p-35.760000000000005_fov90.jpg
+Turn 333: Agent 36 PAN -1
+Turn 333: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\10_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h150.78_p-52.760000000000005_fov61.76194489140374.jpg
+Turn 334: Agent 83 GO JAqfwab2D8RscPgf-y0wOg
+Turn 334: Agent 83 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_83\4_JAqfwab2D8RscPgf-y0wOg_46.05689887478972_14.5058196228894_h90.78_p-4.76_fov90.jpg
+Turn 335: Agent 52 PAN -16
+Turn 335: Agent 52 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_52\6_CAoSF0NJSE0wb2dLRUlDQWdJRDA2NWpMdHdF_36.0544_-112.1401_h146.78_p1.2399999999999984_fov90.jpg
+Turn 336: Agent 7 ZOOM 1.54
+Turn 336: Agent 7 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_7\2_CAoSF0NJSE0wb2dLRUlDQWdJQzhxNEhTcmdF_47.6101_-122.3422_h151.78_p-0.76_fov54.60623175831372.jpg
+Turn 337: Agent 89 GO ijMNFP54S677rI_u3hK9ew
+Turn 337: Agent 89 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_89\5_ijMNFP54S677rI_u3hK9ew_-0.1805720702004473_-78.46775764390713_h158.78_p8.24_fov90.jpg
+Turn 338: Agent 85 GO rLgptm093FjKRyYEtItnRg
+Turn 338: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\1_rLgptm093FjKRyYEtItnRg_43.85634874571501_18.41303898354222_h151.78_p-0.76_fov90.jpg
+Turn 339: Agent 2 PAN 90
+Turn 339: Agent 2 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_2\4_CAoSFkNJSE0wb2dLRUlDQWdJREVfWU9WTWc._40.741_-73.9896_h284.78_p25.24_fov90.jpg
+Turn 340: Agent 65 TILT 21
+Turn 340: Agent 65 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_65\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0JqTmFoRmc._-54.8019_-68.303_h164.78_p49.239999999999995_fov90.jpg
+Turn 341: Agent 67 ZOOM 0.87
+Turn 341: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\9_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p-8.760000000000002_fov61.7943342115695.jpg
+Turn 342: Agent 28 GO 44PhBbkc5vUUsXjWZ03HJw
+Turn 342: Agent 28 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_28\5_44PhBbkc5vUUsXjWZ03HJw_66.54330434828391_25.84654035617726_h151.78_p-0.76_fov26.56002912692803.jpg
+Turn 343: Agent 57 PAN -6
+Turn 343: Agent 57 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_57\5_CAoSFkNJSE0wb2dLRUlDQWdJRDI0ZHpBT1E._43.0828_-79.0742_h75.78_p-0.76_fov90.jpg
+Turn 344: Agent 8 PATH - No pathways found.
+Turn 344: Agent 8 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_8\3_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwbzI2aUFF_29.9572_-90.0644_h151.78_p-29.76_fov90.jpg
+Turn 345: Agent 8 PAN 29
+Turn 345: Agent 8 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_8\4_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwbzI2aUFF_29.9572_-90.0644_h180.78_p-29.76_fov90.jpg
+Turn 346: Agent 33 TILT 26
+Turn 346: Agent 33 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_33\2_CAoSFkNJSE0wb2dLRUlDQWdJRDRncVc0TWc._45.4341_12.3388_h151.78_p25.24_fov90.jpg
+Turn 347: Agent 33 TILT -29
+Turn 347: Agent 33 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_33\3_CAoSFkNJSE0wb2dLRUlDQWdJRDRncVc0TWc._45.4341_12.3388_h151.78_p-3.7600000000000016_fov90.jpg
+Turn 348: Agent 21 GO CAoSF0NJSE0wb2dLRUlDQWdJQ0t4T0tnOUFF
+Turn 348: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\8_CAoSF0NJSE0wb2dLRUlDQWdJQ0t4T0tnOUFF_41.40363396696246_2.174422288438004_h187.78_p25.24_fov55.39598591875685.jpg
+Turn 349: Agent 82 TILT 14
+Turn 349: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\7_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p-4.760000000000002_fov40.6531422691457.jpg
+Turn 350: Agent 55 PATH - No pathways found.
+Turn 350: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\4_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h151.78_p0.23999999999999844_fov90.jpg
+Turn 351: Agent 74 ZOOM 0.95
+Turn 351: Agent 74 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_74\2_CAoSF0NJSE0wb2dLRUlDQWdJRDQ4OVdvX3dF_45.677_-111.0429_h151.78_p-4.76_fov94.92650934092845.jpg
+Turn 352: Agent 31 TILT 5
+Turn 352: Agent 31 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_31\5_CAoSF0NJSE0wb2dLRUlDQWdJQ3VfWS1tOFFF_50.0865235792644_14.41135505673702_h66.78_p4.24_fov46.042780709628275.jpg
+Turn 353: Agent 4 PAN -70
+Turn 353: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\7_CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JOQnc._41.88262631910265_-87.62326472867808_h204.77999999999997_p6.24_fov52.68111387291124.jpg
+Turn 354: Agent 69 PAN 61
+Turn 354: Agent 69 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_69\3_CAoSFkNJSE0wb2dLRUlDQWdJRDQ4N1c4VHc._-43.5321_172.6362_h212.78_p-0.76_fov120.jpg
+Turn 355: Agent 84 PATH - No pathways found.
+Turn 355: Agent 84 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_84\3_CAoSFkNJSE0wb2dLRUlDQWdJREV2TFNjY2c._42.6507_18.0944_h151.78_p25.24_fov83.14253602613631.jpg
+Turn 356: Agent 82 PATH - No pathways found.
+Turn 356: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\8_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p-4.760000000000002_fov40.6531422691457.jpg
+Turn 357: Agent 5 ZOOM 1.58
+Turn 357: Agent 5 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_5\4_CAoSF0NJSE0wb2dLRUlDQWdJQ3FqNUdQOFFF_37.8024_-122.4183_h151.78_p11.24_fov24.572655020271764.jpg
+Turn 358: Agent 85 TILT -4
+Turn 358: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\2_rLgptm093FjKRyYEtItnRg_43.85634874571501_18.41303898354222_h151.78_p-4.76_fov90.jpg
+Turn 359: Agent 50 TILT -7
+Turn 359: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\7_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h138.78_p-51.760000000000005_fov90.jpg
+Turn 360: Agent 4 PAN -6
+Turn 360: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\8_CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JOQnc._41.88262631910265_-87.62326472867808_h198.77999999999997_p6.24_fov52.68111387291124.jpg
+Turn 361: Agent 48 TILT 17
+Turn 361: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\6_e2BoFu7dzKV0sROaLVXNfw_-6.175121508592309_106.8650083687439_h174.78_p5.24_fov74.65341819198206.jpg
+Turn 362: Agent 16 PAN -18
+Turn 362: Agent 16 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_16\4_joQvkwJemqYSd8onuRUhLg_45.52007383747051_-122.6742102739034_h133.78_p4.24_fov56.81413777753154.jpg
+Turn 363: Agent 6 ZOOM 1.29
+Turn 363: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\5_CAoSFkNJSE0wb2dLRUlDQWdJRHNvZFN2RlE._33.74901985318448_-84.38819204684216_h76.78_p-0.76_fov69.78069844851922.jpg
+Turn 364: Agent 72 PAN 39
+Turn 364: Agent 72 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_72\4_CAoSF0NJSE0wb2dLRUlDQWdJREc2ODI2amdF_61.2181_-149.9003_h253.78_p-40.760000000000005_fov90.jpg
+Turn 365: Agent 21 ZOOM 1.73
+Turn 365: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\9_CAoSF0NJSE0wb2dLRUlDQWdJQ0t4T0tnOUFF_41.40363396696246_2.174422288438004_h187.78_p25.24_fov32.02849150560307.jpg
+Turn 366: Agent 73 GO dltgXwfQkGdVZyEGAgP8XQ
+Turn 366: Agent 73 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_73\4_dltgXwfQkGdVZyEGAgP8XQ_64.83805457270181_-147.7166035904912_h96.78_p-21.759999999999998_fov90.jpg
+Turn 367: Agent 38 ZOOM 0.75
+Turn 367: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\4_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h146.78_p-0.76_fov84.22660316081296.jpg
+Turn 368: Agent 79 ZOOM 0.70
+Turn 368: Agent 79 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_79\6_gZ4LFdF-grtVuLFdC3Jc4A_50.06462275861868_19.94501579638641_h151.78_p-0.76_fov119.06417952571964.jpg
+Turn 369: Agent 50 PAN -6
+Turn 369: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\8_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h132.78_p-51.760000000000005_fov90.jpg
+Turn 370: Agent 82 ZOOM 1.69
+Turn 370: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\9_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p-4.760000000000002_fov23.98803805966751.jpg
+Turn 371: Agent 47 PATH - No pathways found.
+Turn 371: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\11_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h81.78_p-35.760000000000005_fov90.jpg
+Turn 372: Agent 17 PATH - No pathways found.
+Turn 372: Agent 17 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_17\1_CAoSF0NJSE0wb2dLRUlDQWdJRHF6YW1XdWdF_21.2793_-157.8293_h151.78_p-0.76_fov90.jpg
+Turn 373: Agent 30 TILT 18
+Turn 373: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\8_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h128.78_p29.240000000000002_fov56.850040509450864.jpg
+Turn 374: Agent 68 ZOOM 1.39
+Turn 374: Agent 68 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_68\5_CAoSFkNJSE0wb2dLRUlDQWdJQ2NtT0h6YkE._64.1466_-21.9426_h213.78_p-0.76_fov64.93250838287683.jpg
+Turn 375: Agent 89 TILT -24
+Turn 375: Agent 89 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_89\6_ijMNFP54S677rI_u3hK9ew_-0.1805720702004473_-78.46775764390713_h158.78_p-15.76_fov90.jpg
+Turn 376: Agent 67 TILT -9
+Turn 376: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\10_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p-17.76_fov61.7943342115695.jpg
+Turn 377: Agent 90 PAN 19
+Turn 377: Agent 90 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_90\4_None_-16.5_-68.15_h112.78_p-5.76_fov90.jpg
+Turn 378: Agent 28 GO TjefseetnqhKUJbI6uX_4w
+Turn 378: Agent 28 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_28\6_TjefseetnqhKUJbI6uX_4w_66.54300729138303_25.84660669923232_h151.78_p-0.76_fov26.56002912692803.jpg
+Turn 379: Agent 84 TILT 2
+Turn 379: Agent 84 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_84\4_CAoSFkNJSE0wb2dLRUlDQWdJREV2TFNjY2c._42.6507_18.0944_h151.78_p27.24_fov83.14253602613631.jpg
+Turn 380: Agent 55 ZOOM 1.69
+Turn 380: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\5_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h151.78_p0.23999999999999844_fov53.3285460580916.jpg
+Turn 381: Agent 39 ZOOM 1.41
+Turn 381: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\7_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h234.78_p-0.76_fov52.470890208921666.jpg
+Turn 382: Agent 19 PAN 60
+Turn 382: Agent 19 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_19\4_CAoSFkNJSE0wb2dLRUlDQWdJREU0SnJsWlE._48.8606_2.3376_h211.78_p12.24_fov33.19540078376099.jpg
+Turn 383: Agent 13 ZOOM 0.97
+Turn 383: Agent 13 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_13\5_CAoSF0NJSE0wb2dLRUlDQWdJREV0c0dDcFFF_39.7392_-104.9903_h151.78_p-2.76_fov38.97316666158916.jpg
+Turn 384: Agent 50 PAN 42
+Turn 384: Agent 50 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_50\9_CAoSFkNJSE0wb2dLRUlDQWdJRGMzZFAyS0E._28.6562_77.241_h174.78_p-51.760000000000005_fov90.jpg
+Turn 385: Agent 17 PAN 10
+Turn 385: Agent 17 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_17\2_CAoSF0NJSE0wb2dLRUlDQWdJRHF6YW1XdWdF_21.2793_-157.8293_h161.78_p-0.76_fov90.jpg
+Turn 386: Agent 24 TILT -9
+Turn 386: Agent 24 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_24\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6OVdmTUE._37.9715_23.7266_h226.78_p-9.76_fov36.61910719590819.jpg
+Turn 387: Agent 29 GO K4LgHJpHosMb3bghhzWqpw
+Turn 387: Agent 29 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_29\5_K4LgHJpHosMb3bghhzWqpw_51.56265373206994_-1.771582356768868_h267.78_p18.24_fov120.jpg
+Turn 388: Agent 55 PATH - No pathways found.
+Turn 388: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\6_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h151.78_p0.23999999999999844_fov53.3285460580916.jpg
+Turn 389: Agent 47 TILT -25
+Turn 389: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\12_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h81.78_p-60.760000000000005_fov90.jpg
+Turn 390: Agent 84 PAN 41
+Turn 390: Agent 84 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_84\5_CAoSFkNJSE0wb2dLRUlDQWdJREV2TFNjY2c._42.6507_18.0944_h192.78_p27.24_fov83.14253602613631.jpg
+Turn 391: Agent 48 GO mSP7mDAD4s624WFhCLkBOw
+Turn 391: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\7_mSP7mDAD4s624WFhCLkBOw_-6.175197797207795_106.8650022460529_h174.78_p5.24_fov74.65341819198206.jpg
+Turn 392: Agent 24 PAN -25
+Turn 392: Agent 24 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_24\5_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6OVdmTUE._37.9715_23.7266_h201.78_p-9.76_fov36.61910719590819.jpg
+Turn 393: Agent 43 PAN -28
+Turn 393: Agent 43 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_43\6_CAoSF0NJSE0wb2dLRUlDQWdJRDQ0T1MxbEFF_37.5795_126.977_h167.78_p23.24_fov19.729214785715545.jpg
+Turn 394: Agent 71 GO 9m-D67zs6opuNNPUEMf9yw
+Turn 394: Agent 71 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_71\7_9m-D67zs6opuNNPUEMf9yw_64.18140458701501_-51.69410849477895_h67.78_p-0.76_fov57.38313400119816.jpg
+Turn 395: Agent 48 PAN -4
+Turn 395: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\8_mSP7mDAD4s624WFhCLkBOw_-6.175197797207795_106.8650022460529_h170.78_p5.24_fov74.65341819198206.jpg
+Turn 396: Agent 61 GO OmTkFXIaRsmN9GgmIsKgZg
+Turn 396: Agent 61 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_61\3_OmTkFXIaRsmN9GgmIsKgZg_-45.87395685055465_170.5036976059624_h151.78_p-4.76_fov62.53311937300681.jpg
+Turn 397: Agent 20 PAN -14
+Turn 397: Agent 20 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_20\2_CAoSFkNJSE0wb2dLRUlDQWdJRDRnZWE3YWc._51.5055_-0.0754_h128.78_p-0.76_fov90.jpg
+Turn 398: Agent 27 ZOOM 0.81
+Turn 398: Agent 27 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_27\3_KEy4xQFIlcQPOWz2TocfFg_53.2236_-4.1981_h151.78_p-24.759999999999998_fov111.73851177919745.jpg
+Turn 399: Agent 56 ZOOM 1.49
+Turn 399: Agent 56 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_56\4_CAoSF0NJSE0wb2dLRUlDQWdJQzRqNVBPaXdF_40.6892_-74.0445_h61.78_p-27.759999999999998_fov60.35634590899921.jpg
+Turn 400: Agent 53 PATH - No pathways found.
+Turn 400: Agent 53 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_53\4_CAoSF0NJSE0wb2dLRUlDQWdJQ1o4SVdRa0FF_44.428_-110.5885_h328.78_p-0.76_fov90.jpg
+Turn 401: Agent 24 TILT -8
+Turn 401: Agent 24 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_24\6_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6OVdmTUE._37.9715_23.7266_h201.78_p-17.759999999999998_fov36.61910719590819.jpg
+Turn 402: Agent 81 ZOOM 1.39
+Turn 402: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\9_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h157.78_p-8.760000000000002_fov28.449319495472245.jpg
+Turn 403: Agent 36 ZOOM 0.82
+Turn 403: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\11_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h150.78_p-52.760000000000005_fov74.99655546027337.jpg
+Turn 404: Agent 10 PATH - No pathways found.
+Turn 404: Agent 10 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_10\4_CAoSF0NJSE0wb2dLRUlDQWdJRGlqT3JidWdF_36.1127_-115.1729_h217.78_p-0.7600000000000016_fov90.jpg
+Turn 405: Agent 79 PAN 65
+Turn 405: Agent 79 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_79\7_gZ4LFdF-grtVuLFdC3Jc4A_50.06462275861868_19.94501579638641_h216.78_p-0.76_fov119.06417952571964.jpg
+Turn 406: Agent 61 GO I8o2Yg9R6NwEURWO5Zt_jQ
+Turn 406: Agent 61 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_61\4_I8o2Yg9R6NwEURWO5Zt_jQ_-45.87387153114279_170.5037440778004_h151.78_p-4.76_fov62.53311937300681.jpg
+Turn 407: Agent 38 PAN -41
+Turn 407: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\5_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h105.78_p-0.76_fov84.22660316081296.jpg
+Turn 408: Agent 69 TILT -9
+Turn 408: Agent 69 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_69\4_CAoSFkNJSE0wb2dLRUlDQWdJRDQ4N1c4VHc._-43.5321_172.6362_h212.78_p-9.76_fov120.jpg
+Turn 409: Agent 81 PAN -3
+Turn 409: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\10_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h154.78_p-8.760000000000002_fov28.449319495472245.jpg
+Turn 410: Agent 82 PATH - No pathways found.
+Turn 410: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\10_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p-4.760000000000002_fov23.98803805966751.jpg
+Turn 411: Agent 87 PAN -86
+Turn 411: Agent 87 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_87\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0VxSmVVUkE._27.71747223338892_85.32393056926705_h153.78_p-0.76_fov72.1005953985474.jpg
+Turn 412: Agent 49 PAN 68
+Turn 412: Agent 49 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_49\5_CAoSF0NJSE0wb2dLRUlDQWdJQ2Vrcm5TcHdF_21.0285_105.8542_h296.78_p-0.76_fov67.51537035235302.jpg
+Turn 413: Agent 33 TILT -2
+Turn 413: Agent 33 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_33\4_CAoSFkNJSE0wb2dLRUlDQWdJRDRncVc0TWc._45.4341_12.3388_h151.78_p-5.760000000000002_fov90.jpg
+Turn 414: Agent 8 PATH - No pathways found.
+Turn 414: Agent 8 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_8\5_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwbzI2aUFF_29.9572_-90.0644_h180.78_p-29.76_fov90.jpg
+Turn 415: Agent 2 PATH - No pathways found.
+Turn 415: Agent 2 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_2\5_CAoSFkNJSE0wb2dLRUlDQWdJREVfWU9WTWc._40.741_-73.9896_h284.78_p25.24_fov90.jpg
+Turn 416: Agent 59 ZOOM 1.64
+Turn 416: Agent 59 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_59\3_CAoSF0NJSE0wb2dLRUlDQWdJQzR1NFc1NkFF_37.8199_-122.4783_h180.78_p-0.76_fov54.730624922295874.jpg
+Turn 417: Agent 23 GO vxnhoED1sEVd5TiE6Qp0Ig
+Turn 417: Agent 23 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_23\3_vxnhoED1sEVd5TiE6Qp0Ig_52.3676967342194_4.903980211922755_h151.78_p8.24_fov60.071753276455.jpg
+Turn 418: Agent 66 PAN 82
+Turn 418: Agent 66 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_66\3_CAoSFENJSE0wb2dLRUlDQWdJREo0dFpT_78.2232_15.6267_h143.78_p-0.76_fov120.jpg
+Turn 419: Agent 25 TILT 26
+Turn 419: Agent 25 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_25\4_CAoSF0NJSE0wb2dLRUlDQWdJQzR3Y1NLN1FF_41.0055_28.9769_h175.78_p44.239999999999995_fov90.jpg
+Turn 420: Agent 23 GO 7jgFNPvw1buJDjZxSKfEKg
+Turn 420: Agent 23 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_23\4_7jgFNPvw1buJDjZxSKfEKg_52.36775737705932_4.903874506329794_h151.78_p8.24_fov60.071753276455.jpg
+Turn 421: Agent 90 ZOOM 1.53
+Turn 421: Agent 90 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_90\5_None_-16.5_-68.15_h112.78_p-5.76_fov58.971080840194844.jpg
+Turn 422: Agent 67 TILT 9
+Turn 422: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\11_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h151.78_p-8.760000000000002_fov61.7943342115695.jpg
+Turn 423: Agent 85 TILT 25
+Turn 423: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\3_rLgptm093FjKRyYEtItnRg_43.85634874571501_18.41303898354222_h151.78_p20.240000000000002_fov90.jpg
+Turn 424: Agent 12 TILT -1
+Turn 424: Agent 12 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_12\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6Y09VQVE._39.94955215343946_-75.15024278875474_h127.78_p-1.76_fov90.jpg
+Turn 425: Agent 55 TILT -3
+Turn 425: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\7_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h151.78_p-2.7600000000000016_fov53.3285460580916.jpg
+Turn 426: Agent 56 ZOOM 1.00
+Turn 426: Agent 56 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_56\5_CAoSF0NJSE0wb2dLRUlDQWdJQzRqNVBPaXdF_40.6892_-74.0445_h61.78_p-27.759999999999998_fov60.20328428077316.jpg
+Turn 427: Agent 24 PAN 13
+Turn 427: Agent 24 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_24\7_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6OVdmTUE._37.9715_23.7266_h214.78_p-17.759999999999998_fov36.61910719590819.jpg
+Turn 428: Agent 60 ZOOM 0.59
+Turn 428: Agent 60 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_60\6_CAoSFkNJSE0wb2dLRUlDQWdJRGtoT21LVUE._44.5902_-104.7151_h151.78_p-12.76_fov90.21855285856721.jpg
+Turn 429: Agent 37 GO gB9Cf4ApN1ekQvyfmqOuTw
+Turn 429: Agent 37 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_37\5_gB9Cf4ApN1ekQvyfmqOuTw_35.65966729014446_139.7006407689933_h151.78_p-19.76_fov102.88724994892448.jpg
+Turn 430: Agent 36 ZOOM 1.50
+Turn 430: Agent 36 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_36\12_CAoSFkNJSE0wb2dLRUlDQWdJRHFpX3F6S0E._50.8467_4.3525_h150.78_p-52.760000000000005_fov50.00651092052024.jpg
+Turn 431: Agent 38 PATH - No pathways found.
+Turn 431: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\6_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h105.78_p-0.76_fov84.22660316081296.jpg
+Turn 432: Agent 67 PAN -12
+Turn 432: Agent 67 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_67\12_R1L5Is-gq4Giz8tQhTOHIA_-23.69787739982423_133.8806175401072_h139.78_p-8.760000000000002_fov61.7943342115695.jpg
+Turn 433: Agent 89 ZOOM 1.48
+Turn 433: Agent 89 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_89\7_ijMNFP54S677rI_u3hK9ew_-0.1805720702004473_-78.46775764390713_h158.78_p-15.76_fov60.74035539071701.jpg
+Turn 434: Agent 47 PATH - No pathways found.
+Turn 434: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\13_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h81.78_p-60.760000000000005_fov90.jpg
+Turn 435: Agent 80 PATH - No pathways found.
+Turn 435: Agent 80 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_80\3_CAoSF0NJSE0wb2dLRUlDQWdJRFUwdjdiMlFF_59.437_24.7536_h147.78_p-0.76_fov90.jpg
+Turn 436: Agent 85 PAN 50
+Turn 436: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\4_rLgptm093FjKRyYEtItnRg_43.85634874571501_18.41303898354222_h201.78_p20.240000000000002_fov90.jpg
+Turn 437: Agent 76 GO xpD0TltCtFHD23JonQNknQ
+Turn 437: Agent 76 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_76\3_xpD0TltCtFHD23JonQNknQ_44.47596291530272_-73.21198863309219_h151.78_p-0.76_fov90.jpg
+Turn 438: Agent 85 ZOOM 0.85
+Turn 438: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\5_rLgptm093FjKRyYEtItnRg_43.85634874571501_18.41303898354222_h201.78_p20.240000000000002_fov105.86683461386085.jpg
+Turn 439: Agent 69 PATH - No pathways found.
+Turn 439: Agent 69 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_69\5_CAoSFkNJSE0wb2dLRUlDQWdJRDQ4N1c4VHc._-43.5321_172.6362_h212.78_p-9.76_fov120.jpg
+Turn 440: Agent 54 PAN 56
+Turn 440: Agent 54 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_54\4_CAoSFkNJSE0wb2dLRUlDQWdJQ0VoYXpUREE._37.7459_-119.5332_h241.78_p-0.76_fov87.71448310278777.jpg
+Turn 441: Agent 26 PAN 0
+Turn 441: Agent 26 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_26\1_CAoSFkNJSE0wb2dLRUlDQWdJREU1ZnlSS3c._55.7539_37.6208_h151.78_p-0.76_fov90.jpg
+Turn 442: Agent 26 PAN 60
+Turn 442: Agent 26 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_26\2_CAoSFkNJSE0wb2dLRUlDQWdJREU1ZnlSS3c._55.7539_37.6208_h211.78_p-0.76_fov90.jpg
+Turn 443: Agent 4 ZOOM 1.96
+Turn 443: Agent 4 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_4\9_CAoSFkNJSE0wb2dLRUlDQWdJREV5Y3JOQnc._41.88262631910265_-87.62326472867808_h198.77999999999997_p6.24_fov26.841527889485775.jpg
+Turn 444: Agent 83 PAN 85
+Turn 444: Agent 83 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_83\5_JAqfwab2D8RscPgf-y0wOg_46.05689887478972_14.5058196228894_h175.78_p-4.76_fov90.jpg
+Turn 445: Agent 76 GO s0c9jX7BWzgfhhXbJeVRrg
+Turn 445: Agent 76 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_76\4_s0c9jX7BWzgfhhXbJeVRrg_44.47596684828889_-73.21186712266383_h151.78_p-0.76_fov90.jpg
+Turn 446: Agent 81 PATH - No pathways found.
+Turn 446: Agent 81 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_81\11_CAoSFkNJSE0wb2dLRUlDQWdJRHFfYXpoWGc._56.9496_24.1052_h154.78_p-8.760000000000002_fov28.449319495472245.jpg
+Turn 447: Agent 55 PAN -55
+Turn 447: Agent 55 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_55\8_CAoSF0NJSE0wb2dLRUlDQWdJQ3ExYldha3dF_43.8791_-103.4591_h96.78_p-2.7600000000000016_fov53.3285460580916.jpg
+Turn 448: Agent 90 PAN -67
+Turn 448: Agent 90 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_90\6_None_-16.5_-68.15_h45.78_p-5.76_fov58.971080840194844.jpg
+Turn 449: Agent 57 PATH - No pathways found.
+Turn 449: Agent 57 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_57\6_CAoSFkNJSE0wb2dLRUlDQWdJRDI0ZHpBT1E._43.0828_-79.0742_h75.78_p-0.76_fov90.jpg
+Turn 450: Agent 14 ZOOM 0.61
+Turn 450: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\7_Y6GF3U7679oK4Pw2476_hQ_36.16270054566505_-86.78145364993394_h151.78_p4.239999999999998_fov120.jpg
+Turn 451: Agent 72 PAN 22
+Turn 451: Agent 72 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_72\5_CAoSF0NJSE0wb2dLRUlDQWdJREc2ODI2amdF_61.2181_-149.9003_h275.78_p-40.760000000000005_fov90.jpg
+Turn 452: Agent 82 TILT 14
+Turn 452: Agent 82 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_82\11_CAoSF0NJSE0wb2dLRUlDQWdJQ0VwNUwyM2dF_54.6872_25.2797_h49.78_p9.239999999999998_fov23.98803805966751.jpg
+Turn 453: Agent 12 TILT -17
+Turn 453: Agent 12 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_12\5_CAoSFkNJSE0wb2dLRUlDQWdJQ0V6Y09VQVE._39.94955215343946_-75.15024278875474_h127.78_p-18.76_fov90.jpg
+Turn 454: Agent 73 TILT 13
+Turn 454: Agent 73 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_73\5_dltgXwfQkGdVZyEGAgP8XQ_64.83805457270181_-147.7166035904912_h96.78_p-8.759999999999998_fov90.jpg
+Turn 455: Agent 21 PAN 0
+Turn 455: Agent 21 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_21\10_CAoSF0NJSE0wb2dLRUlDQWdJQ0t4T0tnOUFF_41.40363396696246_2.174422288438004_h187.78_p25.24_fov32.02849150560307.jpg
+Turn 456: Agent 66 ZOOM 1.03
+Turn 456: Agent 66 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_66\4_CAoSFENJSE0wb2dLRUlDQWdJREo0dFpT_78.2232_15.6267_h143.78_p-0.76_fov116.81499467670736.jpg
+Turn 457: Agent 51 ZOOM 1.11
+Turn 457: Agent 51 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_51\5_None_14.5932_120.9825_h190.78_p-0.76_fov67.82476543875649.jpg
+Turn 458: Agent 6 PAN 38
+Turn 458: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\6_CAoSFkNJSE0wb2dLRUlDQWdJRHNvZFN2RlE._33.74901985318448_-84.38819204684216_h114.78_p-0.76_fov69.78069844851922.jpg
+Turn 459: Agent 35 TILT 10
+Turn 459: Agent 35 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_35\5_CAoSF0NJSE0wb2dLRUlDQWdJRFVfYlROc0FF_55.6795_12.5892_h151.78_p-18.76_fov46.83204029089257.jpg
+Turn 460: Agent 30 TILT -23
+Turn 460: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\9_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h128.78_p6.240000000000002_fov56.850040509450864.jpg
+Turn 461: Agent 72 TILT 12
+Turn 461: Agent 72 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_72\6_CAoSF0NJSE0wb2dLRUlDQWdJREc2ODI2amdF_61.2181_-149.9003_h275.78_p-28.760000000000005_fov90.jpg
+Turn 462: Agent 85 PAN 71
+Turn 462: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\6_rLgptm093FjKRyYEtItnRg_43.85634874571501_18.41303898354222_h272.78_p20.240000000000002_fov105.86683461386085.jpg
+Turn 463: Agent 85 PAN 86
+Turn 463: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\7_rLgptm093FjKRyYEtItnRg_43.85634874571501_18.41303898354222_h358.78_p20.240000000000002_fov105.86683461386085.jpg
+Turn 464: Agent 39 PATH - No pathways found.
+Turn 464: Agent 39 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_39\8_CAoSFkNJSE0wb2dLRUlDQWdJRHFuNWlHSmc._1.2868_103.8545_h234.78_p-0.76_fov52.470890208921666.jpg
+Turn 465: Agent 49 PATH - No pathways found.
+Turn 465: Agent 49 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_49\6_CAoSF0NJSE0wb2dLRUlDQWdJQ2Vrcm5TcHdF_21.0285_105.8542_h296.78_p-0.76_fov67.51537035235302.jpg
+Turn 466: Agent 83 GO TBP-Il3vUFXp17oBMF-MWQ
+Turn 466: Agent 83 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_83\6_TBP-Il3vUFXp17oBMF-MWQ_46.05687970340978_14.50592253938715_h175.78_p-4.76_fov90.jpg
+Turn 467: Agent 14 TILT -10
+Turn 467: Agent 14 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_14\8_Y6GF3U7679oK4Pw2476_hQ_36.16270054566505_-86.78145364993394_h151.78_p-5.760000000000002_fov120.jpg
+Turn 468: Agent 59 PAN 20
+Turn 468: Agent 59 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_59\4_CAoSF0NJSE0wb2dLRUlDQWdJQzR1NFc1NkFF_37.8199_-122.4783_h200.78_p-0.76_fov54.730624922295874.jpg
+Turn 469: Agent 30 ZOOM 0.65
+Turn 469: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\10_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h128.78_p6.240000000000002_fov87.14284604437199.jpg
+Turn 470: Agent 33 TILT -15
+Turn 470: Agent 33 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_33\5_CAoSFkNJSE0wb2dLRUlDQWdJRDRncVc0TWc._45.4341_12.3388_h151.78_p-20.76_fov90.jpg
+Turn 471: Agent 68 TILT 30
+Turn 471: Agent 68 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_68\6_CAoSFkNJSE0wb2dLRUlDQWdJQ2NtT0h6YkE._64.1466_-21.9426_h213.78_p29.24_fov64.93250838287683.jpg
+Turn 472: Agent 11 GO CAoSF0NJSE0wb2dLRUlDQWdJRHE4N0h0NmdF
+Turn 472: Agent 11 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_11\6_CAoSF0NJSE0wb2dLRUlDQWdJRHE4N0h0NmdF_30.2743290996751_-97.74048950675325_h151.78_p13.24_fov120.jpg
+Turn 473: Agent 62 TILT 17
+Turn 473: Agent 62 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_62\7_XXgkK2kb6ZWNFW4YrCqNVw_35.99930603015209_-78.90993712270298_h84.78_p-2.759999999999998_fov90.jpg
+Turn 474: Agent 76 ZOOM 1.86
+Turn 474: Agent 76 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_76\5_s0c9jX7BWzgfhhXbJeVRrg_44.47596684828889_-73.21186712266383_h151.78_p-0.76_fov48.45497862735645.jpg
+Turn 475: Agent 17 PATH - No pathways found.
+Turn 475: Agent 17 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_17\3_CAoSF0NJSE0wb2dLRUlDQWdJRHF6YW1XdWdF_21.2793_-157.8293_h161.78_p-0.76_fov90.jpg
+Turn 476: Agent 16 PAN -23
+Turn 476: Agent 16 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_16\5_joQvkwJemqYSd8onuRUhLg_45.52007383747051_-122.6742102739034_h110.78_p4.24_fov56.81413777753154.jpg
+Turn 477: Agent 51 TILT 24
+Turn 477: Agent 51 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_51\6_None_14.5932_120.9825_h190.78_p23.24_fov67.82476543875649.jpg
+Turn 478: Agent 6 ZOOM 1.05
+Turn 478: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\7_CAoSFkNJSE0wb2dLRUlDQWdJRHNvZFN2RlE._33.74901985318448_-84.38819204684216_h114.78_p-0.76_fov66.63070826690674.jpg
+Turn 479: Agent 86 PATH - No pathways found.
+Turn 479: Agent 86 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_86\4_None_41.7151_44.8271_h72.78_p-14.76_fov90.jpg
+Turn 480: Agent 47 TILT -12
+Turn 480: Agent 47 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_47\14_CAoSF0NJSE0wb2dLRUlDQWdJQ0VoczYtd0FF_3.1579_101.7116_h81.78_p-72.76_fov90.jpg
+Turn 481: Agent 34 ZOOM 0.97
+Turn 481: Agent 34 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_34\7_A5psOSgK28R2r4tNbQLAgg_53.34451022842414_-6.267285244948738_h135.78_p-12.76_fov68.69448039002022.jpg
+Turn 482: Agent 85 GO XFxhMYH63zDUNNhXncCP5w
+Turn 482: Agent 85 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_85\8_XFxhMYH63zDUNNhXncCP5w_43.85629564746579_18.41310189615724_h358.78_p20.240000000000002_fov105.86683461386085.jpg
+Turn 483: Agent 38 TILT 8
+Turn 483: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\7_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h105.78_p7.24_fov84.22660316081296.jpg
+Turn 484: Agent 49 PAN -63
+Turn 484: Agent 49 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_49\7_CAoSF0NJSE0wb2dLRUlDQWdJQ2Vrcm5TcHdF_21.0285_105.8542_h233.77999999999997_p-0.76_fov67.51537035235302.jpg
+Turn 485: Agent 30 PAN 90
+Turn 485: Agent 30 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_30\11_CAoSHENJQUJJaEQ3SmNEZzNsYkRLSVQ1cjJiMXd1WUs._52.5163_13.3777_h218.78_p6.240000000000002_fov87.14284604437199.jpg
+Turn 486: Agent 19 PATH - No pathways found.
+Turn 486: Agent 19 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_19\5_CAoSFkNJSE0wb2dLRUlDQWdJREU0SnJsWlE._48.8606_2.3376_h211.78_p12.24_fov33.19540078376099.jpg
+Turn 487: Agent 9 ZOOM 1.41
+Turn 487: Agent 9 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_9\6_CAoSF0NJSE0wb2dLRUlDQWdJQ0dodF9ZOFFF_42.3467_-71.0972_h240.78_p-0.76_fov32.25816945970351.jpg
+Turn 488: Agent 80 PAN -68
+Turn 488: Agent 80 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_80\4_CAoSF0NJSE0wb2dLRUlDQWdJRFUwdjdiMlFF_59.437_24.7536_h79.78_p-0.76_fov90.jpg
+Turn 489: Agent 35 TILT -1
+Turn 489: Agent 35 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_35\6_CAoSF0NJSE0wb2dLRUlDQWdJRFVfYlROc0FF_55.6795_12.5892_h151.78_p-19.76_fov46.83204029089257.jpg
+Turn 490: Agent 76 GO xpD0TltCtFHD23JonQNknQ
+Turn 490: Agent 76 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_76\6_xpD0TltCtFHD23JonQNknQ_44.47596291530272_-73.21198863309219_h151.78_p-0.76_fov48.45497862735645.jpg
+Turn 491: Agent 11 TILT -29
+Turn 491: Agent 11 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_11\7_CAoSF0NJSE0wb2dLRUlDQWdJRHE4N0h0NmdF_30.2743290996751_-97.74048950675325_h151.78_p-15.76_fov120.jpg
+Turn 492: Agent 65 ZOOM 1.64
+Turn 492: Agent 65 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_65\5_CAoSFkNJSE0wb2dLRUlDQWdJQ0JqTmFoRmc._-54.8019_-68.303_h164.78_p49.239999999999995_fov54.763060406180855.jpg
+Turn 493: Agent 46 TILT -15
+Turn 493: Agent 46 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_46\3_CAoSFkNJSE0wb2dLRUlDQWdJQ010dDJQSlE._25.033_121.5654_h222.78_p1.2399999999999984_fov90.jpg
+Turn 494: Agent 48 GO KD4j3bUwcjq19HaTE4-kHQ
+Turn 494: Agent 48 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_48\9_KD4j3bUwcjq19HaTE4-kHQ_-6.175287879717395_106.8649958532433_h170.78_p5.24_fov74.65341819198206.jpg
+Turn 495: Agent 56 ZOOM 1.55
+Turn 495: Agent 56 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_56\6_CAoSF0NJSE0wb2dLRUlDQWdJQzRqNVBPaXdF_40.6892_-74.0445_h61.78_p-27.759999999999998_fov38.96433515595511.jpg
+Turn 496: Agent 78 TILT -19
+Turn 496: Agent 78 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_78\8_CAoSFkNJSE0wb2dLRUlDQWdJQ2t3T2JUV3c._41.1579_-8.6291_h150.78_p-60.760000000000005_fov82.78662541466684.jpg
+Turn 497: Agent 38 TILT -2
+Turn 497: Agent 38 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_38\8_CAoSFkNJSE0wb2dLRUlDQWdJRHEzT3ljTFE._25.1972_55.2744_h105.78_p5.24_fov84.22660316081296.jpg
+Turn 498: Agent 41 TILT 21
+Turn 498: Agent 41 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_41\4_PzDornbNJovjIsq_2KmWMA_22.27926623953146_114.1627560874437_h151.78_p20.24_fov79.47948677165307.jpg
+Turn 499: Agent 6 ZOOM 1.21
+Turn 499: Agent 6 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_6\8_CAoSFkNJSE0wb2dLRUlDQWdJRHNvZFN2RlE._33.74901985318448_-84.38819204684216_h114.78_p-0.76_fov55.16436251758729.jpg
+Turn 500: Agent 23 TILT 10
+Turn 500: Agent 23 SAVED to C:\Users\moemy\Documents\Huanzhi-Geogusser-Research\tests\agent_logs\agent_23\5_7jgFNPvw1buJDjZxSKfEKg_52.36775737705932_4.903874506329794_h151.78_p18.240000000000002_fov60.071753276455.jpg
+Closing all agents...
+--- Stress Test Complete ---
+Memory before closing: 58.07 MB
+Memory after closing: 58.57 MB
+Total execution time: 588.13 seconds
+Total RAM used by process: 58.57 MB

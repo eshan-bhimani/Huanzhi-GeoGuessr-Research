@@ -1,9 +1,7 @@
 import threading
 import sys
 import queue
-from toolset import view, navigation
-from constants import google_api_key
-from state_manager import state
+from toolset.instance import StreetViewInstance
 
 def log_message(message: str):
     """Prints a message to the terminal."""
@@ -18,47 +16,53 @@ def init_env_cli() -> None:
     print("Available functions: pan(angle), tilt(deg), zoom(rate), teleport(lat, lng), get_possible_pathways(), go_to_node(id)")
     print("Type 'exit' or 'quit' to close the environment.")
 
-    # ------------------ Image Saving Logic ------------------
-    def on_state_change(new_state):
-        try:
-            filepath = view.save_panorama(
-                new_state['pano_id'], 
-                new_state['width'], 
-                new_state['height'], 
-                new_state['latitude'], 
-                new_state['longitude'], 
-                new_state['heading'], 
-                new_state['pitch'], 
-                new_state['fov'], 
-                google_api_key
-            )
-            log_message(f"Panorama saved to: {filepath}")
-        except Exception as e:
-            log_message(f"Error saving panorama: {e}")
-
-    state.add_observer(on_state_change)
-
-    # Initial save
-    on_state_change(state.get_state())
-
     # ------------------ Command Processor (Background Thread) ------------------
     # Handles commands and keeps Playwright calls on a consistent thread.
     cmd_queue = queue.Queue()
 
     def command_worker():
-        navigation.init_browser()
+        # Using StreetViewInstance to manage state and browser interaction
+        instance = StreetViewInstance()
+        log_message("StreetViewInstance initialized.")
+        
+        # Initial save
+        try:
+            filepath = instance.save_panorama()
+            log_message(f"Initial panorama saved to: {filepath}")
+        except Exception as e:
+            log_message(f"Error saving initial panorama: {e}")
+
+        # Context for the commands, using instance methods
+        context = {
+            "pan": instance.pan,
+            "tilt": instance.tilt, 
+            "zoom": instance.zoom,
+            "get_possible_pathways": instance.get_possible_pathways,
+            "go_to_node": instance.go_to_node,
+            "teleport": instance.teleport,
+            "save_panorama": instance.save_panorama,
+            "get_state": instance.get_state
+        }
         
         while True:
             item = cmd_queue.get()
             if item is None: # Shutdown signal
-                navigation.close_browser()
+                instance.close()
                 break
             
-            cmd_string, context = item
+            cmd_string = item
             try:
                 # Simplistic eval for research environment
                 result = eval(cmd_string, {"__builtins__": None}, context)
                 log_message(f"Result: {result}")
+                
+                # Auto-call save_panorama after every function call
+                try:
+                    filepath = instance.save_panorama()
+                    log_message(f"Auto-saved panorama: {filepath}")
+                except Exception as e:
+                    log_message(f"Error in auto-save: {e}")
+                    
             except Exception as e:
                 log_message(f"Error: {e}")
             cmd_queue.task_done()
@@ -68,15 +72,6 @@ def init_env_cli() -> None:
     worker_thread.start()
 
     # ------------------ CLI Loop ------------------
-    context = {
-        "pan": navigation.pan,
-        "tilt": navigation.tilt, 
-        "zoom": navigation.zoom,
-        "get_possible_pathways": navigation.get_possible_pathways,
-        "go_to_node": navigation.go_to_node,
-        "teleport": navigation.teleport
-    }
-
     try:
         while True:
             cmd = input("\n>>> ").strip()
@@ -89,14 +84,11 @@ def init_env_cli() -> None:
                 cmd_queue.put(None)
                 break
 
-            # Put the command into the queue for the worker thread
-            cmd_queue.put((cmd, context))
+            # Put the command string into the queue
+            cmd_queue.put(cmd)
             
-            # Briefly wait for the worker to finish the command to keep input/output somewhat ordered
-            # We don't join here because we want to allow new input if a command hangs,
-            # but a small gap helps UI flow.
-            # cmd_queue.join() # This would block the main thread until the worker finishes. 
-            # Better to just let it run asynchronously.
+            # We don't wait for completion here to allow the CLI to stay responsive
+            # and to handle potential interruptions properly.
 
     except KeyboardInterrupt:
         log_message("\nInterrupted. Exiting...")

@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 img
+/agent_logs_nav/*
+/agent_logs/*
+/val/*

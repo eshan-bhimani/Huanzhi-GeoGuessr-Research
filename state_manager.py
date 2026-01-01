@@ -13,6 +13,7 @@ class StateManager:
         self.pano_id = "Start"
         self._observers = []
         self._lock = threading.Lock()
+        self.steps = 0
 
     def update(self, **kwargs):
         """Update state with new values and notify observers."""
@@ -39,7 +40,8 @@ class StateManager:
                 "heading": self.heading,
                 "pitch": self.pitch,
                 "fov": self.fov,
-                "pano_id": self.pano_id
+                "pano_id": self.pano_id,
+                "steps": self.steps
             }
 
     def add_observer(self, callback):
@@ -63,6 +65,3 @@ class StateManager:
                 callback(state)
             except Exception as e:
                 print(f"Error in observer callback: {e}")
-
-# Global instance
-state = StateManager()
