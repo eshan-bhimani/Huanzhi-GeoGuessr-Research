@@ -29,5 +29,10 @@ Thumbs.db
 
 # Images
 images/
+
+# Local tools with secrets
+agent_cli
+agent_cli.py
+multi_agent.py
 ./docs
 *.md

@@ -82,7 +82,7 @@
     }
     return waitForStable();
   }
-
+  
   // Move to a position and wait for stable links.
   function setPosition({ lat, lng } = {}) {
     ensurePanorama();
@@ -159,3 +159,4 @@
 
   waitForMaps();
 })();
+

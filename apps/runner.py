@@ -137,7 +137,7 @@ def main() -> None:
     try:
         session_id = f"session_{int(time.time())}"
 
-        client.start(api_key=api_key)
+        client.start(session_id, api_key=api_key)
         ctx = ToolContext(
             session_id=session_id,
             meta={
@@ -175,7 +175,7 @@ def main() -> None:
                 _print_help()
                 continue
             if cmd == "state":
-                _print_json(client.get_state())
+                _print_json(client.get_state(session_id))
                 continue
             if cmd == "init":
                 if len(rest) < 2:

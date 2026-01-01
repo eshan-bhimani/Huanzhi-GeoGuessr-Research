@@ -2,3 +2,4 @@ python-dotenv
 requests
 pillow
 pytest
+openai
