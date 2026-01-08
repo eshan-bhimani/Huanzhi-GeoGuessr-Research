@@ -3,3 +3,4 @@ requests
 pillow
 pytest
 openai
+psutil

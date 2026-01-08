@@ -25,7 +25,9 @@ def _execute_command(ctx: ToolContext, cmd: Dict[str, Any]) -> Dict[str, Any]:
     client = _get_client(ctx)
     method = cmd.get("method")
     params = cmd.get("params") or {}
-
+    before_state = None
+    if method in {"setPano", "setPosition"}:
+        before_state = client.get_state(ctx.session_id)
     if method == "setPov":
         client.set_pov(
             ctx.session_id,
@@ -42,9 +44,28 @@ def _execute_command(ctx: ToolContext, cmd: Dict[str, Any]) -> Dict[str, Any]:
         raise RuntimeError(f"unknown_command:{method}")
 
     client.wait_for_stable(ctx.session_id)
-    return client.get_state(ctx.session_id)
+    new_state = client.get_state(ctx.session_id)
+    if before_state is not None:
+        _log_transition(before_state, new_state)
 
+    return new_state
 
+def _log_transition(from_state: Dict[str, Any], to_state: Dict[str, Any]) -> None:
+    if not isinstance(from_state, dict) or not isinstance(to_state, dict):
+        return
+    from_pano_id = from_state.get("panoId")
+    to_pano_id = to_state.get("panoId")
+    from_date = from_state.get("date")
+    to_date = to_state.get("date")
+    payload = {
+        "event": "pano_transition",
+        "from_pano_id": from_pano_id,
+        "to_pano_id": to_pano_id,
+        "from_date": from_date,
+        "to_date": to_date,
+        "time_jump": bool(from_date and to_date and from_date != to_date),
+    }
+    print(json.dumps(payload))
 def _capture_image(ctx: ToolContext, state: Dict[str, Any]) -> Optional[str]:
     if ctx.meta.get("capture_images") is False:
         return None
