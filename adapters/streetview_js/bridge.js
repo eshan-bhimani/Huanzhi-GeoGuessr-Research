@@ -3,6 +3,10 @@
   let panorama = null;
   let svService = null;
 
+  const PANO_META_CACHE_MAX = 3000;
+  const panoMetaCache = new Map();
+  const panoMetaInFlight = new Map();
+  
   // Initialize the Street View panorama lazily.
   function ensurePanorama() {
     if (panorama) return panorama;
@@ -25,27 +29,127 @@
     return panorama;
   }
 
+  // Add a date normalizer helper
+  function normalizeImageDate(raw) {
+    if(!raw || typeof raw !== "string") return null;
+    const trimmed = raw.trim();
+    if(!trimmed) return null;
+
+    const isoMatch = trimmed.match(/^(\d{4})[-/](\d{1,2})(?:[-/]\d{1,2})?$/);
+    if(isoMatch) {
+      const month = isoMatch[2].padStart(2, "0");
+      return `${isoMatch[1]}-${month}`;
+    }
+
+    const monthMatch = trimmed.match(/^([A-Za-z]+)\s+(\d{4})$/);
+    if(monthMatch) {
+      const monthKey = monthMatch[1].slice(0,3).toLowerCase();
+      const monthMap = {
+        jan: "01", feb: "02", mar: "03", apr: "04", may: "05", jun: "06",
+        jul: "07", aug: "08", sep: "09", oct: "10", nov: "11", dec: "12",
+      };
+      const month = monthMap[monthKey];
+      if(month) return `${monthMatch[2]}-${month}`;
+    }
+    return null;
+  }
+  // add tiny lru cache helpers
+  function cacheGetPanoMeta(panoId) {
+    if(!panoId) return null;
+    const cached = panoMetaCache.get(panoId);
+    if(!cached) return null;
+    panoMetaCache.delete(panoId);
+    panoMetaCache.set(panoId, cached);
+    return cached;
+  }
+
+  function cacheSetPanoMeta(panoId, value) {
+    if(!panoId) return value;
+    panoMetaCache.set(panoId, value);
+    if(panoMetaCache.size > PANO_META_CACHE_MAX) {
+      const oldestKey = panoMetaCache.keys().next().value;
+      if(oldestKey !== undefined) {
+        panoMetaCache.delete(oldestKey)
+      }
+    }
+    return value;
+  }
+
+  function fetchPanoMeta(panoId) {
+    if(!panoId) {
+      return Promise.resolve({date: null, lat: null, lng: null});
+    }
+
+    const cached = cacheGetPanoMeta(panoId);
+    if(cached) return Promise.resolve(cached);
+
+    const inflight = panoMetaInFlight.get(panoId);
+    if(inflight) return inflight;
+
+    try {
+      ensurePanorama();
+    } catch {
+      return Promise.resolve({date: null, lat: null, lng: null});
+    }
+    if (!svService || typeof svService.getPanorama !== "function") {
+      return Promise.resolve({date: null, lat: null, lng: null});
+    }
+    const promise = new Promise((resolve) => {
+      try {
+        svService.getPanorama({ pano: panoId }, (data, status) => {
+          if (status !== "OK" || !data) {
+            resolve(cacheSetPanoMeta(panoId, { date: null, lat: null, lng: null }));
+            return;
+          }
+          const latLng = data.location && data.location.latLng;
+          const meta = {
+            date: normalizeImageDate(data.imageDate),
+            lat: latLng ? latLng.lat() : null,
+            lng: latLng ? latLng.lng() : null,
+          };
+          resolve(cacheSetPanoMeta(panoId, meta));
+        });
+      } catch {
+        resolve(cacheSetPanoMeta(panoId, { date: null, lat: null, lng: null }));
+      }
+      }).then((value) => {
+        panoMetaInFlight.delete(panoId);
+        return value;
+      });
+
+      panoMetaInFlight.set(panoId, promise);
+      return promise;
+  }
   // Return the current pano, POV, position, and links snapshot.
-  function getState() {
+  async function getState() {
     if (!panorama) return null;
     const pov = panorama.getPov() || { heading: 0, pitch: 0 };
     const position = panorama.getPosition();
     const links = panorama.getLinks() || [];
+    const panoId = panorama.getPano() || null;
+    const [panoMeta, linkMetas] = await Promise.all([
+      fetchPanoMeta(panoId),
+      Promise.all(links.map((link) => fetchPanoMeta(link.pano))),
+    ]);
     return {
-      panoId: panorama.getPano() || null,
+      panoId: panoId,
+      date: panoMeta ? panoMeta.date: null,
       position: position ? { lat: position.lat(), lng: position.lng() } : null,
       pov: {
         heading: pov.heading,
         pitch: pov.pitch,
         zoom: panorama.getZoom(),
       },
-      links: links.map((link) => ({
+      links: links.map((link, index) => ({
         heading: link.heading,
         panoId: link.pano,
         description: link.description || "",
+        date: (linkMetas[index] && linkMetas[index].date) || null,
       })),
     };
   }
+
+ 
 
   // Initialize panorama position and POV, then wait for stable links.
   function init({ lat, lng, heading = 0, pitch = 0, zoom = 1 } = {}) {

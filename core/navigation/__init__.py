@@ -7,7 +7,7 @@ from .pure_nav import (
     move_northeast,
     move_east,
     move_southeast,
-    move_south,
+    move_south, 
     move_southwest,
     move_west,
     move_northwest,
