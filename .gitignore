@@ -42,4 +42,6 @@ multi_agent.py
 *claude.py
 *multi_agent_test.py
 *multi_agent_test_90.py
-*runner.py
+*claudesnip.py
+*geminisnip.py
+*openaisnip.py
