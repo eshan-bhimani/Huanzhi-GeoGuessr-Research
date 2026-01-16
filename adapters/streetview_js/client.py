@@ -7,9 +7,11 @@ import os
 import shutil
 import subprocess
 import threading
+import logging
 from pathlib import Path
 from typing import Any, Dict, Optional
 
+logger = logging.getLogger(__name__)
 
 class StreetViewHostClient:
     def __init__(
@@ -56,6 +58,7 @@ class StreetViewHostClient:
             bufsize=1,
             env=self.env,
         )
+        logger.debug("Started host process: pid=%s", self._proc.pid)
         self._reader_thread = threading.Thread(target=self._reader_loop, daemon=True)
         self._reader_thread.start()
 
@@ -69,6 +72,7 @@ class StreetViewHostClient:
                 payload = json.loads(line)
             except json.JSONDecodeError:
                 continue
+            logger.debug("Received response: id=%s", payload.get("id"))
             req_id = payload.get("id")
             if req_id is None:
                 continue
@@ -99,14 +103,19 @@ class StreetViewHostClient:
             "method": method,
             "params": params or {},
         }
+        logger.debug("Sending request: id=%d method=%s session=%s", req_id, method, session_id)
         with self._write_lock:
             self._proc.stdin.write(json.dumps(payload) + "\n")
             self._proc.stdin.flush()
-        event.wait()
+        
+        timed_out = not event.wait(timeout=30)
+
         with self._pending_lock:
             entry = self._pending.pop(req_id, None)
-        if not entry or not entry.get("response"):
-            raise RuntimeError("host_no_response")
+        if timed_out or not entry or not entry.get("response"):
+            logger.error("Request failed: id=%d method=%s timeout=%s", req_id, method, timed_out)
+            raise RuntimeError(f"host_no_response:timeout={timed_out}")
+        
         resp = entry["response"]
         if not resp.get("ok"):
             raise RuntimeError(resp.get("error") or "host_error")
@@ -175,6 +184,7 @@ class StreetViewHostClient:
         )
 
     def close_session(self, session_id: str) -> Any:
+        logger.debug("Terminating host process: pid=%s", self._proc.pid)
         return self._request("closeSession", session_id, {})
     
     def close(self) -> None:

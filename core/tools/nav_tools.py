@@ -8,8 +8,9 @@ from typing import Any, Dict, Optional
 from core.tools.contracts import ToolContext, ToolResult
 from core.navigation import pure_nav
 from core.utils.image_pipeline import capture_state_image
+from adapters.streetview_js.client import StreetViewHostClient
 
-def _get_client(ctx: ToolContext):
+def _get_client(ctx: ToolContext) -> StreetViewHostClient:
     client = ctx.meta.get("host_client")
     if not client:
         raise RuntimeError("missing_host_client")
@@ -17,7 +18,7 @@ def _get_client(ctx: ToolContext):
 
 def _get_state(ctx: ToolContext) -> Dict[str, Any]:
     client = _get_client(ctx)
-    state = client.wait_for_stable(ctx.session_id)
+    client.wait_for_stable(ctx.session_id)
     state = client.get_state(ctx.session_id)
     return state
 
