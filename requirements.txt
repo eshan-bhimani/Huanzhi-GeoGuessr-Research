@@ -6,3 +6,4 @@ openai
 psutil
 google-generativeai
 anthropic
+mymy
