@@ -81,34 +81,23 @@ def check_direction(state_json: str) -> str:
 def check_available_moves(state_json: str) -> str:
     state = parse_state(state_json)
     current_heading = _current_heading(state)
-    move_actions: List[Dict[str, Any]] =[]
+    move_actions: List[str] = []
     for link in _links(state):
         move_heading = float(link["heading"])
-        rel = (move_heading - current_heading + 360) % 360
         direction = _heading_to_direction(move_heading)
-        move_actions.append(
-            {
-                "action": f"move_{direction}",
-                "target_pano_id": link["panoId"],
-                "move_heading": move_heading,
-                "relative_heading": rel,
-                "compass": direction,
-            }
-        )
+        move_actions.append(f"move_{direction}")
     
     universal_actions = [
-        {"action": "scroll_up"},
-        {"action": "scroll_left"},
-        {"action": "scroll_right"},
-        {"action": "scroll_down"},
-        {"action": "zoom_in"},
-        {"action": "zoom_out"},
+        "scroll_up",
+        "scroll_left",
+        "scroll_right",
+        "scroll_down",
+        "zoom_in",
+        "zoom_out",
     ]
     return _result(
         {
-            "universal_actions": universal_actions,
-            "move_actions": move_actions,
-            "total_actions": len(universal_actions) + len(move_actions),
+            "available_moves": universal_actions + move_actions,
         }
     )
 

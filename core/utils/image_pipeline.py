@@ -2,18 +2,26 @@ from __future__ import annotations
 
 from typing import Any, Dict
 
-from core.utils.image_store import save_image
+from core.utils.image_store import create_openai_file, save_image
 from core.utils.image_utils import crop_google_logo, fetch_image
+import base64
 
+from io import BytesIO
 
-def capture_state_image(
+def _encode_jpeg_base64(img) -> str:
+    buf = BytesIO()
+    img.save(buf, format="JPEG", quality=95)
+    encoded = base64.b64encode(buf.getvalue()).decode("utf-8")
+    return f"jpeg;base64,{encoded}"
+
+def _capture_and_save(
     state: Dict[str, Any],
     session_id: str,
     root_dir: str,
     step: int | None = None,
     trim_bottom: int = 60,
     size: str = "640x640",
-) -> str:
+) -> tuple[Any, str]:
     pano_id = state["panoId"]
     pov = state["pov"]
     heading = pov.get("heading", 0.0)
@@ -28,7 +36,7 @@ def capture_state_image(
         size=size,
     )
     cropped = crop_google_logo(img_bytes, trim_bottom=trim_bottom)
-    return save_image(
+    path = save_image(
         cropped,
         root_dir=root_dir,
         session_id=session_id,
@@ -38,3 +46,64 @@ def capture_state_image(
         zoom=zoom,
         step=step,
     )
+    return cropped, path
+
+
+def capture_state_image(
+    state: Dict[str, Any],
+    session_id: str,
+    root_dir: str,
+    step: int | None = None,
+    trim_bottom: int = 60,
+    size: str = "640x640",
+) -> str:
+    _, path = _capture_and_save(
+        state,
+        session_id=session_id,
+        root_dir=root_dir,
+        step=step,
+        trim_bottom=trim_bottom,
+        size=size,
+    )
+    return path
+
+
+def capture_state_image_base64(
+    state: Dict[str, Any],
+    session_id: str,
+    root_dir: str,
+    step: int | None = None,
+    trim_bottom: int = 60,
+    size: str = "640x640",
+) -> tuple[str, str]:
+    cropped, path = _capture_and_save(
+        state,
+        session_id=session_id,
+        root_dir=root_dir,
+        step=step,
+        trim_bottom=trim_bottom,
+        size=size,
+    )
+    return _encode_jpeg_base64(cropped), path
+
+
+def capture_state_image_file_id(
+    state: Dict[str, Any],
+    session_id: str,
+    root_dir: str,
+    step: int | None = None,
+    trim_bottom: int = 60,
+    size: str = "640x640",
+    purpose: str = "vision",
+    api_key: str | None = None,
+) -> tuple[str, str]:
+    _, path = _capture_and_save(
+        state,
+        session_id=session_id,
+        root_dir=root_dir,
+        step=step,
+        trim_bottom=trim_bottom,
+        size=size,
+    )
+    file_id = create_openai_file(path, purpose=purpose, api_key=api_key)
+    return file_id, path

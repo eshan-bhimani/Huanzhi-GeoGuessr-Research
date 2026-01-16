@@ -4,3 +4,5 @@ pillow
 pytest
 openai
 psutil
+google-generativeai
+anthropic

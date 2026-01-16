@@ -1,5 +1,8 @@
 import os
 import re
+from pathlib import Path
+
+from openai import OpenAI
 
 def build_filename(pano_id, heading, pitch, zoom, ext=".jpg", step=None):
     h = float(heading) if heading is not None else 0.0
@@ -37,4 +40,18 @@ def save_image(
 
     img.save(path, format="JPEG", quality=95)
     return path
+
+
+def create_openai_file(
+    file_path: str | os.PathLike,
+    purpose: str = "vision",
+    api_key: str | None = None,
+) -> str:
+    path = Path(file_path)
+    if not path.exists():
+        raise FileNotFoundError(f"File not found: {path}")
+    client = OpenAI(api_key=api_key) if api_key else OpenAI()
+    with path.open("rb") as file_content:
+        result = client.files.create(file=file_content, purpose=purpose)
+    return result.id
 
