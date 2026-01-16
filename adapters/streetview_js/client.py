@@ -10,6 +10,7 @@ import threading
 import logging
 from pathlib import Path
 from typing import Any, Dict, Optional
+from core.exceptions import HostTimeoutError, HostResponseError, MissingContextError
 
 logger = logging.getLogger(__name__)
 
@@ -89,7 +90,7 @@ class StreetViewHostClient:
         params: Optional[Dict[str, Any]] = None,
     ) -> Any:
         if not session_id:
-            raise RuntimeError("missing_session_id")
+            raise MissingContextError("session_id")
         self._ensure_proc()
         assert self._proc and self._proc.stdin
         with self._pending_lock:
@@ -114,11 +115,11 @@ class StreetViewHostClient:
             entry = self._pending.pop(req_id, None)
         if timed_out or not entry or not entry.get("response"):
             logger.error("Request failed: id=%d method=%s timeout=%s", req_id, method, timed_out)
-            raise RuntimeError(f"host_no_response:timeout={timed_out}")
+            raise HostTimeoutError(method=method, timeout=30, req_id=req_id)
         
         resp = entry["response"]
         if not resp.get("ok"):
-            raise RuntimeError(resp.get("error") or "host_error")
+             raise HostResponseError(error=resp.get("error") or "unknown", method=method)
         
         return resp.get("result")
     
