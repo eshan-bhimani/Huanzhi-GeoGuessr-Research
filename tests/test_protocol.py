@@ -9,6 +9,7 @@ from core.navigation.protocol import (
     REQUIRED_STATE_KEYS,
     REQUIRED_POV_KEYS,
 )
+from core.exceptions import InvalidStateError, InvalidCommandError
 
 # ─────────────────────────────────────────────────────────────
 # Fixtures
@@ -34,37 +35,37 @@ class TestParseState:
         assert result == valid_state
 
     def test_invalid_json_raises(self):
-        with pytest.raises(ValueError, match="invalid_state_json"):
+        with pytest.raises(InvalidStateError, match="invalid_state_json"):
             parse_state("not valid json {")
 
     def test_non_dict_raises(self):
-        with pytest.raises(ValueError, match="invalid_state"):
+        with pytest.raises(InvalidStateError, match="invalid_state"):
             parse_state('"just a string"')
 
     def test_array_raises(self):
-        with pytest.raises(ValueError, match="invalid_state"):
+        with pytest.raises(InvalidStateError, match="invalid_state"):
             parse_state('[1, 2, 3]')
 
     @pytest.mark.parametrize("missing_key", REQUIRED_STATE_KEYS)
     def test_missing_state_key_raises(self, valid_state, missing_key):
         del valid_state[missing_key]
-        with pytest.raises(ValueError, match="missing_state_keys"):
+        with pytest.raises(InvalidStateError, match="missing_state_keys"):
             parse_state(json.dumps(valid_state))
 
     def test_pov_not_dict_raises(self, valid_state):
         valid_state["pov"] = "not a dict"
-        with pytest.raises(ValueError, match="invalid_pov"):
+        with pytest.raises(InvalidStateError, match="invalid_pov"):
             parse_state(json.dumps(valid_state))
 
     @pytest.mark.parametrize("missing_key", REQUIRED_POV_KEYS)
     def test_missing_pov_key_raises(self, valid_state, missing_key):
         del valid_state["pov"][missing_key]
-        with pytest.raises(ValueError, match="missing_pov_keys"):
+        with pytest.raises(InvalidStateError, match="missing_pov_keys"):
             parse_state(json.dumps(valid_state))
 
     def test_links_not_list_raises(self, valid_state):
         valid_state["links"] = {"not": "a list"}
-        with pytest.raises(ValueError, match="invalid_links"):
+        with pytest.raises(InvalidStateError, match="invalid_links"):
             parse_state(json.dumps(valid_state))
 
     def test_empty_links_allowed(self, valid_state):
@@ -85,11 +86,11 @@ class TestBuildCommand:
         assert cmd == {"method": "getState", "params": {}}
 
     def test_none_method_raises(self):
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidCommandError):
             build_command(None, {})
 
     def test_non_dict_params_raises(self):
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidCommandError):
             build_command("setPov", "not a dict")
 
 
@@ -110,13 +111,13 @@ class TestDumpCommand:
         assert ", " not in result
 
     def test_non_dict_raises(self):
-        with pytest.raises(ValueError, match="Invalid command format"):
+        with pytest.raises(InvalidCommandError, match="Invalid command format"):
             dump_command("not a dict")
 
     def test_missing_method_raises(self):
-        with pytest.raises(ValueError, match="Missing required command keys"):
+        with pytest.raises(InvalidCommandError, match="Missing required command keys"):
             dump_command({"params": {}})
 
     def test_missing_params_raises(self):
-        with pytest.raises(ValueError, match="Missing required command keys"):
+        with pytest.raises(InvalidCommandError, match="Missing required command keys"):
             dump_command({"method": "setPov"})

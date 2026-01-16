@@ -4,8 +4,8 @@ import json
 import math
 import pytest
 
-
 from core.navigation import pure_nav
+from core.exceptions import InvalidStateError
 # =============================================================================
 # Fixtures: Sample state objects
 # =============================================================================
@@ -429,18 +429,18 @@ class TestEdgeCases:
     """Tests for edge cases and error handling."""
 
     def test_invalid_json_raises(self):
-        with pytest.raises(ValueError, match="invalid_state_json"):
+        with pytest.raises(InvalidStateError, match="invalid_state_json"):
             pure_nav.check_direction("not valid json")
-    
+
 
     def test_missing_pov_raise(self):
         state = {"panoId": "test", "links": []}
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidStateError, match="missing_state_keys"):
             pure_nav.check_direction(json.dumps(state))
 
     def test_missing_links_raises(self):
         state = {"panoId": "test", "pov": {"heading": 0, "pitch": 0, "zoom": 1}}
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidStateError, match="missing_state_keys"):
             pure_nav.check_direction(json.dumps(state))
 
     def test_boundary_heading_22_5(self, basic_state):

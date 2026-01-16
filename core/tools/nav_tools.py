@@ -9,11 +9,12 @@ from core.tools.contracts import ToolContext, ToolResult
 from core.navigation import pure_nav
 from core.utils.image_pipeline import capture_state_image
 from adapters.streetview_js.client import StreetViewHostClient
+from core.exceptions import MissingContextError, InvalidArgumentError
 
 def _get_client(ctx: ToolContext) -> StreetViewHostClient:
     client = ctx.meta.get("host_client")
     if not client:
-        raise RuntimeError("missing_host_client")
+        raise MissingContextError("missing_host_client")
     return client
 
 def _get_state(ctx: ToolContext) -> Dict[str, Any]:
@@ -172,40 +173,40 @@ def move_northwest(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
 def scroll_left(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     delta = args.get("delta")
     if delta is None:
-        return ToolResult(ok=False, debug={"error": "missing_delta"})
+        return ToolResult(ok=False, debug={"error": "missing_delta", "arg": "delta"})
     return _run_pure(ctx, pure_nav.scroll_left, delta)
 
 
 def scroll_right(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     delta = args.get("delta")
     if delta is None:
-        return ToolResult(ok=False, debug={"error": "missing_delta"})
+        return ToolResult(ok=False, debug={"error": "missing_delta", "arg": "delta"})
     return _run_pure(ctx, pure_nav.scroll_right, delta)
 
 
 def scroll_up(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     delta = args.get("delta")
     if delta is None:
-        return ToolResult(ok=False, debug={"error": "missing_delta"})
+        return ToolResult(ok=False, debug={"error": "missing_delta", "arg": "delta"})
     return _run_pure(ctx, pure_nav.scroll_up, delta)
 
 
 def scroll_down(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     delta = args.get("delta")
     if delta is None:
-        return ToolResult(ok=False, debug={"error": "missing_delta"})
+        return ToolResult(ok=False, debug={"error": "missing_delta", "arg": "delta"})
     return _run_pure(ctx, pure_nav.scroll_down, delta)
 
 
 def zoom_in(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     delta = args.get("delta") if "delta" in args else args.get("amount")
     if delta is None:
-        return ToolResult(ok=False, debug={"error": "missing_delta"})
+        return ToolResult(ok=False, debug={"error": "missing_delta", "arg": "delta"})
     return _run_pure(ctx, pure_nav.zoom_in, delta)
 
 
 def zoom_out(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     delta = args.get("delta") if "delta" in args else args.get("amount")
     if delta is None:
-        return ToolResult(ok=False, debug={"error": "missing_delta"})
+        return ToolResult(ok=False, debug={"error": "missing_delta", "arg": "delta"})
     return _run_pure(ctx, pure_nav.zoom_out, delta)
