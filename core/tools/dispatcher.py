@@ -1,5 +1,6 @@
 from core.tools import nav_tools
 import re
+from typing import List
 
 TOOL_IMPL =  {
     "init_panorama": nav_tools.init_panorama,
@@ -43,3 +44,7 @@ def run_tool(ctx, name: str, args: dict):
     if not func:
         raise KeyError(f"unknown_tool:{name}")
     return func(ctx, args)
+
+
+def llm_visible_tool_names() -> List[str]:
+    return [name for name in TOOL_IMPL.keys() if name != "init_panorama"]

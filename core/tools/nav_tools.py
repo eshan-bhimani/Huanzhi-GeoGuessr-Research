@@ -45,27 +45,8 @@ def _execute_command(ctx: ToolContext, cmd: Dict[str, Any]) -> Dict[str, Any]:
 
     client.wait_for_stable(ctx.session_id)
     new_state = client.get_state(ctx.session_id)
-    if before_state is not None:
-        _log_transition(before_state, new_state)
-
     return new_state
 
-def _log_transition(from_state: Dict[str, Any], to_state: Dict[str, Any]) -> None:
-    if not isinstance(from_state, dict) or not isinstance(to_state, dict):
-        return
-    from_pano_id = from_state.get("panoId")
-    to_pano_id = to_state.get("panoId")
-    from_date = from_state.get("date")
-    to_date = to_state.get("date")
-    payload = {
-        "event": "pano_transition",
-        "from_pano_id": from_pano_id,
-        "to_pano_id": to_pano_id,
-        "from_date": from_date,
-        "to_date": to_date,
-        "time_jump": bool(from_date and to_date and from_date != to_date),
-    }
-    print(json.dumps(payload))
 def _capture_image(ctx: ToolContext, state: Dict[str, Any]) -> Optional[str]:
     if ctx.meta.get("capture_images") is False:
         return None
@@ -78,22 +59,41 @@ def _capture_image(ctx: ToolContext, state: Dict[str, Any]) -> Optional[str]:
     ctx.meta["image_step"] = step + 1
     return path
 
-def _handle_pure_result(ctx: ToolContext, payload: Dict[str, Any]) -> ToolResult:
+
+def _available_moves_from_state(state: Dict[str, Any]) -> list[str]:
+    try:
+        payload = json.loads(pure_nav.check_available_moves(json.dumps(state)))
+    except (TypeError, ValueError, json.JSONDecodeError):
+        return []
+    updates = payload.get("updates") or {}
+    available_moves = updates.get("available_moves")
+    if isinstance(available_moves, list):
+        return available_moves
+    return []
+
+
+def _handle_pure_result(
+    ctx: ToolContext,
+    payload: Dict[str, Any],
+    state: Dict[str, Any],
+) -> ToolResult:
     result_type = payload.get("type")
     if result_type == "result":
         updates = payload.get("updates") or {}
         ok = updates.get("ok", True)
         if ok is False:
             return ToolResult(ok=False, debug=updates)
+        updates["available_moves"] = _available_moves_from_state(state)
         return ToolResult(updates=updates)
     
     if result_type == "command":
         cmd = payload.get("command") or {}
         new_state = _execute_command(ctx, cmd)
-        updates = {"state": new_state}
         image_path = _capture_image(ctx, new_state)
-        if image_path:
-            updates["image_path"] = image_path
+        updates = {
+            "image_path": image_path,
+            "available_moves": _available_moves_from_state(new_state),
+        }
         return ToolResult(updates=updates)
 
     return ToolResult(ok=False, debug={"error": "invalid_pure_result"})
@@ -103,7 +103,7 @@ def _run_pure(ctx: ToolContext, func, *args) -> ToolResult:
     state_json = json.dumps(state)
     output_json = func(state_json, *args) if args else func(state_json)
     payload = json.loads(output_json)
-    return  _handle_pure_result(ctx, payload)
+    return _handle_pure_result(ctx, payload, state)
 
 
 def init_panorama(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
@@ -121,10 +121,11 @@ def init_panorama(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:
     client.init(ctx.session_id, lat=lat, lng=lng, heading=heading, pitch=pitch, zoom=zoom)
     client.wait_for_stable(ctx.session_id)
     state = client.get_state(ctx.session_id)
-    updates = {"state": state}
     image_path = _capture_image(ctx, state)
-    if image_path:
-        updates["image_path"] = image_path
+    updates = {
+        "image_path": image_path,
+        "available_moves": _available_moves_from_state(state),
+    }
     return ToolResult(updates=updates)
 
 def check_direction(ctx: ToolContext, args: Dict[str, Any]) -> ToolResult:

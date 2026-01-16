@@ -36,3 +36,10 @@ agent_cli.py
 multi_agent.py
 ./docs
 *.md
+./runs
+*events.jsonl
+*gemini.py
+*claude.py
+*multi_agent_test.py
+*multi_agent_test_90.py
+*runner.py

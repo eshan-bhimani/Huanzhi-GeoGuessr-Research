@@ -121,6 +121,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Interactive pipeline runner")
     parser.add_argument("--lat", type=float)
     parser.add_argument("--lng", type=float)
+    parser.add_argument("--question", type=str)
     parser.add_argument("--heading", type=float, default=0.0)
     parser.add_argument("--pitch", type=float, default=0.0)
     parser.add_argument("--zoom", type=float, default=1.0)
