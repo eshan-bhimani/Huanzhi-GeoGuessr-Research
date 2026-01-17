@@ -12,7 +12,9 @@ from .exceptions import (
     ToolError,
     MissingContextError,
     InvalidArgumentError,
+    
 )
+from .logging_config import setup_logging, get_logger
 
 __all__ = [
     "GeoGuessrError",
@@ -27,4 +29,6 @@ __all__ = [
     "ToolError",
     "MissingContextError",
     "InvalidArgumentError",
+    "setup_logging",
+    "get_logger",
 ]
